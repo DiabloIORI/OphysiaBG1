@@ -7,406 +7,406 @@ BEGIN WNOPHYJ
 // Conversation 1: Experience on the road
 
 CHAIN IF ~Global("WNOPHYFriendTalks","GLOBAL",2)~ THEN WNOPHYJ F.01x01
-~So you're a proper adventurer, huh? Sleeping on the ground, finding people's missing uncles and family heirlooms... that sort of thing?~
+~那你就是个正经冒险者了？睡地上，帮人找走失的叔叔和家传宝贝……诸如此类？~
 	END
-		IF~~THEN REPLY ~I don't know about that... I haven't been on the road for that long.~ EXTERN WNOPHYJ F.01x03
-		IF~~THEN REPLY ~Slaying beasts is more my prerogative.~ EXTERN WNOPHYJ F.01x04
-		IF~~THEN REPLY ~That does seem to be the sum of it, doesn't it?~ EXTERN WNOPHYJ F.01x05
-		IF~~THEN REPLY ~I haven't met many uncles yet.~ EXTERN WNOPHYJ F.01x06
-		IF~~THEN REPLY ~We don't really have time to talk.~ EXTERN WNOPHYJ F.01x02
+		IF~~THEN REPLY ~这我可说不准……我上路还没多久。~ EXTERN WNOPHYJ F.01x03
+		IF~~THEN REPLY ~砍野兽更对我的路子。~ EXTERN WNOPHYJ F.01x04
+		IF~~THEN REPLY ~看来大致就是这些，对吧？~ EXTERN WNOPHYJ F.01x05
+		IF~~THEN REPLY ~我还没碰上过多少叔叔。~ EXTERN WNOPHYJ F.01x06
+		IF~~THEN REPLY ~我们真没空说话。~ EXTERN WNOPHYJ F.01x02
 
 CHAIN WNOPHYJ F.01x03
-~I figured. All things considered, though, you seem to be doing fine. You've managed to avoid a gruesome death at the hands of goblins and gibberlings. The paws of gibberlings? Claws? Whatever. Point is—that's more than a lot of people have managed.~ EXTERN WNOPHYJ F.01x07
+~我猜也是。不过总的看，你好像过得还不错。你总算躲过了地精和呓语怪之手——呓语怪的爪子？爪？随便吧。重点是，很多人连这都做不到。~ EXTERN WNOPHYJ F.01x07
 
 CHAIN WNOPHYJ F.01x04
-~How would you define a beast? A gibberling? Dragon? Perhaps a beholder? Not to doubt your abilities, but you don't seem that much like the beholder-killing sort.~ EXTERN WNOPHYJ F.01x07
+~你会怎么定义野兽？呓语怪？龙？也许是眼魔？不是怀疑你的本事，可你看着不太像能杀眼魔的那种人。~ EXTERN WNOPHYJ F.01x07
 
 CHAIN WNOPHYJ F.01x05
-~I've always assumed so. I've had one too many heart-to-hearts with drunken travelers lamenting their adventuring career not being half as exciting as they thought it would be.~ EXTERN WNOPHYJ F.01x07
+~我一向这么想。我跟醉醺醺的旅人掏心掏肺聊过太多回，他们哀叹自己的冒险生涯远没有想象中那么精彩。~ EXTERN WNOPHYJ F.01x07
 
 CHAIN WNOPHYJ F.01x06
-~Give it time. Everyone has an uncle.~
+~慢慢来。人人都有个叔叔。~
 	END
-		IF~~THEN REPLY ~I don't.~ EXTERN WNOPHYJ F.01x08
+		IF~~THEN REPLY ~我没有。~ EXTERN WNOPHYJ F.01x08
 
 CHAIN WNOPHYJ F.01x08
-~Neither do I. Not that I know of, at least. Point is—everyone wants you to do something for them.~ EXTERN WNOPHYJ F.01x07
+~我也没有。至少据我所知没有。重点是——人人都想让你替他们做点事。~ EXTERN WNOPHYJ F.01x07
 
 CHAIN WNOPHYJ F.01x07
-~I suppose I'm a proper adventurer too, now that I'm part of your little group.~
+~既然我成了你这小队伍的一员，我想我现在也算正经冒险者了。~
 	END
-		IF~~THEN REPLY ~What were you before, then?~ EXTERN WNOPHYJ F.01x09
-		IF~~THEN REPLY ~That's not such a bad thing, is it?~ EXTERN WNOPHYJ F.01x10
-		IF~~THEN REPLY ~I'm not really living this life by choice, you know.~ EXTERN WNOPHYJ F.01x11
-		IF~~THEN REPLY ~Good for you. Let's just go, alright?~ EXTERN WNOPHYJ F.01x02
+		IF~~THEN REPLY ~那你以前是什么？~ EXTERN WNOPHYJ F.01x09
+		IF~~THEN REPLY ~这也不算坏事，对吧？~ EXTERN WNOPHYJ F.01x10
+		IF~~THEN REPLY ~你知道，我过这种日子并不是出于自愿。~ EXTERN WNOPHYJ F.01x11
+		IF~~THEN REPLY ~那挺好。咱们走吧，行吗？~ EXTERN WNOPHYJ F.01x02
 
 CHAIN WNOPHYJ F.01x09
-~Well, I am first and foremost a bard of immeasurable talent. After that, though, I suppose you could call me a mercenary of a sort. I wouldn't, and you shouldn't—but you COULD.~ EXTERN WNOPHYJ F.01x12
+~嗯，我首先是位才艺无可估量的吟游诗人。再往后，我想你可以称我某种佣兵。我不会这么称，你也不该——不过你*可以*。~ EXTERN WNOPHYJ F.01x12
 
 CHAIN WNOPHYJ F.01x10
-~I guess not. It's just new to me. Maybe as new as it is to you. MAYBE.~ EXTERN WNOPHYJ F.01x12
+~我想不是。只是对我来说很新鲜。也许对你来说也一样新鲜。*也许*。~ EXTERN WNOPHYJ F.01x12
 
 CHAIN WNOPHYJ F.01x11
-~This isn't exactly where I imagined myself being either, but it's where we are.~ EXTERN WNOPHYJ F.01x12
+~这也不是我原先想象自己会待的地方，可我们就在这儿了。~ EXTERN WNOPHYJ F.01x12
 
 CHAIN WNOPHYJ F.01x12
-~Before I wound up in Nashkel, I'd hire myself out to guard caravans. Folks would come through Daggerford all the time worried about the road to Baldur's Gate and beyond. I have 'adventured', but I'd never have called myself an adventurer.~
-== WNOPHYJ ~Until now, I guess. It's nice to get paid to travel, but I didn't have much freedom in where to go.~
+~在我流落到那西凯之前，我受雇给人护送商队。人们总是从达格福德过，担心去博德之门和更远处路上的安危。我“冒过险”，可我从不自称冒险者。~
+== WNOPHYJ ~到现在，我想算是了。拿钱旅行挺好，只是去哪儿没什么自由。~
 	END
-		IF~~THEN REPLY ~What's Daggerford like?~ EXTERN WNOPHYJ F.01x13
-		IF~~THEN REPLY ~Why did you stop doing mercenary work?~ EXTERN WNOPHYJ F.01x14
-		IF~~THEN REPLY ~Well, enjoy it while it lasts. Let's go.~ EXTERN WNOPHYJ F.01x02
+		IF~~THEN REPLY ~达格福德是什么样？~ EXTERN WNOPHYJ F.01x13
+		IF~~THEN REPLY ~你为什么不做佣兵了？~ EXTERN WNOPHYJ F.01x14
+		IF~~THEN REPLY ~那就趁还能享受好好享受。走吧。~ EXTERN WNOPHYJ F.01x02
 
 CHAIN WNOPHYJ F.01x13 //Question 1
-~It's between Baldur's Gate and Waterdeep, to the north. It's not a big town, but most people live in the surrounding lands, so there are a lot of people "from Daggerford", even if they don't live within its walls.~
-== WNOPHYJ ~It's peaceful. Sleepy. It does get busy on occasion— Though, I might have to attribute that to living above a tavern.~
+~它在博德之门和深水城之间，靠北。不是大镇，可大多数人住在周围乡下，所以“达格福德人”很多，哪怕他们并不住在城墙里。~
+== WNOPHYJ ~那儿很平和，很安闲。偶尔也会忙起来——不过那大概得归因于我住在酒馆楼上。~
 	END
-		IF~~THEN REPLY ~You live above a tavern?~ EXTERN WNOPHYJ F.01x15
-		IF~~THEN REPLY ~It sounds like a nice place.~ EXTERN WNOPHYJ F.01x16
-		IF~~THEN REPLY ~That's great, but we'd best be off.~ EXTERN WNOPHYJ F.01x02
+		IF~~THEN REPLY ~你住在酒馆楼上？~ EXTERN WNOPHYJ F.01x15
+		IF~~THEN REPLY ~听着是个好地方。~ EXTERN WNOPHYJ F.01x16
+		IF~~THEN REPLY ~那挺好，不过我们最好走了。~ EXTERN WNOPHYJ F.01x02
 
 CHAIN WNOPHYJ F.01x14 //Question 2
-~The iron crisis has turned business on its head. No one wants to travel the trade routes anymore, and if they do, then they're hiring guards that they think are a better fit than... me.~
-== WNOPHYJ ~Which is stupid. I'm great company on the road.~
+~铁危机把生意翻了个个儿。没人愿意再走贸易路线了，要是真有人走，他们雇的护卫也是他们觉得比我更……合适的。~
+== WNOPHYJ ~这才叫蠢。我在路上可是好伴儿。~
 	END
-		IF~~THEN REPLY ~Sure.~ EXTERN WNOPHYJ F.01x19
-		IF~~THEN REPLY ~Clearly.~ EXTERN WNOPHYJ F.01x19
-		IF~~THEN REPLY ~What do you mean by 'a better fit'?~ EXTERN WNOPHYJ F.01x20
-		IF~~THEN REPLY ~You're proving otherwise, at the moment.~ EXTERN WNOPHYJ F.01x21
+		IF~~THEN REPLY ~当然。~ EXTERN WNOPHYJ F.01x19
+		IF~~THEN REPLY ~显然。~ EXTERN WNOPHYJ F.01x19
+		IF~~THEN REPLY ~你说的“更合适”是什么意思？~ EXTERN WNOPHYJ F.01x20
+		IF~~THEN REPLY ~你此刻正在证明并非如此。~ EXTERN WNOPHYJ F.01x21
 
 CHAIN WNOPHYJ F.01x15
-~Not anymore. We'll see how things shake out when I go back. My life is usually split between dealing with stuffy merchants or telling tales of valor in front of drunk folk, so being on the road with you is... nice.~ EXTERN WNOPHYJ F.01x17
+~不再干了。等我回去看看事情怎么落定。我平时不是跟一板一眼的商人打交道，就是在醉汉面前讲英勇故事，所以跟你上路……挺好。~ EXTERN WNOPHYJ F.01x17
 
 CHAIN WNOPHYJ F.01x16
-~It is! Unfortunately, my occupations of choice usually have me split between dealing with stuffy merchants or drunk folk, so being on the road with you is... nice.~ EXTERN WNOPHYJ F.01x17
+~确实！可惜我选的这两样营生，通常让我不是跟一板一眼的商人打交道，就是跟醉汉打交道，所以跟你上路……挺好。~ EXTERN WNOPHYJ F.01x17
 
 CHAIN WNOPHYJ F.01x17
-~Uh, should we get moving? I don't want to cause a delay.~
+~呃，我们该走了吧？我不想耽搁。~
 	END
-		IF~~THEN REPLY ~In a moment. I'm curious why you stopped doing mercenary work.~ EXTERN WNOPHYJ F.01x14
-		IF~~THEN REPLY ~Sure, let's go. This was a nice chat.~ EXTERN WNOPHYJ F.01x22
-		IF~~THEN REPLY ~You already have. Just keep walking.~ EXTERN WNOPHYJ F.01x18
+		IF~~THEN REPLY ~再等一下。我很好奇你为什么不做佣兵了。~ EXTERN WNOPHYJ F.01x14
+		IF~~THEN REPLY ~好，走吧。聊得挺愉快。~ EXTERN WNOPHYJ F.01x22
+		IF~~THEN REPLY ~你已经耽搁了。继续走吧。~ EXTERN WNOPHYJ F.01x18
 
 CHAIN WNOPHYJ F.01x19
-~I figured that I'd take matters into my own hands. There are people in Daggerford that I know and love that are being affected by the crisis. I couldn't just sit idly by and watch them struggle.~
-== WNOPHYJ ~Anyway, uh... should we get moving? I don't want to cause a delay.~
+~我想我得自己动手。达格福德有些我认识和爱的人正受危机之苦。我没法就这么干坐着看他们挣扎。~
+== WNOPHYJ ~总之，呃……我们该走了吧？我不想耽搁。~
 	END
-		IF~~THEN REPLY ~In a moment. I wanted to ask you about Daggerford.~ EXTERN WNOPHYJ F.01x13
-		IF~~THEN REPLY ~Sure. This was a nice chat.~ EXTERN WNOPHYJ F.01x22
-		IF~~THEN REPLY ~You already have. Just keep walking.~ EXTERN WNOPHYJ F.01x18
+		IF~~THEN REPLY ~再等一下。我想问问你达格福德的事。~ EXTERN WNOPHYJ F.01x13
+		IF~~THEN REPLY ~好。聊得挺愉快。~ EXTERN WNOPHYJ F.01x22
+		IF~~THEN REPLY ~你已经耽搁了。继续走吧。~ EXTERN WNOPHYJ F.01x18
 
 CHAIN WNOPHYJ F.01x20
-~Y'know, more 'man with big sword'. Not really my forte, I'm sure you're surprised to hear.~ EXTERN WNOPHYJ F.01x19
+~你知道，更像是“拿大剑的男人”。这可不是我的强项，你听了肯定很吃惊。~ EXTERN WNOPHYJ F.01x19
 
 CHAIN WNOPHYJ F.01x21
-~Rude! Like you're much better, you grouch.~ EXTERN WNOPHYJ F.01x19
+~无礼！好像你强多少似的，你个臭脾气。~ EXTERN WNOPHYJ F.01x19
 
 CHAIN WNOPHYJ F.01x22 //Finale
-~Thanks for humoring me. It's nice to have a friendly ear on the road. Lead on.~
+~谢谢你陪我瞎扯。路上有个愿意听的耳朵挺好。你带路吧。~
 DO ~SetGlobal("WNOPHYFriendTalks","GLOBAL",3)~
 EXIT
 
 CHAIN WNOPHYJ F.01x02
-~Alright then. I wasn't planning on talking your ear off.~
+~那好吧。我本来也没打算把你耳朵磨掉。~
 DO ~SetGlobal("WNOPHYFriendTalks","GLOBAL",3)~
 EXIT
 
 CHAIN WNOPHYJ F.01x18
-~Rude! But fine. Let's go.~
+~无礼！不过行吧。走吧。~
 DO ~SetGlobal("WNOPHYFriendTalks","GLOBAL",3)~
 EXIT
 
 // Conversation 2: The tale of the kobold prince
 
 CHAIN IF~Global("WNOPHYFriendTalks","GLOBAL",5)~THEN WNOPHYJ F.02x01
-~Gods, I feel like we've been walking for ages. Can we stop and rest for a moment?~
+~天哪，感觉我们走了好久了。能停下来歇一会儿吗？~
 	END
-		IF~~THEN REPLY ~Of course. Let us hold here for a time.~ EXTERN WNOPHYJ F.02x02
-		IF~~THEN REPLY ~I suppose we can spare a moment.~ EXTERN WNOPHYJ F.02x03
-		IF~~THEN REPLY ~We'll stop when it's time to rest. Until then, keep moving.~ EXTERN WNOPHYJ F.02x04
+		IF~~THEN REPLY ~当然。我们就在这儿停一阵。~ EXTERN WNOPHYJ F.02x02
+		IF~~THEN REPLY ~我想我们能腾出一会儿。~ EXTERN WNOPHYJ F.02x03
+		IF~~THEN REPLY ~到该休息的时候才停。在那之前，继续走。~ EXTERN WNOPHYJ F.02x04
 
 CHAIN WNOPHYJ F.02x02
-~Thank you. I'm not used to so much walking.~ EXTERN WNOPHYJ F.02x05
+~谢谢你。我不习惯走这么多路。~ EXTERN WNOPHYJ F.02x05
 
 CHAIN WNOPHYJ F.02x03
-~Great. I'm not used to so much walking.~ EXTERN WNOPHYJ F.02x05
+~太好了。我不习惯走这么多路。~ EXTERN WNOPHYJ F.02x05
 
 CHAIN WNOPHYJ F.02x05
-~Since we have a moment to catch our breath, what would you say to a story?~
+~既然我们有空喘口气，听个故事怎么样？~
 	END
-		IF~~THEN REPLY ~What kind of story?~ EXTERN WNOPHYJ F.02x06
-		IF~~THEN REPLY ~As long as it won't take all <DAYNIGHT>.~ EXTERN WNOPHYJ F.02x07
-		IF~~THEN REPLY ~I'd rather just sit in silence for a bit.~ EXTERN WNOPHYJ F.02x08
-		IF~~THEN REPLY ~That's why you stopped us? Forget it, let's go.~ EXTERN WNOPHYJ F.02x04
+		IF~~THEN REPLY ~什么样的故事？~ EXTERN WNOPHYJ F.02x06
+		IF~~THEN REPLY ~只要别讲上整个<DAYNIGHT>。~ EXTERN WNOPHYJ F.02x07
+		IF~~THEN REPLY ~我宁愿就这么安静坐一会儿。~ EXTERN WNOPHYJ F.02x08
+		IF~~THEN REPLY ~你就是为了这个叫住我们？算了，走吧。~ EXTERN WNOPHYJ F.02x04
 
 CHAIN WNOPHYJ F.02x06
-~One that—provided there is a distinct lack of interruptions—will leave you a wiser <PRO_MANWOMAN> for having been told it. That is my guarantee.~
+~那种故事——只要中间没有打断——听完会让你成为更明智的<PRO_MANWOMAN>。我保证。~
 	END
-		IF~~THEN REPLY ~Your tone doesn't inspire a lot of confidence.~ EXTERN WNOPHYJ F.02x09
-		IF~~THEN REPLY ~My expectations have been set.~ EXTERN WNOPHYJ F.02x10
-		IF~~THEN REPLY ~If you say so.~ EXTERN WNOPHYJ F.02x10
-		IF~~THEN REPLY ~I am absolutely not listening to this.~ EXTERN WNOPHYJ F.02x11
+		IF~~THEN REPLY ~你的语气不太让人有信心。~ EXTERN WNOPHYJ F.02x09
+		IF~~THEN REPLY ~我的期待已经定下来了。~ EXTERN WNOPHYJ F.02x10
+		IF~~THEN REPLY ~随你怎么说。~ EXTERN WNOPHYJ F.02x10
+		IF~~THEN REPLY ~我绝对不听这个。~ EXTERN WNOPHYJ F.02x11
 
 CHAIN WNOPHYJ F.02x07
-~As long as you don't interrupt me, it won't.~
-== WNOPHYJ ~This is a story that shall leave you a wiser <PRO_MANWOMAN> for having been told it. That is my guarantee.~
+~只要你不打断我，就不会讲那么久。~
+== WNOPHYJ ~这故事听完会让你成为更明智的<PRO_MANWOMAN>。我保证。~
 	END
-		IF~~THEN REPLY ~The way that you said that doesn't inspire a lot of confidence.~ EXTERN WNOPHYJ F.02x09
-		IF~~THEN REPLY ~My expectations have been set.~ EXTERN WNOPHYJ F.02x10
-		IF~~THEN REPLY ~If you say so.~ EXTERN WNOPHYJ F.02x11
-		IF~~THEN REPLY ~I am absolutely not listening to this.~ EXTERN WNOPHYJ F.02x12
+		IF~~THEN REPLY ~你这么说，不太让人有信心。~ EXTERN WNOPHYJ F.02x09
+		IF~~THEN REPLY ~我的期待已经定下来了。~ EXTERN WNOPHYJ F.02x10
+		IF~~THEN REPLY ~随你怎么说。~ EXTERN WNOPHYJ F.02x11
+		IF~~THEN REPLY ~我绝对不听这个。~ EXTERN WNOPHYJ F.02x12
 
 CHAIN WNOPHYJ F.02x08
-~...~
-== WNOPHYJ ~...~
+~……~
+== WNOPHYJ ~……~
 	END
-		IF~~THEN REPLY ~...~ EXTERN WNOPHYJ F.02x13
+		IF~~THEN REPLY ~……~ EXTERN WNOPHYJ F.02x13
 
 CHAIN WNOPHYJ F.02x09
-~I'm wounded by the fact that you don't implicitly trust me.~ EXTERN WNOPHYJ F.02x14
+~你不无条件信任我，我很受伤。~ EXTERN WNOPHYJ F.02x14
 
 CHAIN WNOPHYJ F.02x10
-~And I shall shatter them with my awesome storytelling powers!~ EXTERN WNOPHYJ F.02x14
+~那我就用我惊人的讲故事本事把它们砸碎！~ EXTERN WNOPHYJ F.02x14
 
 CHAIN WNOPHYJ F.02x11
-~I do say so.~ EXTERN WNOPHYJ F.02x14
+~我确实这么说。~ EXTERN WNOPHYJ F.02x14
 
 CHAIN WNOPHYJ F.02x12
-~You have no idea what you're missing out on. This story could have forged our bond into the annals of history. It could have inspired you to fight just hard enough to survive the day. But now you've missed out on that opportunity. What does that mean? It means you're going to die, <CHARNAME>. It means that the villains will win, and no one will ever remember you.~
+~你根本不知道自己错过了什么。这故事本可以把我们的情谊写进史册。本可以激励你拼到刚好活过今天。可现在你错过了那个机会。这意味着什么？意味着你会死，<CHARNAME>。意味着坏人会赢，没人会记得你。~
 	END
-		IF~~THEN REPLY ~Fine, I'll listen to your damned story!~ EXTERN WNOPHYJ F.02x09
-		IF~~THEN REPLY ~A small price to pay to get you to stop talking.~ EXTERN WNOPHYJ F.02x13
+		IF~~THEN REPLY ~行，我听你那该死的破故事！~ EXTERN WNOPHYJ F.02x09
+		IF~~THEN REPLY ~能让你闭嘴，这点代价不算什么。~ EXTERN WNOPHYJ F.02x13
 
 CHAIN WNOPHYJ F.02x14
-~Now listen closely, for I shall not be repeating myself.~
-== WNOPHYJ ~There was once a kobold prince...~
+~那就听好了，我不会重复。~
+== WNOPHYJ ~曾经有位狗头人王子……~
 	END
-		IF~~THEN REPLY ~...~ EXTERN WNOPHYJ F.02x15
-		IF~~THEN REPLY ~Could you repeat that?~ EXTERN WNOPHYJ F.02x16
-		IF~~THEN REPLY ~Kobolds live in tribes, thus they do not have princes.~ EXTERN WNOPHYJ F.02x17
-		IF~~THEN REPLY ~Six words in and I'm already done.~ EXTERN WNOPHYJ F.02x18
+		IF~~THEN REPLY ~……~ EXTERN WNOPHYJ F.02x15
+		IF~~THEN REPLY ~你能重复一遍吗？~ EXTERN WNOPHYJ F.02x16
+		IF~~THEN REPLY ~狗头人都是部落而居，所以他们没有王子。~ EXTERN WNOPHYJ F.02x17
+		IF~~THEN REPLY ~六个字，我已经听不下去了。~ EXTERN WNOPHYJ F.02x18
 
 CHAIN WNOPHYJ F.02x15
-~...named Snet-Vilgo.~
+~……名叫斯奈特-维尔戈。~
 	END
-		IF~~THEN REPLY ~...~ EXTERN WNOPHYJ F.02x19
-		IF~~THEN REPLY ~Really?~ EXTERN WNOPHYJ F.02x20
-		IF~~THEN REPLY ~That's a stupid name.~ EXTERN WNOPHYJ F.02x21
-		IF~~THEN REPLY ~Eight words in and I'm already done.~ EXTERN WNOPHYJ F.02x18
+		IF~~THEN REPLY ~……~ EXTERN WNOPHYJ F.02x19
+		IF~~THEN REPLY ~真的？~ EXTERN WNOPHYJ F.02x20
+		IF~~THEN REPLY ~这名字真蠢。~ EXTERN WNOPHYJ F.02x21
+		IF~~THEN REPLY ~八个字，我已经听不下去了。~ EXTERN WNOPHYJ F.02x18
 
 CHAIN WNOPHYJ F.02x16
-~Ugh... THERE WAS ONCE A KOBOLD PRINCE... named Snet-Vilgo.~
+~唉……*曾经有位狗头人王子*……名叫斯奈特-维尔戈。~
 	END
-		IF~~THEN REPLY ~Right. Go on.~ EXTERN WNOPHYJ F.02x19
-		IF~~THEN REPLY ~Really?~ EXTERN WNOPHYJ F.02x20
-		IF~~THEN REPLY ~That's a stupid name.~ EXTERN WNOPHYJ F.02x21
-		IF~~THEN REPLY ~Eight words in and I'm already done.~ EXTERN WNOPHYJ F.02x18
+		IF~~THEN REPLY ~好。继续。~ EXTERN WNOPHYJ F.02x19
+		IF~~THEN REPLY ~真的？~ EXTERN WNOPHYJ F.02x20
+		IF~~THEN REPLY ~这名字真蠢。~ EXTERN WNOPHYJ F.02x21
+		IF~~THEN REPLY ~八个字，我已经听不下去了。~ EXTERN WNOPHYJ F.02x18
 
 CHAIN WNOPHYJ F.02x17
-~You're a riot. As I was SAYING, there was a kobold prince...~ EXTERN WNOPHYJ F.02x15
+~你真会逗人。正如我*所说*，有位狗头人王子……~ EXTERN WNOPHYJ F.02x15
 
 CHAIN WNOPHYJ F.02x19
-~Now, Snet-Vilgo was naturally gifted at dragonchess. He was so talented, in fact, that a Cormyrian master caught wind of Snet-Vilgo's prowess and traveled all the way to his tribe's home to play against him in person.~
+~话说斯奈特-维尔戈天生擅长龙棋。实际上他天赋太高，以至于一位科米尔的棋师听说了他的本领，一路赶到他部落的住处，要亲自与他下棋。~
 	END
-		IF~~THEN REPLY ~...~ EXTERN WNOPHYJ F.02x22
-		IF~~THEN REPLY ~What was this master's name?~ EXTERN WNOPHYJ F.02x23
-		IF~~THEN REPLY ~You know, I'm pretty good at dragonchess myself.~ EXTERN WNOPHYJ F.02x24
-		IF~~THEN REPLY ~Forty-one words in and I'm already done.~ EXTERN WNOPHYJ F.02x18
+		IF~~THEN REPLY ~……~ EXTERN WNOPHYJ F.02x22
+		IF~~THEN REPLY ~这位棋师叫什么？~ EXTERN WNOPHYJ F.02x23
+		IF~~THEN REPLY ~你知道，我自己龙棋下得挺好。~ EXTERN WNOPHYJ F.02x24
+		IF~~THEN REPLY ~四十一个字，我已经听不下去了。~ EXTERN WNOPHYJ F.02x18
 
 CHAIN WNOPHYJ F.02x20
-~Yes.~ EXTERN WNOPHYJ F.02x19
+~是的。~ EXTERN WNOPHYJ F.02x19
 
 CHAIN WNOPHYJ F.02x21
-~Talking down on a kobold isn't a good look, <CHARNAME>.~ EXTERN WNOPHYJ F.02x19
+~贬低一个狗头人可不好看，<CHARNAME>。~ EXTERN WNOPHYJ F.02x19
 
 CHAIN WNOPHYJ F.02x22
-~Unfortunately, Snet-Vilgo's father—the ruler of the tribe—was not pleased with his son's talent. Not very kobold-like, you see? When the master from Cormyr arrived, he ordered that the man be thrown from atop a waterfall. Snet-Vilgo was reasonably upset by this, so he left his tribe in the dead of night, taking with him only his dragonchess board.~
+~不幸的是，斯奈特-维尔戈的父亲——部落的统治者——并不喜欢儿子的天赋。不太像狗头人，你懂吧？那位科米尔棋师到了之后，他下令把人从瀑布顶上扔下去。斯奈特-维尔戈当然为此难过，于是他在深夜离开部落，只带走了自己的龙棋盘。~
 	END
-		IF~~THEN REPLY ~...~ EXTERN WNOPHYJ F.02x25
-		IF~~THEN REPLY ~Where did he go?~ EXTERN WNOPHYJ F.02x26
-		IF~~THEN REPLY ~Wait, so this man walked into a kobold tribe and expected NOT to be thrown off a waterfall?~ EXTERN WNOPHYJ F.02x27
-		IF~~THEN REPLY ~Okay, okay, wrap it up already.~ EXTERN WNOPHYJ F.02x28
+		IF~~THEN REPLY ~……~ EXTERN WNOPHYJ F.02x25
+		IF~~THEN REPLY ~他去哪儿了？~ EXTERN WNOPHYJ F.02x26
+		IF~~THEN REPLY ~等等，这人走进一个狗头人部落，还指望不被扔下瀑布？~ EXTERN WNOPHYJ F.02x27
+		IF~~THEN REPLY ~好了，好了，快收尾吧。~ EXTERN WNOPHYJ F.02x28
 
 CHAIN WNOPHYJ F.02x23
-~All relevant details will be revealed if you LISTEN.~ EXTERN WNOPHYJ F.02x22
+~你要是*听*，所有相关细节都会揭晓。~ EXTERN WNOPHYJ F.02x22
 
 CHAIN WNOPHYJ F.02x24
-~I'm *so* happy for you.~ EXTERN WNOPHYJ F.02x22
+~我*太*为你高兴了。~ EXTERN WNOPHYJ F.02x22
 
 CHAIN WNOPHYJ F.02x25
-~Snet-Vilgo was ready to take his skills to the big city. Perhaps he could even take the dead Cormyrian master's place. Along the way, he encountered many obstacles—beasts and animals of all sizes, near-impassable deserts and mountains, and all sorts of brigands who sought to bring him harm. But Snet-Vilgo was not an evil creature—he just wanted to play dragonchess with the greats, and nothing was going to stop him.~
+~斯奈特-维尔戈准备把自己的本事带到大城市去。也许他还能顶替那位死去的科米尔棋师。一路上他遇到许多阻碍——大大小小的野兽走兽，几乎过不去的沙漠和山脉，还有各种想害他的强盗。可斯奈特-维尔戈不是邪恶之物——他只想与高手下龙棋，什么都挡不住他。~
 	END
-		IF~~THEN REPLY ~...~ EXTERN WNOPHYJ F.02x29
-		IF~~THEN REPLY ~I may not be a master of geography, but you'd have to travel a long way to scale both mountains and deserts on your way to Cormyr.~ EXTERN WNOPHYJ F.02x30
-		IF~~THEN REPLY ~All kobolds are evil.~ EXTERN WNOPHYJ F.02x30
-		IF~~THEN REPLY ~I'm surprised he wasn't killed.~ EXTERN WNOPHYJ F.02x31
-		IF~~THEN REPLY ~Alright, get to the point.~ EXTERN WNOPHYJ F.02x28
+		IF~~THEN REPLY ~……~ EXTERN WNOPHYJ F.02x29
+		IF~~THEN REPLY ~我算不上地理通，可去科米尔的路上要翻山又要过沙漠，那得走多远啊。~ EXTERN WNOPHYJ F.02x30
+		IF~~THEN REPLY ~所有狗头人都是邪恶的。~ EXTERN WNOPHYJ F.02x30
+		IF~~THEN REPLY ~我很奇怪他没被杀。~ EXTERN WNOPHYJ F.02x31
+		IF~~THEN REPLY ~好了，说重点。~ EXTERN WNOPHYJ F.02x28
 
 CHAIN WNOPHYJ F.02x26
-~If you had waited a single moment longer before asking that question, you would have found out.~ EXTERN WNOPHYJ F.02x25
+~你要是再多等一刻再问，你就已经知道了。~ EXTERN WNOPHYJ F.02x25
 
 CHAIN WNOPHYJ F.02x27
-~It just goes to show that being good at dragonchess isn't indicative of intelligence.~ EXTERN WNOPHYJ F.02x25
+~这就说明，龙棋下得好并不代表有脑子。~ EXTERN WNOPHYJ F.02x25
 
 CHAIN WNOPHYJ F.02x28
-~Fine, fine. After many tendays of travel, Snet-Vilgo arrives at Cormyr only for the guards at the gate to kill him.~
+~好好好。走了许多个十日之后，斯奈特-维尔戈终于到了科米尔，结果门口的守卫杀了他。~
 	END
-		IF~~THEN REPLY ~What?!~ EXTERN WNOPHYJ F.02x32
-		IF~~THEN REPLY ~That's horrible!~ EXTERN WNOPHYJ F.02x33
-		IF~~THEN REPLY ~Huh? You lost me about three minutes ago.~ EXTERN WNOPHYJ F.02x34
-		IF~~THEN REPLY ~Hooray! Can we go now?~ EXTERN WNOPHYJ F.02x35
+		IF~~THEN REPLY ~什么？！~ EXTERN WNOPHYJ F.02x32
+		IF~~THEN REPLY ~这太可怕了！~ EXTERN WNOPHYJ F.02x33
+		IF~~THEN REPLY ~啊？你三分钟前就把我讲丢了。~ EXTERN WNOPHYJ F.02x34
+		IF~~THEN REPLY ~万岁！我们可以走了吗？~ EXTERN WNOPHYJ F.02x35
 
 CHAIN WNOPHYJ F.02x29
-~After many tendays of travel, Snet-Vilgo arrived in Suzail, capital of Cormyr. Wearily, he approached one of the grand gates that guarded the city, nervous but optimistic. I'm not too sure what the poor kobold expected, because not a moment later did a guard send an arrow flying towards his skull. The kobold prince hit the ground with a thud, and thus ends the tale of Snet-Vilgo.~
+~走了许多个十日之后，斯奈特-维尔戈到了科米尔的首都苏塞尔。他疲惫地走向守卫城门的一道大门，紧张却又乐观。我不太确定这可怜的狗头人期待什么，因为下一刻守卫就朝他的脑袋射了一箭。狗头人王子咚地一声落地，斯奈特-维尔戈的故事就此结束。~
 	END
-		IF~~THEN REPLY ~What?!~ EXTERN WNOPHYJ F.02x32
-		IF~~THEN REPLY ~That's horrible!~ EXTERN WNOPHYJ F.02x32
-		IF~~THEN REPLY ~Huh? You lost me about three minutes ago.~ EXTERN WNOPHYJ F.02x33
-		IF~~THEN REPLY ~Hooray! Can we go now?~ EXTERN WNOPHYJ F.02x34
+		IF~~THEN REPLY ~什么？！~ EXTERN WNOPHYJ F.02x32
+		IF~~THEN REPLY ~这太可怕了！~ EXTERN WNOPHYJ F.02x32
+		IF~~THEN REPLY ~啊？你三分钟前就把我讲丢了。~ EXTERN WNOPHYJ F.02x33
+		IF~~THEN REPLY ~万岁！我们可以走了吗？~ EXTERN WNOPHYJ F.02x34
 
 CHAIN WNOPHYJ F.02x30
-~You may be the most insufferable person I have ever met.~ EXTERN WNOPHYJ F.02x29
+~你可能是我见过最让人受不了的人。~ EXTERN WNOPHYJ F.02x29
 
 CHAIN WNOPHYJ F.02x31
-~Well...~ EXTERN WNOPHYJ F.02x29
+~嗯……~ EXTERN WNOPHYJ F.02x29
 
 CHAIN WNOPHYJ F.02x32
-~I know, it's a tragic tale. Perhaps a little heavy for this time of <DAYNIGHT>.~
-== WNOPHYJ ~Do you know what the moral of the story is?~
+~我知道，这是出悲剧。对这<DAYNIGHT>来说也许沉重了点。~
+== WNOPHYJ ~你知道这故事的寓意是什么吗？~
 	END
-		IF~~THEN REPLY ~Following your dreams will get you killed?~ EXTERN WNOPHYJ F.02x35
-		IF~~THEN REPLY ~People who play dragonchess are stupid?~ EXTERN WNOPHYJ F.02x36
-		IF~~THEN REPLY ~Don't go to Cormyr?~ EXTERN WNOPHYJ F.02x37
-		IF~~THEN REPLY ~Always throw dragonchess masters off waterfalls?~ EXTERN WNOPHYJ F.02x38
-		IF~~THEN REPLY ~Never let Ophysia tell a story ever again?~ EXTERN WNOPHYJ F.02x39
-		IF~~THEN REPLY ~I have absolutely no idea.~ EXTERN WNOPHYJ F.02x40
+		IF~~THEN REPLY ~追随梦想会让你丧命？~ EXTERN WNOPHYJ F.02x35
+		IF~~THEN REPLY ~下龙棋的人都蠢？~ EXTERN WNOPHYJ F.02x36
+		IF~~THEN REPLY ~别去科米尔？~ EXTERN WNOPHYJ F.02x37
+		IF~~THEN REPLY ~永远把龙棋大师扔下瀑布？~ EXTERN WNOPHYJ F.02x38
+		IF~~THEN REPLY ~永远别让奥菲希娅再讲故事？~ EXTERN WNOPHYJ F.02x39
+		IF~~THEN REPLY ~我完全不知道。~ EXTERN WNOPHYJ F.02x40
 
 CHAIN WNOPHYJ F.02x35
-~I... can certainly see how you might come to that conclusion. I'm sure that there's more to it. Surely. Right?~ EXTERN WNOPHYJ F.02x41
+~我……当然能理解你怎么会得出那个结论。我相信还有更深的含义。一定。对吧？~ EXTERN WNOPHYJ F.02x41
 
 CHAIN WNOPHYJ F.02x36
-~I don't think Snet-Vilgo was stupid—he was just altruistic. I can't really say the same for the Cormyrian master though.~ EXTERN WNOPHYJ F.02x41
+~我不觉得斯奈特-维尔戈蠢——他只是利他。至于那位科米尔棋师，我可不敢这么说。~ EXTERN WNOPHYJ F.02x41
 
 CHAIN WNOPHYJ F.02x37
-~If you're a kobold, at least.~ EXTERN WNOPHYJ F.02x41
+~前提你是狗头人。~ EXTERN WNOPHYJ F.02x41
 
 CHAIN WNOPHYJ F.02x38
-~That DOES sound kind of fun, doesn't it? I don't know about you, but I've always wanted to dive off a waterfall. Maybe I should start learning how to play.~ EXTERN WNOPHYJ F.02x41
+~那*确实*听着有点好玩，对吧？不知道你怎么想，我一直想从瀑布上跳下去。也许我该开始学下棋。~ EXTERN WNOPHYJ F.02x41
 
 CHAIN WNOPHYJ F.02x39
-~Only an ungrateful audience blames the storyteller for an unfortunate yarn... or something to that effect.~ EXTERN WNOPHYJ F.02x41
+~只有不知感恩的听众才会把不幸的故事怪在说书人头上……大概这意思。~ EXTERN WNOPHYJ F.02x41
 
 CHAIN WNOPHYJ F.02x40
-~Yeah, me neither. I was hoping you'd be able to tell me.~ EXTERN WNOPHYJ F.02x42
+~是啊，我也不知道。我还指望你能告诉我。~ EXTERN WNOPHYJ F.02x42
 
 CHAIN WNOPHYJ F.02x41
-~I actually have no idea what the moral of the story is. I picked it up from a fellow near the High Forest a couple of years ago.~ EXTERN WNOPHYJ F.02x42
+~其实我完全不知道这故事的寓意。几年前我从高密林附近一个家伙那儿听来的。~ EXTERN WNOPHYJ F.02x42
 
 CHAIN WNOPHYJ F.02x42
-~Oh well, it's a mystery for another day! Let's get going, shall we?~
+~算了，这谜团留给以后吧！咱们走吧，好吗？~
 DO ~SetGlobal("WNOPHYFriendTalks","GLOBAL",6)~
 EXIT
 
 CHAIN WNOPHYJ F.02x04
-~Yeah... okay.~
+~是啊……好吧。~
 DO ~SetGlobal("WNOPHYFriendTalks","GLOBAL",6)~
 EXIT
 
 CHAIN WNOPHYJ F.02x13
-~Okay, fine. You win. Let's go.~
+~好，行。你赢了。走吧。~
 DO ~SetGlobal("WNOPHYFriendTalks","GLOBAL",6)~
 EXIT
 
 CHAIN WNOPHYJ F.02x18
-~Alright, alright. Let's just go.~
+~好好好。走吧。~
 DO ~SetGlobal("WNOPHYFriendTalks","GLOBAL",6)~
 EXIT
 
 CHAIN WNOPHYJ F.02x33
-~You suck, you know that? Let's just go. Now you'll never learn the moral of the story.~
+~你真差劲，你知道吗？走吧。这下你永远不知道这故事的寓意了。~
 DO ~SetGlobal("WNOPHYFriendTalks","GLOBAL",6)~
 EXIT
 
 CHAIN WNOPHYJ F.02x34
-~Fine! I guess you'll never learn the moral of the story. Let's go.~
+~行！我看你永远不知道这故事的寓意了。走吧。~
 DO ~SetGlobal("WNOPHYFriendTalks","GLOBAL",6)~
 EXIT
 
 // Conversation 3: Respective histories
 
 CHAIN IF~Global("WNOPHYFriendTalks","GLOBAL",8)~THEN WNOPHYJ F.03x01
-~You're from Candlekeep, right, <CHARNAME>? Growing up around all those books must've been peaceful, if nothing else.~
+~你是烛堡来的，对吧，<CHARNAME>？在那些书堆里长大，至少该算平和吧。~
 	END
-		IF~~THEN REPLY ~It wasn't all bad. The monks were a bit dusty but I had Imoen to keep me company, and Gorion to guide me.~ EXTERN WNOPHYJ F.03x02
-		IF~~THEN REPLY ~Candlekeep was a good home, but a sheltered one. I didn't get to leave that often.~ EXTERN WNOPHYJ F.03x03
-		IF~~THEN REPLY ~I couldn't stand it. It was always so quiet... I think Imoen and I created most of the noise in that place.~ EXTERN WNOPHYJ F.03x04
-		IF~~THEN REPLY ~That place is behind me now, and I want to keep it that way.~ EXTERN WNOPHYJ F.03x05
-		IF~~THEN REPLY ~We can't stop to talk right now.~ EXTERN WNOPHYJ F.03x06
+		IF~~THEN REPLY ~也不全是坏事。修士们有点书呆气，可有伊莫恩陪我，还有葛立安指引我。~ EXTERN WNOPHYJ F.03x02
+		IF~~THEN REPLY ~烛堡是个好家，可太受庇护了。我不常能出去。~ EXTERN WNOPHYJ F.03x03
+		IF~~THEN REPLY ~我受不了。那儿总是那么安静……我想那地方大部分的动静都是伊莫恩和我弄出来的。~ EXTERN WNOPHYJ F.03x04
+		IF~~THEN REPLY ~那地方如今已在我身后，我想保持这样。~ EXTERN WNOPHYJ F.03x05
+		IF~~THEN REPLY ~我们现在不能停下来谈。~ EXTERN WNOPHYJ F.03x06
 
 CHAIN WNOPHYJ F.03x02
-~Gorion, your mentor? He's... gone now, right? I'm sorry to bring it up if it's a painful topic. It sounds like you had a good childhood, for the most part.~ EXTERN WNOPHYJ F.03x03
+~葛立安，你的导师？他……现在不在了，对吧？如果这是痛苦的话题，我很抱歉提起。听起来你的童年大体还是不错的。~ EXTERN WNOPHYJ F.03x03
 
 CHAIN WNOPHYJ F.03x03
-~It must have been odd to leave it all behind, if it was all you'd ever known. I can definitely relate.~ EXTERN WNOPHYJ F.03x07
+~如果那是你唯一知道的世界，抛下这一切一定很怪。我完全能体会。~ EXTERN WNOPHYJ F.03x07
 
 CHAIN WNOPHYJ F.03x04
-~Hah. I would've given anything for a quiet childhood, but I guess friends can make any place feel bearable.~ EXTERN WNOPHYJ F.03x03
+~哈。我愿付出一切换个安静的童年，不过我想有朋友在，哪儿都能忍。~ EXTERN WNOPHYJ F.03x03
 
 CHAIN WNOPHYJ F.03x05
-~I can certainly understand that, though fate seems to have a funny way of bringing us back to the places we least want to return to.~ EXTERN WNOPHYJ F.03x07
+~我完全理解，不过命运似乎有种古怪的办法，总把我们带回最不想回去的地方。~ EXTERN WNOPHYJ F.03x07
 
 CHAIN WNOPHYJ F.03x07
-~You already know that I've made my home in Daggerford, but I come from Waterdeep before that. The so-called City of Splendors.~
+~你知道我已在达格福德安家，可在那之前我是深水城人。那所谓的“光辉之城”。~
 	END
-		IF~~THEN REPLY ~I've read about Waterdeep, but I've never seen it. What's it like there?~ EXTERN WNOPHYJ F.03x08
-		IF~~THEN REPLY ~I gather from your tone that you're not fond of the place.~ EXTERN WNOPHYJ F.03x09
-		IF~~THEN REPLY ~Sounds like a bit of a downgrade, if you ask me.~ EXTERN WNOPHYJ F.03x10
-		IF~~THEN REPLY ~I've always wanted to go to Waterdeep. There are so many exciting stories about it!~ EXTERN WNOPHYJ F.03x11
-		IF~~THEN REPLY ~That's great and all, but we need to get going. Come on.~ EXTERN WNOPHYJ F.03x06
+		IF~~THEN REPLY ~我读过关于深水城的东西，可从没见过。那儿是什么样？~ EXTERN WNOPHYJ F.03x08
+		IF~~THEN REPLY ~从你的语气听来，你不喜欢那地方。~ EXTERN WNOPHYJ F.03x09
+		IF~~THEN REPLY ~要我说，这听着像降级了。~ EXTERN WNOPHYJ F.03x10
+		IF~~THEN REPLY ~我一直想去深水城。关于它的精彩故事太多了！~ EXTERN WNOPHYJ F.03x11
+		IF~~THEN REPLY ~那挺好，可我们得走了。来。~ EXTERN WNOPHYJ F.03x06
 
 CHAIN WNOPHYJ F.03x08
-~Depends who you are. And how much gold you have.~ EXTERN WNOPHYJ F.03x12
+~看你是谁。还有你有多少金币。~ EXTERN WNOPHYJ F.03x12
 
 CHAIN WNOPHYJ F.03x09
-~You gather correctly. There's a good reason why I left, after all.~ EXTERN WNOPHYJ F.03x12
+~你听对了。我离开是有充分理由的。~ EXTERN WNOPHYJ F.03x12
 
 CHAIN WNOPHYJ F.03x10
-~Sure, if you're a pompous nobleman who enjoys profiting off the poor. What they tell you in the history books is only half the story.~ EXTERN WNOPHYJ F.03x12
+~当然，如果你是位喜欢从穷人身上牟利的高傲贵族。历史书上告诉你的只是一半。~ EXTERN WNOPHYJ F.03x12
 
 CHAIN WNOPHYJ F.03x11
-~Adventurers are often more welcome there then some of their own people, so I'm sure you'd like it just fine.~ EXTERN WNOPHYJ F.03x12
+~冒险者在那儿往往比某些本地人更受欢迎，所以我肯定你会喜欢。~ EXTERN WNOPHYJ F.03x12
 
 CHAIN WNOPHYJ F.03x12
-~The richest parts of the city are all anyone cares about. I'm sure life there is great, but I wouldn't know it. On the edge of the city, inside the walls, there's a place for folks who are too poor, too broken, or too ugly for the 'proper' city.~
-== WNOPHYJ ~That's where I grew up. But it's not my home, and I'm not going back.~
+~城里最富的那些区才是人人关心的。那儿的日子肯定很好，可我不了解。在城边、城墙之内，有个地方是给那些太穷、太破落、或太丑，进不了“正经”城区的人住的。~
+== WNOPHYJ ~我就在那儿长大。可那不是我的家，我不会回去。~
 	END
-		IF~~THEN REPLY ~I understand why. It sounds like a hard life.~ EXTERN WNOPHYJ F.03x13
-		IF~~THEN REPLY ~I'm glad that you found a better home for yourself.~ EXTERN WNOPHYJ F.03x14
-		IF~~THEN REPLY ~Our travels may well take us to Waterdeep at some point.~ EXTERN WNOPHYJ F.03x15
-		IF~~THEN REPLY ~Only a coward runs from their past.~ EXTERN WNOPHYJ F.03x16
+		IF~~THEN REPLY ~我明白为什么。听起来日子很苦。~ EXTERN WNOPHYJ F.03x13
+		IF~~THEN REPLY ~我很高兴你给自己找到了更好的家。~ EXTERN WNOPHYJ F.03x14
+		IF~~THEN REPLY ~我们的旅程说不定哪天会到深水城。~ EXTERN WNOPHYJ F.03x15
+		IF~~THEN REPLY ~只有懦夫才逃避过去。~ EXTERN WNOPHYJ F.03x16
 
 CHAIN WNOPHYJ F.03x13
-~I made the most of it. More than most folks there were able to, at least.~ EXTERN WNOPHYJ F.03x17
+~我尽力利用了它。至少比那儿大多数人都强。~ EXTERN WNOPHYJ F.03x17
 
 CHAIN WNOPHYJ F.03x14
-~It took me a while, but I'm glad I did too. I wouldn't trade it for the world.~ EXTERN WNOPHYJ F.03x17
+~花了我些时间，不过我也很高兴我做到了。我拿什么都不换。~ EXTERN WNOPHYJ F.03x17
 
 CHAIN WNOPHYJ F.03x15
-~I wouldn't count on it, but if they do then at least we'll be able to stop by Daggerford first.~ EXTERN WNOPHYJ F.03x17
+~我不指望这个，可要是真去了，至少我们能先绕去达格福德。~ EXTERN WNOPHYJ F.03x17
 
 CHAIN WNOPHYJ F.03x17
-~Anyway, I think that's enough of a history lesson for one day. This is information that I usually keep close to my heart and far from my thoughts.~
-== WNOPHYJ ~Just don't use my tragic backstory to ruin my reputation—'Ophysia grew up in a sewer, Ophysia smells' et cetera, et cetera. Here's a secret for you: you smell just as bad as I do. Let's go.~
+~总之，这一天的历史课够了。这些事我通常藏在心底，尽量不去想。~
+== WNOPHYJ ~别拿我的悲惨身世毁我名声——“奥菲希娅在下水道长大，奥菲希娅很臭”之类的。告诉你个秘密：你跟我一样臭。走吧。~
 DO ~SetGlobal("WNOPHYFriendTalks","GLOBAL",9)~
 EXIT
 
 CHAIN WNOPHYJ F.03x06
-~Haven't you ever heard of walking and talking? Everyone else does it. Well, whatever. Have it your way.~
+~你没听说过边走边聊吗？别人都这么干。嗯，随便。随你。~
 DO ~SetGlobal("WNOPHYFriendTalks","GLOBAL",9)~
 EXIT
 
 CHAIN WNOPHYJ F.03x16
-~You're not running from Candlekeep, are you? I— Oh, never mind. I'm too tired to argue. You won't hear this from me again if that's how you're going to be.~
+~你不是在逃避烛堡吧？我——哦，算了。我太累了，不想争。你要是这样，这话我不会再说第二遍。~
 DO ~SetGlobal("WNOPHYFriendshipActive","GLOBAL",3)~
 EXIT
 
@@ -414,376 +414,376 @@ EXIT
 // Conversation 4: Shatsk Ambrosius Birgoz and Madri
 
 CHAIN IF~Global("WNOPHYFriendTalks","GLOBAL",11)~THEN WNOPHYJ F.04x01
-~I had forgotten how much fun it was to just... travel. Ever since I found myself in Daggerford, I only really left when I was taking a job. It's nice to be able to wander the countryside without any responsibilities.~
+~我都忘了单纯……旅行有多好玩。自从到了达格福德，我只有接活儿时才真离开。能没牵没挂地在乡间游荡真好。~
 	END
-		IF~~THEN REPLY ~Isn't it your turn to cook tonight?~ EXTERN WNOPHYJ F.04x03
-		IF~~THEN REPLY ~Being under constant threat of ambush isn't my idea of fun.~ EXTERN WNOPHYJ F.04x04
-		IF~~THEN REPLY ~I know what you mean. I never found the time to venture far from Candlekeep... there was always one more thing to do, person to talk to.~ EXTERN WNOPHYJ F.04x05
-		IF~~THEN REPLY ~We don't have time for this to<DAYNIGHT>. Let's keep moving.~ EXTERN WNOPHYJ F.04x02
+		IF~~THEN REPLY ~今晚不是轮到你做饭了吗？~ EXTERN WNOPHYJ F.04x03
+		IF~~THEN REPLY ~时刻担心遭伏击可不是我心目中的乐趣。~ EXTERN WNOPHYJ F.04x04
+		IF~~THEN REPLY ~我懂你的意思。我以前总抽不出时间远离烛堡……总有一件事要做，一个人要谈。~ EXTERN WNOPHYJ F.04x05
+		IF~~THEN REPLY ~我们没空为这事耗<DAYNIGHT>。继续走吧。~ EXTERN WNOPHYJ F.04x02
 
 CHAIN WNOPHYJ F.04x03
-~Ugh, don't remind me.~
-== WNOPHYJ ~You know what I mean, though. I don't have to babysit boring merchants and their stuffy caravans like I usually would on the road. Besides, you're far better company.~ EXTERN WNOPHYJ F.04x06
+~唉，别提醒我。~
+== WNOPHYJ ~不过你懂我意思。我不用像平时在路上那样给无聊商人看货、守他们一板一眼的商队。再说，你的伴儿好得多。~ EXTERN WNOPHYJ F.04x06
 
 CHAIN WNOPHYJ F.04x04
-~You know what I mean, you grouch. I've never known an adventurer to be so skittish!~
-== WNOPHYJ ~Every time I found myself traveling in the past, it was for work, babysitting boring merchants and their stuffy caravans. You're much better company.~ EXTERN WNOPHYJ F.04x06
+~你懂我意思，你个臭脾气。我从没见过哪个冒险者这么容易受惊！~
+== WNOPHYJ ~以前每次旅行都是为了活儿，给无聊商人看货、守他们一板一眼的商队。你的伴儿好得多。~ EXTERN WNOPHYJ F.04x06
 
 CHAIN WNOPHYJ F.04x05
-~It's unfortunate that freedom from chores means constant danger and peril, but I'm glad we can both look on the bright side of things. Adventuring sure beats babysitting boring merchants and their stuffy caravans. And you're much better company, too.~ EXTERN WNOPHYJ F.04x06
+~摆脱杂活就意味着时刻危险、险象环生，这真不幸，不过我很高兴我们俩都能看到好的一面。冒险肯定比给无聊商人看货、守商队强。而且你的伴儿也好得多。~ EXTERN WNOPHYJ F.04x06
 
 CHAIN WNOPHYJ F.04x06
-~The last person I befriended on the road was this dwarvern merchant named Shatsk Ambrosius Birgoz. Doesn't exactly roll off the tongue, does it? Well, he loved reminding people about it. Probably thought it made him sound all important or something. He paid me extra up front to make doubly sure that he arrived at Baldur's Gate safely—easiest job of my life. We made it there without a hitch. He was annoyed that he had wasted money on a guard at all.~
-== WNOPHYJ ~I found it particularly amusing to poke fun at him. He found it less so, but he played along until we got to Baldur's Gate. Then he started yelling at me, telling me I was useless. I promptly removed myself from the situation once he began demanding back the coin he paid me.~
-== WNOPHYJ ~Huh... maybe I shouldn't be considering him a friend.~
+~我在路上交的最后一个朋友，是个叫沙茨克·安布罗修斯·比尔戈兹的矮人商人。这名字念起来一点也不顺口，对吧？可他爱提醒别人这名字。大概觉得这样显得自己很重要之类的。他预先多付我钱，好加倍确保他安全抵达博德之门——我这辈子最轻松的活儿。我们一路平安到了。他倒恼火了，觉得白花钱雇了个护卫。~
+== WNOPHYJ ~我觉得拿他取乐特别有意思。他不这么觉得，可还是配合着，直到我们到了博德之门。然后他开始冲我吼，说我没用。他一开口要回付给我的钱，我就立刻抽身走了。~
+== WNOPHYJ ~嗯……也许我不该把他当朋友。~
 	END
-		IF~~THEN REPLY ~He sounds like a charming man.~ EXTERN WNOPHYJ F.04x07
-		IF~~THEN REPLY ~Typical merchants, always looking for the angle they can profit the most from.~ EXTERN WNOPHYJ F.04x08
-		IF~~THEN REPLY ~I wouldn't think so, no.~ EXTERN WNOPHYJ F.04x09
-		IF~~THEN REPLY ~I don't have the energy for your tangents to<DAYNIGHT>. Let's go.~ EXTERN WNOPHYJ F.04x02
+		IF~~THEN REPLY ~他听起来是个挺有魅力的男人。~ EXTERN WNOPHYJ F.04x07
+		IF~~THEN REPLY ~典型商人，总在找最能赚钱的角度。~ EXTERN WNOPHYJ F.04x08
+		IF~~THEN REPLY ~我想不会，不会。~ EXTERN WNOPHYJ F.04x09
+		IF~~THEN REPLY ~我没精力陪你扯到<DAYNIGHT>。走吧。~ EXTERN WNOPHYJ F.04x02
 
 CHAIN WNOPHYJ F.04x07
-~Doesn't he just?~ EXTERN WNOPHYJ F.04x10
+~可不是嘛？~ EXTERN WNOPHYJ F.04x10
 
 CHAIN WNOPHYJ F.04x08
-~They're not all bad. I think Birgoz was just mad that his paranoia cost him his gold.~ EXTERN WNOPHYJ F.04x10
+~他们也不都坏。我想比尔戈兹只是气自己的疑心害他花了钱。~ EXTERN WNOPHYJ F.04x10
 
 CHAIN WNOPHYJ F.04x09
-~Well, whatever. Like I said, you're much better company.~ EXTERN WNOPHYJ F.04x10
+~嗯，随便。我说了，你的伴儿好得多。~ EXTERN WNOPHYJ F.04x10
 
 CHAIN WNOPHYJ F.04x10
-~Hopefully we don't run into him anywhere.~ // sometimes foreshadowing is relatively obvious
+~希望我们别在哪儿撞上他。~ // sometimes foreshadowing is relatively obvious
 	END
-		IF~~THEN REPLY ~Surely you have people in Daggerford that you're close to.~ EXTERN WNOPHYJ F.04x11
-		IF~~THEN REPLY ~Do you have any ACTUAL friends?~ EXTERN WNOPHYJ F.04x12
-		IF~~THEN REPLY ~Right. Well, we should get going.~ EXTERN WNOPHYJ F.04x02
+		IF~~THEN REPLY ~你在达格福德肯定有亲近的人。~ EXTERN WNOPHYJ F.04x11
+		IF~~THEN REPLY ~你有*真正的*朋友吗？~ EXTERN WNOPHYJ F.04x12
+		IF~~THEN REPLY ~对。嗯，我们该走了。~ EXTERN WNOPHYJ F.04x02
 
 CHAIN WNOPHYJ F.04x11
-~Well, yeah. I probably wouldn't have stayed there if I hadn't hit it off with the people I met.~ EXTERN WNOPHYJ F.04x13
+~嗯，有啊。要是我没跟遇到的人合得来，大概也不会在那儿待下去。~ EXTERN WNOPHYJ F.04x13
 
 CHAIN WNOPHYJ F.04x12
-~Firstly, rude! And secondly, yes, I do. I doubt that I'd have stayed in Daggerford if I hadn't hit it off with the people I met there.~ EXTERN WNOPHYJ F.04x13
+~首先，无礼！其次，有，我有。要是我没跟达格福德遇到的人合得来，我怀疑我不会留在那儿。~ EXTERN WNOPHYJ F.04x13
 
 CHAIN WNOPHYJ F.04x13
-~There's Madri, my best friend, and her family. She was about to finish her wizard apprenticeship just before I left. I... feel kind of bad that I'm not there to celebrate with her, but I'm here with you for the good of the town.~
-== WNOPHYJ ~Her family has kind of become my family. Her little sisters, especially. I have a lot to go back to after all this is done... but home isn't going anywhere.~
+~有玛德莉，我最好的朋友，和她的家人。我走之前她正要完成法师学徒的修行。我……有点遗憾没能留下跟她一起庆祝，可我为了镇子的好处，跟你在这儿。~
+== WNOPHYJ ~她家有点成了我的家。尤其是她的小妹妹们。这一切完了之后我有很多要回去的……可家又不会跑。~
 	END
-		IF~~THEN REPLY ~Aren't you going to go back to Daggerford once our quest is over?~ EXTERN WNOPHYJ F.04x14
-		IF~~THEN REPLY ~I'll admit, you don't seem like the sort of person to stay in one place for long.~ EXTERN WNOPHYJ F.04x15
-		IF~~THEN REPLY ~Home may not be going anywhere, but my energy is. Let's just keep moving, alright?~ EXTERN WNOPHYJ F.04x02
+		IF~~THEN REPLY ~我们的任务结束之后，你不打算回达格福德吗？~ EXTERN WNOPHYJ F.04x14
+		IF~~THEN REPLY ~我得承认，你看着不像会在一个地方久留的人。~ EXTERN WNOPHYJ F.04x15
+		IF~~THEN REPLY ~家也许不会跑，可我的精力会。咱们继续走吧，好吗？~ EXTERN WNOPHYJ F.04x02
 
 CHAIN WNOPHYJ F.04x14
-~I'll visit, certainly. Whether I'll stay there... I don't know.~
-== WNOPHYJ ~I think I just need to travel for a while. The folks at home have heard my tales a hundred times and my skills are wasted on people like Birgoz, so I feel like it's the right time for a little adventure.~ EXTERN WNOPHYJ F.04x16
+~我当然会回去看看。会不会留下……我不知道。~
+== WNOPHYJ ~我想我只是需要旅行一阵。家里的人听过我的故事上百遍了，我的本事浪费在比尔戈兹那种人身上，所以我觉得现在正适合来点冒险。~ EXTERN WNOPHYJ F.04x16
 
 CHAIN WNOPHYJ F.04x15
-~The Waterdhavian city guard would agree with you.~
-== WNOPHYJ ~I don't know how true that is, though. I miss Daggerford, but the folks at home have heard my tales a hundred times and my skills are wasted on people like Birgoz. I feel like it's the right time for a little adventure.~ EXTERN WNOPHYJ F.04x16
+~深水城的城卫会同意你这话。~
+== WNOPHYJ ~不过这有多大真实性，我说不准。我想念达格福德，可家里的人听过我的故事上百遍了，我的本事浪费在比尔戈兹那种人身上。我觉得现在正适合来点冒险。~ EXTERN WNOPHYJ F.04x16
 
 CHAIN WNOPHYJ F.04x16
-~Huh. I seem to be forming a habit of talking your ear off. Let's get going, shall we?~
+~嗯。我好像养成了把你耳朵磨破的习惯。咱们走吧，好吗？~
 DO ~SetGlobal("WNOPHYFriendTalks","GLOBAL",12)~
 EXIT
 
 CHAIN WNOPHYJ F.04x02
-~As you say, your <PRO_LADYLORD>ship.~
+~遵命，我的<PRO_LADYLORD>大人。~
 DO ~SetGlobal("WNOPHYFriendTalks","GLOBAL",12)~
 EXIT
 
 // Conversation 5: Free-form chatting
 
 CHAIN IF~Global("WNOPHYFriendTalks","GLOBAL",14)~THEN WNOPHYJ F.05x01
-~Hmm...~
-== WNOPHYJ ~No, that's no good...~
+~嗯……~
+== WNOPHYJ ~不，这样不行……~
 	END
-		IF~~THEN REPLY ~You're mumbling, Ophysia.~ EXTERN WNOPHYJ F.05x02
-		IF~~THEN REPLY ~What was that? Speak up, girl.~ EXTERN WNOPHYJ F.05x02
-		IF~~THEN REPLY ~Can you quit it? I'm trying to think over here.~ EXTERN WNOPHYJ F.05x03
+		IF~~THEN REPLY ~你在嘟囔，奥菲希娅。~ EXTERN WNOPHYJ F.05x02
+		IF~~THEN REPLY ~什么？大声点，丫头。~ EXTERN WNOPHYJ F.05x02
+		IF~~THEN REPLY ~你能不能别这样？我在这儿想事情。~ EXTERN WNOPHYJ F.05x03
 
 CHAIN WNOPHYJ F.05x02
-~Hm? Oh, I'm running verses in my head. Well, they started in my head. Then they came out of my mouth.~
-== WNOPHYJ ~Sorry if I was bothering you.~
+~嗯？哦，我在脑子里过诗句。嗯，它们从脑子里开始，然后就从嘴里出来了。~
+== WNOPHYJ ~要是我打扰你了，抱歉。~
 	END
-		IF~~THEN REPLY ~You weren't. I just wanted to make sure you were alright.~ EXTERN WNOPHYJ F.05x04
-		IF~~THEN REPLY ~You never bother me, Ophysia.~ EXTERN WNOPHYJ F.05x05
-		IF~~THEN REPLY ~Well, keep it down next time.~ EXTERN WNOPHYJ F.05x03
+		IF~~THEN REPLY ~你没打扰。我只是想确认你没事。~ EXTERN WNOPHYJ F.05x04
+		IF~~THEN REPLY ~你从来不打扰我，奥菲希娅。~ EXTERN WNOPHYJ F.05x05
+		IF~~THEN REPLY ~那下次小声点。~ EXTERN WNOPHYJ F.05x03
 
 CHAIN WNOPHYJ F.05x03
-~Sure, sure. Whatever you say.~ EXTERN WNOPHYJ F.05x06
+~好好好。随你怎么说。~ EXTERN WNOPHYJ F.05x06
 
 CHAIN WNOPHYJ F.05x04
-~I'm fine! No need to worry. I'm just in a bit of a creative slump.~ EXTERN WNOPHYJ F.05x06
+~我没事！不用担心。我只是有点创作瓶颈。~ EXTERN WNOPHYJ F.05x06
 
 CHAIN WNOPHYJ F.05x05
-~Oh, well... Thank you, then. That's good to hear.~ EXTERN WNOPHYJ F.05x06
+~哦，那……谢谢你。这话好听。~ EXTERN WNOPHYJ F.05x06
 
 CHAIN WNOPHYJ F.05x06
-~Do you think we can chat for a bit? It might help me to get out of these clouds my head is swimming in.~
+~你说我们能聊一会儿吗？也许能帮我从脑子里这团乱云里出来。~
 	END
-		IF~~THEN REPLY ~I'd like that. Did you have anything particular in mind?~ EXTERN WNOPHYJ F.05x07
-		IF~~THEN REPLY ~I suppose I can humor you for a time.~ EXTERN WNOPHYJ F.05x08
-		IF~~THEN REPLY ~I'd rather not, Ophysia. Let's just get back to what we were doing.~ EXTERN WNOPHYJ F.05x09
+		IF~~THEN REPLY ~我很愿意。你有特别想聊的吗？~ EXTERN WNOPHYJ F.05x07
+		IF~~THEN REPLY ~我想我能陪你一阵。~ EXTERN WNOPHYJ F.05x08
+		IF~~THEN REPLY ~我宁愿不要，奥菲希娅。咱们回去干刚才的事吧。~ EXTERN WNOPHYJ F.05x09
 
 CHAIN WNOPHYJ F.05x07
-~You'd like that, would you? Here I thought our little conversations were a scourge upon your daily routine.~ EXTERN WNOPHYJ F.05x10
+~你愿意，是吧？我还以为我们这点小谈话是你日常里的祸害呢。~ EXTERN WNOPHYJ F.05x10
 
 CHAIN WNOPHYJ F.05x08
-~You suppose, do you? Well, thank you for your cooperation.~ EXTERN WNOPHYJ F.05x10
+~你想，是吧？那谢谢你的配合。~ EXTERN WNOPHYJ F.05x10
 
 CHAIN WNOPHYJ F.05x10
-~How about you tell me... Your favorite memory from Candlekeep?~
+~不如你告诉我……你在烛堡最喜欢的回忆？~
 	END
-		IF~~THEN REPLY ~There are too many to choose from. I have hundreds of stories about Imoen and I causing trouble for Gorion and the monks. There weren’t any other people our age—not really, at least—so we had to make our own fun, and that usually involved causing mayhem wherever we could. Of course, we’d have to make up for it tenfold with our studies and chores.~ EXTERN WNOPHYJ F.05x11
-		IF~~THEN REPLY ~I think back on the small things most of all. My little room in the library, the late nights studying tomes by candlelight, watching the sun set over the sea… They were quiet moments in a quieter place, and now it’s all gone, denied from me.~ EXTERN WNOPHYJ F.05x12
-		IF~~THEN REPLY ~The times that I could venture beyond Candlekeep’s walls were few and far between, but I treasured each one. Now the world outside the library seems mundane, but it used to excite me like nothing else. Whether I was traveling with Gorion, sneaking out with Imoen, or off camping in the woods.~ EXTERN WNOPHYJ F.05x13
-		IF~~THEN REPLY ~Nothing about my time in Candlekeep can compare to the feeling of leaving it behind. The place was more of a prison than a home. Seeing its walls fade from my sight was the best thing that ever happened to me.~ EXTERN WNOPHYJ F.05x14
-		IF~~THEN REPLY ~I'd rather talk about you, honestly.~ EXTERN WNOPHYJ F.05x15
-		IF~~THEN REPLY ~On second thought, never mind. Let's just keep moving.~ EXTERN WNOPHYJ F.05x16
+		IF~~THEN REPLY ~太多了，挑不出来。我有上百个关于伊莫恩和我给葛立安和修士们惹麻烦的故事。那儿没有别的同龄人——至少不真的算有——所以我们得自己找乐子，那通常意味着到处搞破坏。当然，我们得用功课和杂活十倍地补回来。~ EXTERN WNOPHYJ F.05x11
+		IF~~THEN REPLY ~我最常回想的是那些小事。我在图书馆里的小房间，深夜借着烛光研读典籍，看太阳落到海面上……那是更安静的地方里安静的时辰，如今都没了，被剥夺了。~ EXTERN WNOPHYJ F.05x12
+		IF~~THEN REPLY ~我能出烛堡城墙的机会少而又少，可每一次我都珍视。如今图书馆外的世界显得平淡，可它曾让我兴奋得不得了。无论是跟葛立安同行，跟伊莫恩偷偷溜出去，还是在林子里露营。~ EXTERN WNOPHYJ F.05x13
+		IF~~THEN REPLY ~我在烛堡的日子，什么都比不上离开它的那种感觉。那地方更像监狱，不是家。看它的墙从视野里消失，是我遇到过最好的事。~ EXTERN WNOPHYJ F.05x14
+		IF~~THEN REPLY ~老实说，我更想聊你。~ EXTERN WNOPHYJ F.05x15
+		IF~~THEN REPLY ~再想想，算了。咱们继续走吧。~ EXTERN WNOPHYJ F.05x16
 
 CHAIN WNOPHYJ F.05x11
-~The way you talk about it makes me feel like I've been there. An admirable trait in a storyteller, if I do say so myself.~ EXTERN WNOPHYJ F.05x17
+~你讲得让我觉得我去过那儿。作为说书人，这是可敬的本事，要我说。~ EXTERN WNOPHYJ F.05x17
 
 CHAIN WNOPHYJ F.05x12
-~It's always the small things that make a place special. The smells, the creaky floorboards, the everyday occurences. When you know a place as well as you know yourself, then it's home.~ EXTERN WNOPHYJ F.05x17
+~总是一些小事让一个地方特别。气味，吱呀响的地板，日常的琐事。等你对一个地方熟得像对自己一样，那就是家了。~ EXTERN WNOPHYJ F.05x17
 
 CHAIN WNOPHYJ F.05x13
-~I've always enjoyed being among the trees. I could give or take the swamps we have to wade through every so often, though. I imagine the forest would seem like a magical place for one who spent most of <PRO_HISHER> time surrounded by books.~ EXTERN WNOPHYJ F.05x17
+~我一向喜欢身处林木之间。不过我们时不时得趟过的那些沼泽，我可以要也可以不要。我想对一个大半辈子被书围着的人来说，森林会像块有魔力的地方。~ EXTERN WNOPHYJ F.05x17
 
 CHAIN WNOPHYJ F.05x14
-~Believe me—I know what you mean. I'll never forget the feeling of leaving Waterdeep behind. Though I suppose your experience is laced with a little more tragedy.~ EXTERN WNOPHYJ F.05x17
+~相信我——我懂你的意思。我永远忘不了把深水城抛在身后的感觉。不过我猜你的经历里掺着更多悲剧。~ EXTERN WNOPHYJ F.05x17
 
 CHAIN WNOPHYJ F.05x15
-~Oh? What do you want to know?~
+~哦？你想知道什么？~
 	END
-		IF~~THEN REPLY ~What was your life in Waterdeep like?~ EXTERN WNOPHYJ F.05x18
-		IF~~THEN REPLY ~How did you end up in Daggerford?~ EXTERN WNOPHYJ F.05x25
-		IF~~THEN REPLY ~Tell me about your friend, Madri.~ EXTERN WNOPHYJ F.05x29 
-		IF~~THEN REPLY ~What drew you to life as a bard?~ EXTERN WNOPHYJ F.05x35
-		IF~~THEN REPLY ~On second thought, I think we're out of time. Let's keep going.~ EXTERN WNOPHYJ F.05x24
+		IF~~THEN REPLY ~你在深水城的日子是什么样？~ EXTERN WNOPHYJ F.05x18
+		IF~~THEN REPLY ~你是怎么到达格福德的？~ EXTERN WNOPHYJ F.05x25
+		IF~~THEN REPLY ~跟我说说你的朋友玛德莉。~ EXTERN WNOPHYJ F.05x29 
+		IF~~THEN REPLY ~是什么让你走上吟游诗人这条路的？~ EXTERN WNOPHYJ F.05x35
+		IF~~THEN REPLY ~再想想，我看我们没时间了。继续走吧。~ EXTERN WNOPHYJ F.05x24
 
 CHAIN WNOPHYJ F.05x17
-~Thank you for sharing that with me. It’s only fair I let you ask about me too, if you’d like.~
+~谢谢你跟我分享这些。我也该让你问问我的事，如果你愿意。~
 	END
-		IF~~THEN REPLY ~What was your life in Waterdeep like?~ EXTERN WNOPHYJ F.05x18
-		IF~~THEN REPLY ~How did you end up in Daggerford?~ EXTERN WNOPHYJ F.05x25
-		IF~~THEN REPLY ~Tell me about your friend, Madri.~ EXTERN WNOPHYJ F.05x29
-		IF~~THEN REPLY ~What drew you to life as a bard?~ EXTERN WNOPHYJ F.05x35
-		IF~~THEN REPLY ~No thanks, I think that's enough chatting for one day.~ EXTERN WNOPHYJ F.05x24
+		IF~~THEN REPLY ~你在深水城的日子是什么样？~ EXTERN WNOPHYJ F.05x18
+		IF~~THEN REPLY ~你是怎么到达格福德的？~ EXTERN WNOPHYJ F.05x25
+		IF~~THEN REPLY ~跟我说说你的朋友玛德莉。~ EXTERN WNOPHYJ F.05x29
+		IF~~THEN REPLY ~是什么让你走上吟游诗人这条路的？~ EXTERN WNOPHYJ F.05x35
+		IF~~THEN REPLY ~不用了，我看这一天的闲聊够了。~ EXTERN WNOPHYJ F.05x24
 
 CHAIN WNOPHYJ F.05x18
-~My time in Waterdeep was... not pleasant. I grew up in a run down orphanage on the northern edge of the city. I'm pretty sure everyone there hated me. After enough escape attempts, I moved from a decrepit orphanage to a decrepit home alongside a few folks in a... less than noble crowd.~
-== WNOPHYJ ~We would steal from people who didn't need the gold, head to the dingiest tavern in Waterdeep, and sing songs as we ate and drank the nights away.~
-== WNOPHYJ ~I'd never really considered the possibility of leaving, until one day... I did. And that was that. I have no idea what happened to my old crew.~
+~我在深水城的那些年……并不愉快。我在城北边缘一家破败的孤儿院长大。我相当确定那儿所有人都恨我。在足够多次逃跑之后，我从一所破孤儿院搬到了一处破屋子，跟几个……不太高尚的人混在一起。~
+== WNOPHYJ ~我们会从不需要那些金币的人那儿偷东西，去深水城最破的酒馆，边吃边喝边唱歌，把夜晚耗掉。~
+== WNOPHYJ ~我从没真正想过离开的可能，直到有一天……我走了。就是这样。我完全不知道旧伙计提后来怎么了。~
 	END
-		IF~~THEN REPLY ~That sounds awful, I'm sorry.~ EXTERN WNOPHYJ F.05x19
-		IF~~THEN REPLY ~Stealing is never acceptable, no matter who it's from.~ EXTERN WNOPHYJ F.05x20
-		IF~~THEN REPLY ~I suppose you did what you had to.~ EXTERN WNOPHYJ F.05x21
-		IF~~THEN REPLY ~What happened to your parents?~ EXTERN WNOPHYJ F.05x22
-		IF~~THEN REPLY ~There was something else I wanted to know...~ EXTERN WNOPHYJ F.05x15
+		IF~~THEN REPLY ~听起来太糟了，我很遗憾。~ EXTERN WNOPHYJ F.05x19
+		IF~~THEN REPLY ~偷窃永远不可接受，不管是从谁那儿。~ EXTERN WNOPHYJ F.05x20
+		IF~~THEN REPLY ~我想你是做了不得不做的事。~ EXTERN WNOPHYJ F.05x21
+		IF~~THEN REPLY ~你父母怎么了？~ EXTERN WNOPHYJ F.05x22
+		IF~~THEN REPLY ~还有件事我想知道……~ EXTERN WNOPHYJ F.05x15
 
 CHAIN WNOPHYJ F.05x19
-~Yeah, well, it's in the past now.~ EXTERN WNOPHYJ F.05x23
+~是啊，嗯，那都过去了。~ EXTERN WNOPHYJ F.05x23
 
 CHAIN WNOPHYJ F.05x20
-~Uhuh. Don't act like you hold the moral high ground, <PRO_LADYLORD> Adventurer.~ EXTERN WNOPHYJ F.05x23
+~嗯哼。别摆出一副道德高地的样子，<PRO_LADYLORD>冒险者。~ EXTERN WNOPHYJ F.05x23
 
 CHAIN WNOPHYJ F.05x21
-~I did, and I don't regret it.~
-== WNOPHYJ ~I also don't regret leaving it behind. I'm pretty sure I would've ended up in a cell somewhere if I hadn't.~ EXTERN WNOPHYJ F.05x23
+~我做了，我不后悔。~
+== WNOPHYJ ~我也不后悔把它抛下。我很确定要是没走，我早晚会落到某个牢房里。~ EXTERN WNOPHYJ F.05x23
 
 CHAIN WNOPHYJ F.05x22
-~Never knew them. I don't know who they were, what happened to them, or if they're even still alive.~
-== WNOPHYJ ~I don't have any interest in finding out, anyway.~ EXTERN WNOPHYJ F.05x23
+~从没见过他们。我不知道他们是谁，遭遇了什么，甚至是否还活着。~
+== WNOPHYJ ~反正我也没兴趣去查。~ EXTERN WNOPHYJ F.05x23
 
 CHAIN WNOPHYJ F.05x23
-~This is probably my least favorite topic, so feel free to talk about anything else.~
+~这大概是我最不喜欢的话题，你随意聊别的吧。~
 	END
-		IF~~THEN REPLY ~Of course, my apologies. I did have some more questions.~ EXTERN WNOPHYJ F.05x15
-		IF~~THEN REPLY ~No, I think that's enough talking for now.~ EXTERN WNOPHYJ F.05x24
+		IF~~THEN REPLY ~当然，我道歉。我还有几个问题。~ EXTERN WNOPHYJ F.05x15
+		IF~~THEN REPLY ~不，我看这会儿聊够了。~ EXTERN WNOPHYJ F.05x24
 
 CHAIN WNOPHYJ F.05x25
-~After I left Waterdeep, I spent a while traveling. I figured that I'd travel some great distance and end up having an epiphany on what to do with my life.~
-== WNOPHYJ ~Back in Waterdeep, I used to scale the outermost walls and stare at High Forest in the distance, imagining what sort of adventures I would get up to there.~
-== WNOPHYJ ~So I went there first. Turns out it was mostly riddle-based adventures. Comes with the territory, I suppose. Anyway, it was nice there, but it wasn't for me.~
+~离开深水城之后，我旅行了一阵。我想我会走很远，然后对人生该怎么过恍然大悟。~
+== WNOPHYJ ~在深水城时，我常爬上最外圈的城墙，盯着远处的高密林，想象自己在那儿会遇上什么样的冒险。~
+== WNOPHYJ ~所以我先去了那儿。结果那儿的冒险大多是解谜。我想这是那地方的性质。总之，那儿不错，但不适合我。~
 	END
-		IF~~THEN REPLY ~How is this related to you living in Daggerford?~ EXTERN WNOPHYJ F.05x26
-		IF~~THEN REPLY ~You know what? There's actually something else I wanted to know.~ EXTERN WNOPHYJ F.05x15
-		IF~~THEN REPLY ~Gods forbid Ophysia tell a focused and straightforward story.~ EXTERN WNOPHYJ F.05x26
+		IF~~THEN REPLY ~这跟你住在达格福德有什么关系？~ EXTERN WNOPHYJ F.05x26
+		IF~~THEN REPLY ~你知道吗？其实还有件事我想知道。~ EXTERN WNOPHYJ F.05x15
+		IF~~THEN REPLY ~老天不许奥菲希娅讲个有条有理、直截了当的故事。~ EXTERN WNOPHYJ F.05x26
 
 CHAIN WNOPHYJ F.05x26
-~Shush! Anyway, one day I stumbled across a caravan facing a little hobgoblin problem. So I did what I do best, and dispatched them all with style and grace, then hitched a ride south with the caravan.~
-== WNOPHYJ ~I went all the way to Daggerford with them, chatting and laughing the whole way. Then I met Madri, and... I guess I never really wanted to leave after that. I felt... welcomed. It felt like home.~
+~嘘！总之，有一天我撞见一支商队正为几个大地精发愁。于是我就拿出看家本事，连打带帅地把它们全解决了，然后搭商队的车往南走。~
+== WNOPHYJ ~我跟他们一路到了达格福德，一路聊天大笑。然后我遇见了玛德莉，然后……我想那之后我就再没真想离开过。我觉得……被接纳了。像家。~
 	END
-		IF~~THEN REPLY ~That's a lovely tale. There's something else I wanted to know.~ EXTERN WNOPHYJ F.05x15
-		IF~~THEN REPLY ~You've certainly mastered the art of long-windedness, haven't you?~ EXTERN WNOPHYJ F.05x27
-		IF~~THEN REPLY ~On that note, I think we're out of time to talk. Let's keep walking.~ EXTERN WNOPHYJ F.05x24
+		IF~~THEN REPLY ~这故事真好。还有件事我想知道。~ EXTERN WNOPHYJ F.05x15
+		IF~~THEN REPLY ~你确实精通长篇大论这门艺术，对吧？~ EXTERN WNOPHYJ F.05x27
+		IF~~THEN REPLY ~说到这儿，我看我们没时间聊了。继续走吧。~ EXTERN WNOPHYJ F.05x24
 
 CHAIN WNOPHYJ F.05x27
-~Apologies, my <PRO_LADYLORD>, I forgot that you have the attention span of a xvart. Was there something else, or should we keep moving?~
+~抱歉，我的<PRO_LADYLORD>，我忘了你的注意力只有小妖精那么长。还有别的吗，还是我们继续走？~
 	END
-		IF~~THEN REPLY ~There was something I wanted to know, actually.~ EXTERN WNOPHYJ F.05x15
-		IF~~THEN REPLY ~No, I think we're out of time.~ EXTERN WNOPHYJ F.05x28
+		IF~~THEN REPLY ~其实有件事我想知道。~ EXTERN WNOPHYJ F.05x15
+		IF~~THEN REPLY ~不，我看我们没时间了。~ EXTERN WNOPHYJ F.05x28
 
 CHAIN WNOPHYJ F.05x29
-~Madri and I met during my first week in Daggerford, and she's probably the reason I ended up staying there. She can be a little too serious for her own good sometimes, but I've never connected with anyone as fast as I did with her. She's pretty handy with a spellbook—she's been doing a 'wizard's apprentice' thing that pretty much consumed her life for the last few years. We still found time to be around each other, though.~
+~玛德莉和我在我到达格福德的第一个礼拜认识的，她大概就是我最后留在那儿的原因。她有时候认真得过头，对自己不好，可我从未这么快就跟谁投缘。她用起法术书来很在行——这些年她一直在做“法师学徒”那档事，几乎占了她整个生活。不过我们还是找时间待在一起。~
 	END
-		IF~~THEN REPLY ~That's nice. Anyway, there's something else I wanted to talk about.~ EXTERN WNOPHYJ F.05x15
-		IF~~THEN REPLY ~Are you two... close?~ EXTERN WNOPHYJ F.05x30
-		IF~~THEN REPLY ~You must miss her a lot.~ EXTERN WNOPHYJ F.05x31
-		IF~~THEN REPLY ~We should probably get going.~ EXTERN WNOPHYJ F.05x24
+		IF~~THEN REPLY ~挺好。总之，还有件别的事我想聊。~ EXTERN WNOPHYJ F.05x15
+		IF~~THEN REPLY ~你们俩……很亲近？~ EXTERN WNOPHYJ F.05x30
+		IF~~THEN REPLY ~你一定很想她。~ EXTERN WNOPHYJ F.05x31
+		IF~~THEN REPLY ~我们该走了。~ EXTERN WNOPHYJ F.05x24
 
 CHAIN WNOPHYJ F.05x30
-~Close? Well—oh. I see what you mean.~
-== WNOPHYJ ~It's not like that. If anything, she's more of a sister to me. A taller, more serious, human sister. She has family of her own in Daggerford. Parents. Two little sisters. I miss them all.~ EXTERN WNOPHYJ F.05x32
+~亲近？嗯——哦。我明白你意思了。~
+== WNOPHYJ ~不是那种关系。要说的话，她对我来说更像姐妹。一个更高、更认真的人类姐妹。她在达格福德有自己的家人。父母。两个小妹妹。我想他们所有人。~ EXTERN WNOPHYJ F.05x32
 
 CHAIN WNOPHYJ F.05x31
-~I do. Madri can take care of herself, but I'm glad she didn't come with me to Nashkel. She has family in Daggerford. Parents. Two little sisters. I couldn't bare to go back to them if something happened to Madri under my watch.~ EXTERN WNOPHYJ F.05x32
+~我确实想。玛德莉能照顾自己，可我很高兴她没跟我去那西凯。她在达格福德有家人。父母。两个小妹妹。要是玛德莉在我照看下出了什么事，我没脸回去见他们。~ EXTERN WNOPHYJ F.05x32
 
 CHAIN WNOPHYJ F.05x32
-~I hope they're all doing okay. The iron crisis was making business hard for everyone, even as far north as Secomber.~
+~希望他们都还好。铁危机让所有人的生意都难做，哪怕远在北边的塞康伯也一样。~
 	END
-		IF~~THEN REPLY ~It's clear that you care about them a lot. There was something else I wanted to talk to you about.~ EXTERN WNOPHYJ F.05x15
-		IF~~THEN REPLY ~But there are plenty of unaffected mines up north.~ EXTERN WNOPHYJ F.05x33
-		IF~~THEN REPLY ~Thank you for the talk. We'd best keep moving now.~ EXTERN WNOPHYJ F.05x24
+		IF~~THEN REPLY ~看得出你很在乎他们。还有件别的事我想跟你说。~ EXTERN WNOPHYJ F.05x15
+		IF~~THEN REPLY ~可北边还有很多没受影响的矿。~ EXTERN WNOPHYJ F.05x33
+		IF~~THEN REPLY ~谢谢你陪我聊。我们最好继续走了。~ EXTERN WNOPHYJ F.05x24
 
 CHAIN WNOPHYJ F.05x33
-~You may be right, but fear spreads like a plague. Merchants don't want to travel well-worn roads anymore out of fear of bandit attacks, and if they travel at all then they hire a team of mercenaries to accompany them.~
-== WNOPHYJ ~It makes things harder for people who live along those roads that rely on merchants passing through. Daggerford is just as badly affected as Beregost or Nashkel.~
+~你也许说得对，可恐惧像瘟疫一样传。商人怕遭劫，不愿再走那些熟路，要是真走，就雇一队佣兵随行。~
+== WNOPHYJ ~这让那些靠商人过路维生的路边居民更难了。达格福德受的害跟贝苟斯特或那西凯一样重。~
 	END
-		IF~~THEN REPLY ~I see. In any case, I had another question.~ EXTERN WNOPHYJ F.05x15
-		IF~~THEN REPLY ~Bah! Sounds like cowardice, plain and simple.~ EXTERN WNOPHYJ F.05x34
-		IF~~THEN REPLY ~I think we're out of time for talk. Let's go.~ EXTERN WNOPHYJ F.05x24
+		IF~~THEN REPLY ~我明白了。总之，我还有个问题。~ EXTERN WNOPHYJ F.05x15
+		IF~~THEN REPLY ~呸！听着就是懦弱，明摆着。~ EXTERN WNOPHYJ F.05x34
+		IF~~THEN REPLY ~我看我们没时间聊了。走吧。~ EXTERN WNOPHYJ F.05x24
 
 CHAIN WNOPHYJ F.05x35
-~I always had a knack for playing up my escapades back in Waterdeep, though my audience usually consisted of a local family of rats. When you're not living the life that you want to live, you get to be pretty good at telling stories.~
-== WNOPHYJ ~Don't tell anyone, but I'm not very good with instruments. I can't play a lute for the life of me.~
+~我在深水城那阵，一向擅长把自己的事迹讲得夸张，虽然我的听众通常只是本地一家子老鼠。当你没法过想过的生活时，你会变得相当会讲故事。~
+== WNOPHYJ ~别告诉别人，我用乐器不太行。我弹鲁特琴一窍不通。~
 	END
-		IF~~THEN REPLY ~I wanted to know something else...~ EXTERN WNOPHYJ F.05x15
-		IF~~THEN REPLY ~Your secret is safe with me.~ EXTERN WNOPHYJ F.05x36
-		IF~~THEN REPLY ~Can you sing, at least?~ EXTERN WNOPHYJ F.05x37
-		IF~~THEN REPLY ~What kind of bard can't play any instruments?~ EXTERN WNOPHYJ F.05x38
+		IF~~THEN REPLY ~我还想知道点别的……~ EXTERN WNOPHYJ F.05x15
+		IF~~THEN REPLY ~你的秘密我替你守着。~ EXTERN WNOPHYJ F.05x36
+		IF~~THEN REPLY ~至少你会唱歌吗？~ EXTERN WNOPHYJ F.05x37
+		IF~~THEN REPLY ~什么吟游诗人一样乐器都不会？~ EXTERN WNOPHYJ F.05x38
 
 CHAIN WNOPHYJ F.05x36
-~My thanks. I wouldn't want that information getting out to the public, lest some fellow sees fit to humiliate me by handing me a violin.~ EXTERN WNOPHYJ F.05x39
+~多谢。我可不想这消息传出去，免得哪个家伙觉得该递给我一把小提琴来羞辱我。~ EXTERN WNOPHYJ F.05x39
 
 CHAIN WNOPHYJ F.05x37
-~I... CAN sing, but I'm not going to. You'll have to earn that privilege. The only person I'm comfortable singing around is Madri, and that's because I know she's far worse at it than I.~ EXTERN WNOPHYJ F.05x39
+~我……*会*唱，可我不唱。那特权你得挣。我唯一自在在其面前唱歌的人是玛德莉，因为我知道她比我差得多。~ EXTERN WNOPHYJ F.05x39
 
 CHAIN WNOPHYJ F.05x38
-~The type that can kick your ass. Don't ask stupid questions!~ EXTERN WNOPHYJ F.05x39
+~能踹你屁股的那种。别问蠢问题！~ EXTERN WNOPHYJ F.05x39
 
 CHAIN WNOPHYJ F.05x39
-~Anway, was there anything else?~
+~总之，还有别的吗？~
 	END
-		IF~~THEN REPLY ~Actually, there was something.~ EXTERN WNOPHYJ F.05x15
-		IF~~THEN REPLY ~No, let's keep moving.~ EXTERN WNOPHYJ F.05x24
+		IF~~THEN REPLY ~其实，有件事。~ EXTERN WNOPHYJ F.05x15
+		IF~~THEN REPLY ~不，我们继续走吧。~ EXTERN WNOPHYJ F.05x24
 
 CHAIN WNOPHYJ F.05x09
-~That's fine. I'll just talk to Ao, or something.~
+~没关系。我去跟艾欧聊聊什么的。~
 DO ~SetGlobal("WNOPHYFriendTalks","GLOBAL",15)~
 EXIT
 
 CHAIN WNOPHYJ F.05x16
-~That's fine. Gods forbid you get all nostalgic on me.~
+~没关系。老天不许你对我怀旧一下。~
 DO ~SetGlobal("WNOPHYFriendTalks","GLOBAL",15)~
 EXIT
 
 CHAIN WNOPHYJ F.05x24 //Good chat
-~Well, thanks for the chat. Let's do it again sometime.~
+~嗯，多谢聊天。改天再来一次。~
 DO ~SetGlobal("WNOPHYFriendTalks","GLOBAL",15)~
 EXIT
 
 CHAIN WNOPHYJ F.05x28 //Bad chat
-~Fine by me.~
+~我没意见。~
 DO ~SetGlobal("WNOPHYFriendTalks","GLOBAL",15)~
 EXIT
 
 CHAIN WNOPHYJ F.05x34 //Rude ending
-~Is it cowardice to rightfully fear for your life? Actually, don't answer that. I don't want to know. Let's just go, alright? I don't think I'll be asking you for any more friendly chats.~
+~为自己性命正当担忧算懦弱吗？其实，别答。我不想听。咱们走吧，好吗？我想我不会再找你友好地聊天了。~
 DO ~SetGlobal("WNOPHYFriendshipActive","GLOBAL",3)~
 EXIT
 
 // Conversation 6: Anxiety on the Battlefield
 
 CHAIN IF~Global("WNOPHYFriendTalks","GLOBAL",17)~THEN WNOPHYJ F.06x01
-~You move pretty confidently on the battlefield. Even when you make mistakes, you seem to make up for it. What drives you? Is it just a desire for survival, or is it something else?~
+~你在战场上移动得很自信。就算犯错，你似乎也能补回来。是什么驱动你？只是求生的欲望，还是别的什么？~
 	END
-		IF~~THEN REPLY ~I just do what I have to do. Nothing more, nothing less.~ EXTERN WNOPHYJ F.06x02
-		IF~~THEN REPLY ~It's fun. Nothing beats the feeling of standing before a defeated foe.~ EXTERN WNOPHYJ F.06x03
-		IF~~THEN REPLY ~Survival is the only thing that matters.~ EXTERN WNOPHYJ F.06x04
-		IF~~THEN REPLY ~Really? I feel like I'm barely holding on out there.~ EXTERN WNOPHYJ F.06x05
-		IF~~THEN REPLY ~Well, I wouldn't want to miss out on our next conversation due to my untimely demise...~ EXTERN WNOPHYJ F.06x06
-		IF~~THEN REPLY ~Not now, Ophysia.~ EXTERN WNOPHYJ F.06x07
+		IF~~THEN REPLY ~我只是做我必须做的。不多，不少。~ EXTERN WNOPHYJ F.06x02
+		IF~~THEN REPLY ~好玩。没有什么比站在被击败的敌人面前更痛快。~ EXTERN WNOPHYJ F.06x03
+		IF~~THEN REPLY ~活下来才是唯一要紧的。~ EXTERN WNOPHYJ F.06x04
+		IF~~THEN REPLY ~真的？我觉得我在那儿只是勉强撑着。~ EXTERN WNOPHYJ F.06x05
+		IF~~THEN REPLY ~嗯，我可不想因为英年早逝而错过我们下一次谈话……~ EXTERN WNOPHYJ F.06x06
+		IF~~THEN REPLY ~这会儿不行，奥菲希娅。~ EXTERN WNOPHYJ F.06x07
 
 CHAIN WNOPHYJ F.06x02
-~Ugh. That's a boring answer, though not a terribly surprising one.~ EXTERN WNOPHYJ F.06x08
+~唉。这答案无聊，不过也不算太意外。~ EXTERN WNOPHYJ F.06x08
 
 CHAIN WNOPHYJ F.06x03
-~Ooooookay. A little creepy, but I guess I know what you mean. Facing down death and emerging victorious, and all that.~ EXTERN WNOPHYJ F.06x08
+~好——吧。有点瘆人，不过我想我懂你意思。直面死亡又凯旋之类。~ EXTERN WNOPHYJ F.06x08
 
 CHAIN WNOPHYJ F.06x04
-~Is it? You don't feel as though you're fighting for a cause, or anything?~ EXTERN WNOPHYJ F.06x08
+~是吗？你不觉得自己是在为某个事业而战吗？~ EXTERN WNOPHYJ F.06x08
 
 CHAIN WNOPHYJ F.06x05
-~It doesn't show. Maybe you're just being modest. I kind of feel that way, myself.~ EXTERN WNOPHYJ F.06x08
+~看不出来。也许你只是谦虚。我自己多少也有那种感觉。~ EXTERN WNOPHYJ F.06x08
 
 CHAIN WNOPHYJ F.06x06
-~I know that I'm an excellent conversational partner and all, but I was being serious.~ EXTERN WNOPHYJ F.06x08
+~我知道我是个极好的谈话对象之类，可我是认真的。~ EXTERN WNOPHYJ F.06x08
 
 CHAIN WNOPHYJ F.06x08
-~When I'm out there, swinging my sword or acting all confident, there's a little part of me that's just... terrified. Like I've suddenly remembered all at once how vulnerable I am. That it could all end with one bad fight.~
-== WNOPHYJ ~Do you know what I mean?~
+~我在那儿挥剑、装出一副自信样子的时候，我心里有一小块就是……怕得要命。就像我突然一下子想起自己多脆弱。一切可能在一场败仗里结束。~
+== WNOPHYJ ~你懂我意思吗？~
 	END
-		IF~~THEN REPLY ~I do. Yet despite this, we still fight as hard as we can. That's all we can do, and at the end of the day, it's our actions that matter the most.~ EXTERN WNOPHYJ F.06x09
-		IF~~THEN REPLY ~You're not vulnerable, though. You're a skilled warrior with equally skilled allies. Don't undermine your abilities.~ EXTERN WNOPHYJ F.06x10
-		IF~~THEN REPLY ~Everyone has doubts, Ophysia. Courage is not the absence of fear.~ EXTERN WNOPHYJ F.06x11
-		IF~~THEN REPLY ~You don't have to be afraid. I'll protect you.~ EXTERN WNOPHYJ F.06x12
-		IF~~THEN REPLY ~No. If you're scared, then go home.~ EXTERN WNOPHYJ F.06x13
+		IF~~THEN REPLY ~我懂。可尽管如此，我们还是拼尽全力去打。我们只能这样，归根到底，最重要的是我们的行动。~ EXTERN WNOPHYJ F.06x09
+		IF~~THEN REPLY ~可你并不脆弱。你是个熟练的战士，还有同样熟练的盟友。别贬低自己的本事。~ EXTERN WNOPHYJ F.06x10
+		IF~~THEN REPLY ~人人都有疑虑，奥菲希娅。勇气不是没有恐惧。~ EXTERN WNOPHYJ F.06x11
+		IF~~THEN REPLY ~你不必害怕。我会保护你。~ EXTERN WNOPHYJ F.06x12
+		IF~~THEN REPLY ~不。你要是怕，那就回家。~ EXTERN WNOPHYJ F.06x13
 
 CHAIN WNOPHYJ F.06x09
-~I suppose you're right. I can't really imagine myself turning heel and running away. Especially if doing so would put someone else in danger. It's reassuring that you know what I mean, though.~ EXTERN WNOPHYJ F.06x14
+~我想你说得对。我真没法想象自己转身逃跑。尤其要是那样会让别人陷入危险。不过知道你也懂这意思，让我安心。~ EXTERN WNOPHYJ F.06x14
 
 CHAIN WNOPHYJ F.06x10
-~Yeah. Yeah, you're right. I feel like I've become so much better at all this since I started traveling with you.~ EXTERN WNOPHYJ F.06x14
+~对。对，你说得对。我觉得自从跟你旅行，我在这上头强了很多。~ EXTERN WNOPHYJ F.06x14
 
 CHAIN WNOPHYJ F.06x11
-~I don't know what to do with that fear, though. I try not to let it get to me, but is that all it is?~ EXTERN WNOPHYJ F.06x14
+~可我不知道拿这份恐惧怎么办。我尽量不让它影响我，可它就只是这个吗？~ EXTERN WNOPHYJ F.06x14
 
 CHAIN WNOPHYJ F.06x12
-~That—that's not what I'm saying. I don't NEED to be protected. I just have this lingering fear in the back of my head.~ EXTERN WNOPHYJ F.06x14
+~那——我不是这个意思。我*不需要*被保护。我只是后脑勺总有一份挥不去的恐惧。~ EXTERN WNOPHYJ F.06x14
 
 CHAIN WNOPHYJ F.06x14
-~Maybe I'd be worse off without the fear, like some new adventurer that gets themselves killed right outside their hometown. That doesn't mean it's... easy to deal with, though. I just hope that it doesn't cost us anything in the long run.~
-== WNOPHYJ ~Agh, whatever. This doesn't change anything. You can forget I brought it up.~
+~也许没有这份恐惧我反而更糟，像个刚出道的冒险者，在家门口就把自己弄死。可这也不代表它……好对付。我只希望它长远上不会让我们付出什么代价。~
+== WNOPHYJ ~唉，随便。这改变不了什么。你可以当我没提过。~
 	END
-		IF~~THEN REPLY ~If you say so.~ EXTERN WNOPHYJ F.06x15
-		IF~~THEN REPLY ~Your skills are invaluable to the group, Ophysia. Don't forget that.~ EXTERN WNOPHYJ F.06x16
-		IF~~THEN REPLY ~You don't need to brush your issues away so easily. I'm here to listen.~ EXTERN WNOPHYJ F.06x17
-		IF~~THEN REPLY ~Gladly. Let's get moving.~ EXTERN WNOPHYJ F.06x07
+		IF~~THEN REPLY ~随你怎么说。~ EXTERN WNOPHYJ F.06x15
+		IF~~THEN REPLY ~你的本事对队伍无比宝贵，奥菲希娅。别忘了。~ EXTERN WNOPHYJ F.06x16
+		IF~~THEN REPLY ~你不必这么轻易把自己的问题扫开。我在这儿听着。~ EXTERN WNOPHYJ F.06x17
+		IF~~THEN REPLY ~乐意。咱们走吧。~ EXTERN WNOPHYJ F.06x07
 
 CHAIN WNOPHYJ F.06x16
-~Yeah, yeah. Whatever you say.~ EXTERN WNOPHYJ F.06x18
+~是是是。随你怎么说。~ EXTERN WNOPHYJ F.06x18
 
 CHAIN WNOPHYJ F.06x17
-~You sound like Madri right now. She's usually right about this sort of thing.~ EXTERN WNOPHYJ F.06x18
+~你现在说话像玛德莉。这种事她通常是对的。~ EXTERN WNOPHYJ F.06x18
 
 CHAIN WNOPHYJ F.06x07
-~Yeah, yeah. Alright.~
+~是是是。好。~
 DO ~SetGlobal("WNOPHYFriendTalks","GLOBAL",18)~
 EXIT
 
 CHAIN WNOPHYJ F.06x13
-~You can be awful to talk to sometimes, you know?~
+~你有时候真难聊，你知道吗？~
 DO ~SetGlobal("WNOPHYFriendshipActive","GLOBAL",3)~
 EXIT
 
 CHAIN WNOPHYJ F.06x15
-~I do say so!~
+~我确实这么说！~
 DO ~SetGlobal("WNOPHYFriendTalks","GLOBAL",18)~
 EXIT
 
 CHAIN WNOPHYJ F.06x18
-~Thanks, <CHARNAME>.~
+~谢谢你，<CHARNAME>。~
 DO ~SetGlobal("WNOPHYFriendTalks","GLOBAL",18)~
 EXIT
 
@@ -794,25 +794,25 @@ EXIT
 // ELDOTH CONFLICT Global("WNOPHY_ELDOTH","GLOBAL",4)
 
 CHAIN IF~Global("WNOPHY_ELDOTH_FIGHT","GLOBAL",2) InParty("ELDOTH")~THEN WNOPHYJ Conflict1.00
-~Eldoth, I swear to the gods, if you keep staring at me, I will make you regret it.~
-	== ELDOTJ ~Whatever is wrong with looking? I would expect a gutter-rat like to you leap to catch any crumb of attention you can get. I doubt your parents ever gave you any—it would explain *so* much.~
-	== WNOPHYJ ~I refuse to do this with you. I've put up with your barbs for long enough. Another tenday with you and I’ll start entertaining choices I once considered beneath me.~
-	== ELDOTJ ~Oh, please, don't hold back on my account. Let's see what you've got, girl.~
-	== SKIEJ IF ~InParty("SKIE")~ THEN ~Please, will you both just stop it? We’re supposed to be a team! Eldoth, you’re being cruel—and Ophysia, you don’t deserve it, but fighting back just makes it worse. I can’t stand this. Can’t we just... try to get along?~
-	== WNOPHYJ ~<CHARNAME>, I'm struggling to see why we're keeping Eldoth around. Either he goes, or I do.~
+~埃尔多斯，我向神发誓，你再盯着我，我就让你后悔。~
+	== ELDOTJ ~看看有什么错？我倒指望你这种沟渠老鼠会扑向任何一点注意。我怀疑你父母从没给过你——这能解释*太多*了。~
+	== WNOPHYJ ~我拒绝跟你来这套。你的刺我忍够了。再跟你过十个十日，我就要开始考虑一些我曾觉得不配我的选择。~
+	== ELDOTJ ~哦，拜托，别为我忍着。让我看看你有什么，丫头。~
+	== SKIEJ IF ~InParty("SKIE")~ THEN ~求你们，能不能都停下？我们本该是一个队！埃尔多斯，你太残忍了——还有奥菲希娅，你不该受这个，可回击只会更糟。我受不了。我们不能……试着相处吗？~
+	== WNOPHYJ ~<CHARNAME>，我很难看出我们为什么还留着埃尔多斯。要么他走，要么我走。~
 	END
-		IF~~THEN REPLY ~If that's the way it's going to be, then I suppose Eldoth is going.~ EXTERN ELDOTJ Conflict1.01
-		IF~InParty("SKIE")~THEN REPLY ~Skie’s right. If you two can’t put this behind you, maybe neither of you should stay. I won’t let this party be torn apart by petty fights.~ EXTERN ELDOTJ Conflict1.02
-		IF~CheckStatGT(Player1,15,CHR)~THEN REPLY ~You two are both valuable, but my patience has its limits. I expect more from the people I travel with. Either you call a truce and focus on the task at hand, or neither of you has a place in this group.~ EXTERN ELDOTJ Conflict1.03 //Success 
-		IF~CheckStatLT(Player1,16,CHR)~THEN REPLY ~You two are both valuable, but my patience has its limits. I expect more from the people I travel with. Either you call a truce and focus on the task at hand, or neither of you has a place in this group.~ EXTERN WNOPHYJ Conflict1.04 //Failure
-		IF~~THEN REPLY ~Then it looks like you're leaving, Ophysia.~ EXTERN WNOPHYJ Conflict1.05
+		IF~~THEN REPLY ~既然要这样，那我看走的是埃尔多斯。~ EXTERN ELDOTJ Conflict1.01
+		IF~InParty("SKIE")~THEN REPLY ~史姬说得对。你们要是没法把这事放下，也许两个都不该留。我不会让这支队伍被小吵小闹撕碎。~ EXTERN ELDOTJ Conflict1.02
+		IF~CheckStatGT(Player1,15,CHR)~THEN REPLY ~你们俩都宝贵，可我的耐性有限。我对我同行的人期望更高。要么你们停战、专心眼前的事，要么你们两个都不属于这支队。~ EXTERN ELDOTJ Conflict1.03 //Success 
+		IF~CheckStatLT(Player1,16,CHR)~THEN REPLY ~你们俩都宝贵，可我的耐性有限。我对我同行的人期望更高。要么你们停战、专心眼前的事，要么你们两个都不属于这支队。~ EXTERN WNOPHYJ Conflict1.04 //Failure
+		IF~~THEN REPLY ~那看来走的是你，奥菲希娅。~ EXTERN WNOPHYJ Conflict1.05
 		
 CHAIN ELDOTJ Conflict1.01
-~What? You good for nothing wench... Fine! If you're so desperate to be rid of my company, then so be it!~
-	== ELDOTJ IF ~InParty("SKIE")~THEN ~Come along Skie. I'm not so cruel a man as to leave you in the hungry jaws of these cretins.~
-	== SKIEJ IF ~InParty("SKIE")~THEN ~*sigh* Fine, Eldoth. Maybe I'll see you around, Ophysia.~
-	== WNOPHYJ ~Get out of here, Eldoth. I'm sure you'll get what's coming to you eventually.~
-	== ELDOTJ ~Goodbye now. Hope to never see you again.~ [ELDOT07]
+~什么？你这个没用的贱人……行！你这么急着摆脱我，那就随你！~
+	== ELDOTJ IF ~InParty("SKIE")~THEN ~来吧，史姬。我没那么残忍，不会把你留给这些下等人的饿嘴。~
+	== SKIEJ IF ~InParty("SKIE")~THEN ~*叹气* 好，埃尔多斯。也许以后还会见到你，奥菲希娅。~
+	== WNOPHYJ ~滚出去，埃尔多斯。我相信你早晚会得到报应。~
+	== ELDOTJ ~再见了。希望再也见不到你。~ [ELDOT07]
 	DO
     ~ActionOverride("ELDOTH",LeaveParty())
     ActionOverride("ELDOTH",EscapeArea())
@@ -822,27 +822,27 @@ CHAIN ELDOTJ Conflict1.01
 EXIT
 	
 CHAIN ELDOTJ Conflict1.02
-~Well now, it appears that my Skie has become a fountain of wisdom. I suppose I can attempt to divert my hostilities towards a more... productive end if it would so please you both.~
-	== WNOPHYJ ~I can live with that. For now.~
-	== SKIEJ IF~InParty("SKIE")~THEN ~I'll walk with you Ophysia. Maybe you could tell me a story? I always like listening to you...~
+~那么，看来我的史姬成了智慧之泉。如果两位愿意，我想我可以试着把敌意转向一个更……有产出的方向。~
+	== WNOPHYJ ~我可以接受。就目前而言。~
+	== SKIEJ IF~InParty("SKIE")~THEN ~我陪你走，奥菲希娅。也许你可以给我讲个故事？我一直喜欢听你讲……~
 	DO ~SetGlobal("wn_ophy_eldoth","GLOBAL",3) SetGlobal("WNOPHY_ELDOTH_FIGHT","GLOBAL",3)~ EXIT
 	
 CHAIN ELDOTJ Conflict1.03
-~Why, I wouldn't want to test your *patience*. Though, I suppose I can attempt to divert my hostilities towards a more... productive end if it would so please you.~
-	== WNOPHYJ ~I can live with that. For now. Just remember—if you call me 'gutter-rat' one more time, any truce between us is forfeit. Understood?~
-	== ELDOTJ ~Indeed. I shan't forget so long as you keep your blade pointed away from my neck.~
-	== SKIEJ IF~InParty("SKIE")~THEN ~See? Everything's alright. Let's just stay friendly, okay?~
-	== ELDOTJ IF~InParty("SKIE")~THEN ~Anything for you, Skie. Now come along, walk beside me.~
+~哎呀，我可不想考验你的*耐性*。不过，要是我能让两位满意，我想我可以试着把敌意转向一个更……有产出的方向。~
+	== WNOPHYJ ~我可以接受。就目前而言。不过记住——你要再叫我一声“沟渠老鼠”，我们之间的任何休战都作废。明白？~
+	== ELDOTJ ~确实。只要你的刀不冲着我的脖子，我就不会忘。~
+	== SKIEJ IF~InParty("SKIE")~THEN ~看？都没事了。咱们就友好相处，好吗？~
+	== ELDOTJ IF~InParty("SKIE")~THEN ~为你，什么都行，史姬。现在来吧，走我旁边。~
 	DO ~SetGlobal("WNOPHY_ELDOTH_FIGHT","GLOBAL",3)~ EXIT
 	
 CHAIN WNOPHYJ Conflict1.04
-~Absolutely not. I'd rather pull out my own hair than walk alongside this xvart-faced chauvinist another <DAYNIGHT>. If you want him in the group, you're saying goodbye to me—and that's not a difficult choice for me to make.~
+~绝对不行。我宁愿把自己的头发拔光，也不愿跟这个长着妖精脸的沙文主义者再走一个<DAYNIGHT>。你要他留在队里，那就是跟我道别——这选择对我来说不难做。~
 	END
-		IF~~THEN REPLY ~Very well. Goodbye, Eldoth—you're leaving.~ EXTERN ELDOTJ Conflict1.01
-		IF~~THEN REPLY ~If you wish to force the issue, then you'll have to leave, Ophysia.~ EXTERN WNOPHYJ Conflict1.05
+		IF~~THEN REPLY ~很好。再见，埃尔多斯——你走。~ EXTERN ELDOTJ Conflict1.01
+		IF~~THEN REPLY ~你要是想强行如此，那走的是你，奥菲希娅。~ EXTERN WNOPHYJ Conflict1.05
 		
 CHAIN WNOPHYJ Conflict1.05
-~Fine. I see where your priorities lie, and I'd prefer not to travel with someone who thinks Eldoth Kron’s company is worth more than mine. If that’s truly the choice you want to make, then so be it. Goodbye, <CHARNAME>—and good luck. You'll need it if he's who you're choosing to watch your back.~
+~行。我看清你把什么放在前头了，我也不想跟一个认为埃尔多斯·克朗的陪伴比我值钱的人同行。你要是真要做这个选择，那就这样吧。再见，<CHARNAME>——祝你好运。你要是选他替你守后背，你会需要的。~
 	DO 
 	~ActionOverride("WNOPHY",LeaveParty())
     ActionOverride("WNOPHY",EscapeArea())
@@ -853,236 +853,236 @@ EXIT
 // AFTER MULAHEY'S DEATH
 
 CHAIN IF~Global("WNPaperTrail","GLOBAL",2)~THEN WNOPHYJ PaperTrail.01
-~We're lucky that all these ugly bandits seem to love carrying around letters from their bosses. I'd bet real gold that we can follow this paper trail all the way to the top. Here's a tip for if you ever put together a villanous plot—word of mouth leaves no evidence.~
+~真走运，这些丑强盗好像都爱随身带着老板的信。我敢拿真金打赌，我们能顺着这条纸线索一路查到顶。给你个提示，哪天你要策划阴谋——口头传话不留证据。~
 	END
-		IF~~THEN REPLY ~You've given this an awful lot of thought. You're not plotting to overthrow the Sword Coast, are you?~ EXTERN WNOPHYJ PaperTrail.02
-		IF~~THEN REPLY ~Only if you're pulling off petty heists. A larger plot requires a deft hand.~ EXTERN WNOPHYJ PaperTrail.03
-		IF~~THEN REPLY ~I'm just happy things are going our way.~ EXTERN WNOPHYJ PaperTrail.04
-		IF~~THEN REPLY ~We really don't have time to discuss this, Ophysia.~ EXTERN WNOPHYJ PaperTrail.05
+		IF~~THEN REPLY ~你想得可真多。你不是在谋划推翻剑湾吧？~ EXTERN WNOPHYJ PaperTrail.02
+		IF~~THEN REPLY ~前提你只搞小打小闹的抢劫。大阴谋得靠灵巧的手。~ EXTERN WNOPHYJ PaperTrail.03
+		IF~~THEN REPLY ~事情顺着我们来，我就高兴了。~ EXTERN WNOPHYJ PaperTrail.04
+		IF~~THEN REPLY ~我们真的没空讨论这个，奥菲希娅。~ EXTERN WNOPHYJ PaperTrail.05
 
 CHAIN WNOPHYJ PaperTrail.02
-~Not in this lifetime. I've dabbled in a few schemes before—you know, the whole 'steal from the rich and eat well for a week' type of thing. Nothing TOO nefarious.~ EXTERN WNOPHYJ PaperTrail.06
+~这辈子都不会。我以前试过几个小计谋——你知道，那种“劫富、吃好一个礼拜”的路子。不算*太*邪恶。~ EXTERN WNOPHYJ PaperTrail.06
 
 CHAIN WNOPHYJ PaperTrail.03
-~There's careful, and then there's this. Do they use regular messengers, or bandit messengers? Wouldn't that just be the worst job? Running correspondence back and forth between people who think they're the smartest, most important people alive?~
-== WNOPHYJ ~And to have the law on your tail too! You couldn't pay me to be a bandit messenger.~ EXTERN WNOPHYJ PaperTrail.06
+~有谨慎的，然后有这种。他们用普通信使，还是强盗信使？那岂不最糟的差事？在自认最聪明、最重要的人之间来回跑信？~
+== WNOPHYJ ~还得被官府追！你给钱我也不当强盗信使。~ EXTERN WNOPHYJ PaperTrail.06
 
 CHAIN WNOPHYJ PaperTrail.04
-~Me too, but I'm wary of our luck running out. Eventually we'll run out of people telling us where to go, what to do, and how to do it. I'm perfectly happy to follow the pointed arrow until that happens though.~ EXTERN WNOPHYJ PaperTrail.06
+~我也一样，可我担心我们的运气会用完。早晚没人再告诉我们该去哪、该做什么、怎么做。在那之前，我倒是很乐意跟着箭头走。~ EXTERN WNOPHYJ PaperTrail.06
 
 CHAIN WNOPHYJ PaperTrail.06
-~I wonder what kind of reward we'll get once we're done with it. Maybe the dukes of Baldur's Gate themselves will dump a load of gold on us and herald us as heroes. Gods know they can afford it.~
+~我好奇这事完了我们能得什么赏。也许博德之门的大公们会亲自往我们身上倒一堆金币，把我们捧成英雄。天知道他们付得起。~
 		END
-		IF~~THEN REPLY ~I wouldn't mind that. Fame and riches certainly have their appeal.~ EXTERN WNOPHYJ PaperTrail.07
-		IF~~THEN REPLY ~I'm hoping for a bit more than a congratulations and a pat on the back, at least.~ EXTERN WNOPHYJ PaperTrail.08
-		IF~~THEN REPLY ~Those things don't interest me. I'm doing this because it's the right thing to do.~ EXTERN WNOPHYJ PaperTrail.09
-		IF~~THEN REPLY ~If we ever figure it out. I'm finding it hard to keep up with everything.~ EXTERN WNOPHYJ PaperTrail.10
-		IF~~THEN REPLY ~Is gold all you think about? Let's just go before I get a headache.~ EXTERN WNOPHYJ PaperTrail.11
+		IF~~THEN REPLY ~我不反对。名声和财富当然有吸引力。~ EXTERN WNOPHYJ PaperTrail.07
+		IF~~THEN REPLY ~至少我指望的比一句恭喜和拍拍背多点。~ EXTERN WNOPHYJ PaperTrail.08
+		IF~~THEN REPLY ~那些东西我不感兴趣。我做这事是因为它是对的。~ EXTERN WNOPHYJ PaperTrail.09
+		IF~~THEN REPLY ~要是我们能弄明白的话。我觉得什么都跟不上。~ EXTERN WNOPHYJ PaperTrail.10
+		IF~~THEN REPLY ~你满脑子就是金子？咱们走吧，别让我头疼。~ EXTERN WNOPHYJ PaperTrail.11
 
 CHAIN WNOPHYJ PaperTrail.07
-~They're empty promises, unfortunately. Heroes are forgotten and gold remains hoarded until its owner is inevitably plucked from this mortal coil.~ EXTERN WNOPHYJ PaperTrail.12
+~不幸的是，那些都是空头承诺。英雄被遗忘，金币被囤着，直到主人不可避免地被从这凡世带走。~ EXTERN WNOPHYJ PaperTrail.12
 
 CHAIN WNOPHYJ PaperTrail.08
-~It'll be one or the other. I've managed to lose all the coin I've ever received and no title granted to me has ever stuck, so I'll probably end up right back where I started.~ EXTERN WNOPHYJ PaperTrail.12
+~两者之一吧。我拿到过的钱全丢光了，封给我的头衔也一个没留住，所以我大概会回到起点。~ EXTERN WNOPHYJ PaperTrail.12
 
 CHAIN WNOPHYJ PaperTrail.09
-~Oh, how noble. I suppose you'll refuse any reward, and let the gold reside with those who need it the least? I'm sure the dukes wouldn't miss it.~ EXTERN WNOPHYJ PaperTrail.12
+~哦，多高尚。我猜你会拒收任何报酬，让金币留在最不需要它的人手里？我相信大公们不会想念它。~ EXTERN WNOPHYJ PaperTrail.12
 
 CHAIN WNOPHYJ PaperTrail.10
-~Hey, keep that chin up. We're doing well, and if we KEEP doing well then we might end up with a boatload of coin at the end of it.~ EXTERN WNOPHYJ PaperTrail.12
+~嘿，别泄气。我们干得不错，要是我们*继续*干得好，最后说不定能捞一大船金币。~ EXTERN WNOPHYJ PaperTrail.12
 
 CHAIN WNOPHYJ PaperTrail.12
-~Better to take that gold and do something good with it, though. Who knows—by showing a little kindness we might be able to prevent the next plot to throw the Sword Coast into turmoil.~
-== WNOPHYJ ~Not that I'm trying to induct you into a life of philanthrophy. I just don't like sitting idly when there are things that I can do to help people.~
+~不过不如拿那些金币去做点好事。谁知道——靠施一点善意，我们也许能阻止下一个把剑湾搅乱的阴谋。~
+== WNOPHYJ ~不是我想引你过一种慈善人生。我只是不喜欢在能做点什么帮人的时候干坐着。~
 	END
-		IF~~THEN REPLY ~This sounds personal to you.~ EXTERN WNOPHYJ PaperTrail.13
-		IF~~THEN REPLY ~I admire that. It's a noble trait to have.~ EXTERN WNOPHYJ PaperTrail.14
-		IF~~THEN REPLY ~I feel similarly. Those with power should do what they can do help those without.~ EXTERN WNOPHYJ PaperTrail.15
-		IF~~THEN REPLY ~What's the point in helping others if it leaves you with nothing?~ EXTERN WNOPHYJ PaperTrail.16
+		IF~~THEN REPLY ~这听着对你来说是私事。~ EXTERN WNOPHYJ PaperTrail.13
+		IF~~THEN REPLY ~我欣赏这一点。这是个高尚的品质。~ EXTERN WNOPHYJ PaperTrail.14
+		IF~~THEN REPLY ~我也有同感。有力量的人该尽力帮助没有力量的人。~ EXTERN WNOPHYJ PaperTrail.15
+		IF~~THEN REPLY ~帮别人如果让自己一无所有，那有什么意义？~ EXTERN WNOPHYJ PaperTrail.16
 
 CHAIN WNOPHYJ PaperTrail.13
-~How observant of you.~ EXTERN WNOPHYJ PaperTrail.17
+~你观察得真细。~ EXTERN WNOPHYJ PaperTrail.17
 
 CHAIN WNOPHYJ PaperTrail.14
-~Hah, that's not something I hear a whole lot.~ EXTERN WNOPHYJ PaperTrail.17
+~哈，这话我不常听到。~ EXTERN WNOPHYJ PaperTrail.17
 
 CHAIN WNOPHYJ PaperTrail.15
-~Everyone has power. There's power in community, but some people are determined to keep such things repressed.~ EXTERN WNOPHYJ PaperTrail.17
+~人人都有力量。共同体里就有力量，可有些人一心要把这种东西压下去。~ EXTERN WNOPHYJ PaperTrail.17
 
 CHAIN WNOPHYJ PaperTrail.05
-~Not a fan of camaraderie, huh? Fine. Let's go.~
+~不喜欢同志情谊，是吧？行。走吧。~
 DO ~SetGlobal("WNPaperTrail","GLOBAL",3)~
 EXIT
 
 CHAIN WNOPHYJ PaperTrail.17
-~We'd best keep moving. Thanks for the chat, oh great leader.~
+~我们最好继续走。多谢聊天，哦伟大的领袖。~
 DO ~SetGlobal("WNPaperTrail","GLOBAL",3)~
 EXIT
 
 CHAIN WNOPHYJ PaperTrail.11
-~Not a fan of conversations, huh? Can't blame you. Let's go.~
+~不喜欢谈话，是吧？怪不得你。走吧。~
 DO ~SetGlobal("WNPaperTrail","GLOBAL",3)~
 EXIT
 
 CHAIN WNOPHYJ PaperTrail.16
-~You seem to have mastered the art of selective listening, because you clearly haven't understood anything I've said. Let's cut this conversation short and get going, huh?~
+~你似乎精通选择性听力这门艺术，因为你显然一点没听懂我说的话。咱们就把这场谈话截短，继续走吧，嗯？~
 DO ~SetGlobal("WNPaperTrail","GLOBAL",3)~
 EXIT
 
 // Baldur's Gate
 
 CHAIN IF~Global("WNCityTalk","GLOBAL",2)~THEN WNOPHYJ CityTalk.01
-~So... Baldur's Gate. What do you think of it? Personally, I've always found it a bit pungent.~
+~那么……博德之门。你觉得怎样？就我个人来说，我一直觉得它味儿有点冲。~
 	END
-		IF~~THEN REPLY ~It's not that bad.~ EXTERN WNOPHYJ CityTalk.02
-		IF~~THEN REPLY ~What do you mean?! This is amazing!~ EXTERN WNOPHYJ CityTalk.03
-		IF~~THEN REPLY ~I'm not impressed by what I've seen so far, that's for sure.~ EXTERN WNOPHYJ CityTalk.04
-		IF~~THEN REPLY ~It's certainly a lot busier than Candlekeep ever was.~ EXTERN WNOPHYJ CityTalk.05
-		IF~~THEN REPLY ~Then let's not waste time standing around chatting. Let's get out of here.~ EXTERN WNOPHYJ CityTalk.06
+		IF~~THEN REPLY ~也没那么糟。~ EXTERN WNOPHYJ CityTalk.02
+		IF~~THEN REPLY ~你什么意思？！这地方棒极了！~ EXTERN WNOPHYJ CityTalk.03
+		IF~~THEN REPLY ~就我到目前为止看到的，我不觉得有什么了不起。~ EXTERN WNOPHYJ CityTalk.04
+		IF~~THEN REPLY ~它确实比烛堡热闹多了。~ EXTERN WNOPHYJ CityTalk.05
+		IF~~THEN REPLY ~那就别站着闲聊浪费时间。咱们离开这儿。~ EXTERN WNOPHYJ CityTalk.06
 
 CHAIN WNOPHYJ CityTalk.02
-~It's not *that* bad, but it is *bad*. The moment you look beneath the surface, you realize what kind of place this is.~ EXTERN WNOPHYJ CityTalk.07
+~也没*那么*糟，可确实*糟*。你一看表面底下，就知道这是什么地方。~ EXTERN WNOPHYJ CityTalk.07
 
 CHAIN WNOPHYJ CityTalk.03
-~I can see why you might think so, library <PRO_GIRLBOY>. Look a little beneath the surface, though, and you'll realize what kind of place this is.~ EXTERN WNOPHYJ CityTalk.07
+~我能理解你为什么会这么想，书呆子<PRO_GIRLBOY>。不过往表面底下看一点，你就会明白这是什么地方。~ EXTERN WNOPHYJ CityTalk.07
 
 CHAIN WNOPHYJ CityTalk.04
-~And you've barely even scratched the surface.~ EXTERN WNOPHYJ CityTalk.07
+~你连表面都还没刮到。~ EXTERN WNOPHYJ CityTalk.07
 
 CHAIN WNOPHYJ CityTalk.05
-~Busy just means that it's easy to cover up everything lurking beneath the surface. Look a little deeper, and you'll see what kind of place this really is.~ EXTERN WNOPHYJ CityTalk.07
+~热闹只意味着容易把表面下藏着的一切盖住。再往里看一点，你就看得出这地方真是什么样。~ EXTERN WNOPHYJ CityTalk.07
 
 CHAIN WNOPHYJ CityTalk.07
-~The rich and the pompous in the upper city live in a state of ignorant bliss, while there are men and women down in the dirt who have to beg for gold to get by. The worst part of it all? The dukes are totally, completely unwilling to do anything to fix it.~
+~上城区的富人和显贵活在无知的安乐里，而泥地里还有男女得靠乞讨金币过活。最糟的是？大公们完全、彻底不愿做任何事来改善。~
 	END
-		IF~~THEN REPLY ~You really hate this place, huh?~ EXTERN WNOPHYJ CityTalk.08
-		IF~~THEN REPLY ~I'm sure they're doing all they can.~ EXTERN WNOPHYJ CityTalk.09
-		IF~~THEN REPLY ~So what do you propose they do, then?~ EXTERN WNOPHYJ CityTalk.10
-		IF~~THEN REPLY ~I see. I hope that our actions can bring some good to the city.~ EXTERN WNOPHYJ CityTalk.11
-		IF~~THEN REPLY ~Stop complaining. Let's just go.~ EXTERN WNOPHYJ CityTalk.12
+		IF~~THEN REPLY ~你真恨这地方，是吧？~ EXTERN WNOPHYJ CityTalk.08
+		IF~~THEN REPLY ~我相信他们已尽力了。~ EXTERN WNOPHYJ CityTalk.09
+		IF~~THEN REPLY ~那你提议他们该做什么？~ EXTERN WNOPHYJ CityTalk.10
+		IF~~THEN REPLY ~我明白了。希望我们的行动能给这城带来些好处。~ EXTERN WNOPHYJ CityTalk.11
+		IF~~THEN REPLY ~别抱怨了。咱们走吧。~ EXTERN WNOPHYJ CityTalk.12
 
 CHAIN WNOPHYJ CityTalk.08
-~It's not personal to Baldur's Gate. Most cities are like this... I just hate seeing it up close.~ EXTERN WNOPHYJ CityTalk.13
+~这不是针对博德之门。多数城市都这样……我只是讨厌近看它。~ EXTERN WNOPHYJ CityTalk.13
 
 CHAIN WNOPHYJ CityTalk.09
-~The dukes are a bunch of retired adventurers, so long removed from their glory days that they've forgotten that they once tried to HELP people. Now they just sit around in their fancy castle and expect the Fist to clean up all the mess in the streets.~ EXTERN WNOPHYJ CityTalk.13
+~大公们是一帮退休的冒险者，离他们的荣光岁月太久，已经忘了自己也曾试图*帮助*别人。如今他们只坐在气派的城堡里，指望焰拳清理街上的一切烂摊子。~ EXTERN WNOPHYJ CityTalk.13
 
 CHAIN WNOPHYJ CityTalk.10
-~I don't know. I don't have to know what the solution is to know that there's a problem, and the problem is as clear as day.~ EXTERN WNOPHYJ CityTalk.09
+~我不知道。我不必知道解法，也能知道有问题，而问题明摆着。~ EXTERN WNOPHYJ CityTalk.09
 
 CHAIN WNOPHYJ CityTalk.11
-~That's all we can do, really. Maybe one day we'll be able to bring about some real change, but in the meantime, I don't think we're doing too badly.~ EXTERN WNOPHYJ CityTalk.13
+~我们能做的就这些。也许有天我们能带来真正的改变，不过眼下，我觉得我们干得不算太差。~ EXTERN WNOPHYJ CityTalk.13
 
 CHAIN WNOPHYJ CityTalk.13
-~Seeing people suffer here... reminds me of Waterdeep, and all the things I went through there. Things no person deserves to experience.~
-== WNOPHYJ ~It's difficult.~
+~在这儿看人受苦……让我想起深水城，想起我在那儿经历的一切。那些没人该经历的事。~
+== WNOPHYJ ~这很难。~
 	END
-		IF~~THEN REPLY ~We'll do right by the people here, Ophysia. I promise.~ EXTERN WNOPHYJ CityTalk.14
-		IF~~THEN REPLY ~Hey, it's alright. We're doing good things here.~ EXTERN WNOPHYJ CityTalk.14
-		IF~~THEN REPLY ~Uh... Right. I'll be over here when you're ready to go.~ EXTERN WNOPHYJ CityTalk.15
-		IF~~THEN REPLY ~My heart bleeds for you. Can we go, now?~ EXTERN WNOPHYJ CityTalk.16
+		IF~~THEN REPLY ~我们会为这儿的人做对的事，奥菲希娅。我保证。~ EXTERN WNOPHYJ CityTalk.14
+		IF~~THEN REPLY ~嘿，没事。我们在这儿做着好事。~ EXTERN WNOPHYJ CityTalk.14
+		IF~~THEN REPLY ~呃……对。你准备好走的时候，我就在这边。~ EXTERN WNOPHYJ CityTalk.15
+		IF~~THEN REPLY ~我的心为你流血。我们能走了吗？~ EXTERN WNOPHYJ CityTalk.16
 
 CHAIN WNOPHYJ CityTalk.06
-~You won't hear me complain about that. Lead on.~
+~你不会听我抱怨这个。带路吧。~
 DO ~SetGlobal("WNCityTalk","GLOBAL",3)~
 EXIT
 
 CHAIN WNOPHYJ CityTalk.12
-~Yes <PRO_SIRMAAM>.~
-== WNOPHYJ ~(Asshole).~
+~是的，<PRO_SIRMAAM>。~
+== WNOPHYJ ~（混蛋。）~
 DO ~SetGlobal("WNCityTalk","GLOBAL",3) SetGlobal("WNOPHYFriendshipActive","GLOBAL",3)~
 EXIT
 
 CHAIN WNOPHYJ CityTalk.14
-~Yeah, I know. Thank you.~
-== WNOPHYJ ~You're a good friend, <CHARNAME>.~
+~是，我知道。谢谢你。~
+== WNOPHYJ ~你是个好朋友，<CHARNAME>。~
 DO ~SetGlobal("WNCityTalk","GLOBAL",3)~
 EXIT
 
 CHAIN WNOPHYJ CityTalk.15
-~I'm good. Sorry. Let's go.~
+~我没事。抱歉。走吧。~
 DO ~SetGlobal("WNCityTalk","GLOBAL",3)~
 EXIT
 
 CHAIN WNOPHYJ CityTalk.16
-~Yeah, yeah. Come on.~
+~是是是。来吧。~
 DO ~SetGlobal("WNCityTalk","GLOBAL",3)~
 EXIT
 
 // After receiving Gorion's letter or Sarevok's journal
 
 CHAIN IF~Global("WNBhaalChat","GLOBAL",2)~THEN WNOPHYJ OphyBhaal.01
-~So... a Child of Bhaal, huh? I guess that explains the nightmares, and the random people trying to kill you, and all the chaos being sewn from your passage.~
-== WNOPHYJ ~Sorry. Bad time for jokes.~
+~那么……巴尔之子，嗯？我猜这解释了那些噩梦，解释那些莫名其妙想杀你的人，也解释了你经过之处种下的所有混乱。~
+== WNOPHYJ ~抱歉。不是开玩笑的时候。~
 	END
-		IF~~THEN REPLY ~Yes, Ophysia. It really is.~ EXTERN WNOPHYJ OphyBhaal.03
-		IF~~THEN REPLY ~It's fine. I don't know how else I'm going to make sense out of all... this.~ EXTERN WNOPHYJ OphyBhaal.04
-		IF~~THEN REPLY ~The only thing I find funny is that Gorion decided to keep this from me until now.~ EXTERN WNOPHYJ OphyBhaal.05
-		IF~~THEN REPLY ~Just leave me alone, Ophysia.~ EXTERN WNOPHYJ OphyBhaal.02
+		IF~~THEN REPLY ~是的，奥菲希娅。确实不是。~ EXTERN WNOPHYJ OphyBhaal.03
+		IF~~THEN REPLY ~没关系。我不知道还能怎么弄明白这……这一切。~ EXTERN WNOPHYJ OphyBhaal.04
+		IF~~THEN REPLY ~我唯一觉得好笑的，是葛立安决定瞒我到现在。~ EXTERN WNOPHYJ OphyBhaal.05
+		IF~~THEN REPLY ~让我一个人待着，奥菲希娅。~ EXTERN WNOPHYJ OphyBhaal.02
 
 CHAIN WNOPHYJ OphyBhaal.03
-~I hope you don't think I'm not taking this seriously. I mean, it's messed up. REALLY messed up. I can't imagine what it must be like for you.~ EXTERN WNOPHYJ OphyBhaal.06
+~我希望你别以为我没把这事当真。我是说，这很操蛋。*真的*很操蛋。我想不出这对你是什么滋味。~ EXTERN WNOPHYJ OphyBhaal.06
 
 CHAIN WNOPHYJ OphyBhaal.04
-~It would be a lot to process for anyone. I mean, it's messed up. REALLY messed up. I can't imagine what it must be like for you.~ EXTERN WNOPHYJ OphyBhaal.06
+~对谁来说都很难消化。我是说，这很操蛋。*真的*很操蛋。我想不出这对你是什么滋味。~ EXTERN WNOPHYJ OphyBhaal.06
 
 CHAIN WNOPHYJ OphyBhaal.05
-~He probably just wanted to protect you. I don't think it would be wise to tell a child that their actual father is the god of murder.~ EXTERN WNOPHYJ OphyBhaal.06
+~他大概只是想保护你。我觉得告诉一个孩子他真正的父亲是谋杀之神，不太明智。~ EXTERN WNOPHYJ OphyBhaal.06
 
 CHAIN WNOPHYJ OphyBhaal.06
-~How are you feeling about it all?~
+~这一切你现在感觉如何？~
 	END
-		IF~~THEN REPLY ~I don't know. I'm just so confused by everything.~ EXTERN WNOPHYJ OphyBhaal.07
-		IF~~THEN REPLY ~Relieved. I felt that something might be wrong with me. The nightmares, the abilities... As far as answers go, being the child of a god isn't too bad.~ EXTERN WNOPHYJ OphyBhaal.08
-		IF~~THEN REPLY ~Indifferent. This doesn't change anything—I'm still me. Bhaal is dead and he has no influence over who I am.~ EXTERN WNOPHYJ OphyBhaal.09
-		IF~~THEN REPLY ~Excited. Do you know what this means? I'm the <PRO_SONDAUGHTER> of a GOD. Who knows how powerful I could become?~ EXTERN WNOPHYJ OphyBhaal.10
-		IF~~THEN REPLY ~Scared. I wish that I was safe, back in Candlekeep, without knowing any of this. It's all too much.~ EXTERN WNOPHYJ OphyBhaal.11
-		IF~~THEN REPLY ~Sad. I can't imagine how my mother must have felt. I have to wonder if what Gorion had told me about her was even true.~ EXTERN WNOPHYJ OphyBhaal.12
-		IF~~THEN REPLY ~I don't really want to talk about it.~ EXTERN WNOPHYJ OphyBhaal.02
+		IF~~THEN REPLY ~我不知道。我被这一切弄得太糊涂了。~ EXTERN WNOPHYJ OphyBhaal.07
+		IF~~THEN REPLY ~松了口气。我一直觉得我身上有什么不对。那些噩梦，那些能力……就答案而言，当一位神的孩子不算太坏。~ EXTERN WNOPHYJ OphyBhaal.08
+		IF~~THEN REPLY ~无所谓。这改变不了什么——我还是我。巴尔死了，他对我是谁没有影响。~ EXTERN WNOPHYJ OphyBhaal.09
+		IF~~THEN REPLY ~兴奋。你知道这意味着什么吗？我是一位神的<PRO_SONDAUGHTER>。谁知道我能变得多强？~ EXTERN WNOPHYJ OphyBhaal.10
+		IF~~THEN REPLY ~害怕。我希望我安全地待在烛堡，什么都不知道。这一切太多了。~ EXTERN WNOPHYJ OphyBhaal.11
+		IF~~THEN REPLY ~难过。我想不出我母亲会是什么感受。我不由得怀疑葛立安告诉我关于她的事到底是不是真的。~ EXTERN WNOPHYJ OphyBhaal.12
+		IF~~THEN REPLY ~我不太想谈这个。~ EXTERN WNOPHYJ OphyBhaal.02
 
 CHAIN WNOPHYJ OphyBhaal.07
-~I think that's a completely normal reaction. I'm confused too.~ EXTERN WNOPHYJ OphyBhaal.13
+~我觉得这反应再正常不过。我也糊涂。~ EXTERN WNOPHYJ OphyBhaal.13
 
 CHAIN WNOPHYJ OphyBhaal.08
-~Well, that's... certainly one way to look at it. I suppose it would be a lot less impressive if you were cursed by a hag or something.~ EXTERN WNOPHYJ OphyBhaal.13
+~嗯，那……当然是一种看法。我想，要是你被个老巫婆诅咒了，那还不算太了不起。~ EXTERN WNOPHYJ OphyBhaal.13
 
 CHAIN WNOPHYJ OphyBhaal.09
-~Then you're handling this news a lot better than I would be, if I were you.~ EXTERN WNOPHYJ OphyBhaal.13
+~那你处理这消息比我处在你的位置会好得多。~ EXTERN WNOPHYJ OphyBhaal.13
 
 CHAIN WNOPHYJ OphyBhaal.10
-~Well, you're certainly beginning to act the part.~ EXTERN WNOPHYJ OphyBhaal.13
+~嗯，你确实开始演起那个角色了。~ EXTERN WNOPHYJ OphyBhaal.13
 
 CHAIN WNOPHYJ OphyBhaal.11
-~I think everyone feels that way sometimes. But we persevere, lest life moves on without us.~ EXTERN WNOPHYJ OphyBhaal.13
+~我觉得人人有时都这么想。可我们仍坚持，免得日子在我们不在时自顾自往前。~ EXTERN WNOPHYJ OphyBhaal.13
 
 CHAIN WNOPHYJ OphyBhaal.12
-~I was thinking about that too. Maybe she really did die in childbirth, or maybe Gorion was just trying to protect you from the truth again.~ EXTERN WNOPHYJ OphyBhaal.13
+~我也在想这个。也许她真死于难产，也许葛立安又想瞒你真相来保护你。~ EXTERN WNOPHYJ OphyBhaal.13
 
 CHAIN WNOPHYJ OphyBhaal.13
-~Even if you're the <PRO_SONDAUGHTER> of Bhaal, I don't see the resemblance. To me, you're just <CHARNAME>. And that's all you have to be.~
+~就算你是巴尔的<PRO_SONDAUGHTER>，我也看不出相似之处。对我来说，你就是<CHARNAME>。你只要是这样就够了。~
 	END
-		IF~~THEN REPLY ~Thank you, Ophysia. That means a lot to me.~ EXTERN WNOPHYJ OphyBhaal.14
-		IF~~THEN REPLY ~Yeah, yeah. No need to get all sappy on me.~ EXTERN WNOPHYJ OphyBhaal.15
-		IF~~THEN REPLY ~I didn't ask for your opinion. Next time, keep it to yourself.~ EXTERN WNOPHYJ OphyBhaal.16
+		IF~~THEN REPLY ~谢谢你，奥菲希娅。这对我很重要。~ EXTERN WNOPHYJ OphyBhaal.14
+		IF~~THEN REPLY ~是是是。别对我这么多愁善感。~ EXTERN WNOPHYJ OphyBhaal.15
+		IF~~THEN REPLY ~我没问你的意见。下次留给自己吧。~ EXTERN WNOPHYJ OphyBhaal.16
 
 CHAIN WNOPHYJ OphyBhaal.14
-~Anytime! What am I good for if not raising group morale?~ EXTERN WNOPHYJ OphyBhaal.17
+~随时！除了鼓鼓队伍士气，我还能干什么？~ EXTERN WNOPHYJ OphyBhaal.17
 
 CHAIN WNOPHYJ OphyBhaal.15
-~Alright, whatever you say. I'm not taking it back, though.~ EXTERN WNOPHYJ OphyBhaal.17
+~好吧，随你怎么说。不过我可不收回。~ EXTERN WNOPHYJ OphyBhaal.17
 
 CHAIN WNOPHYJ OphyBhaal.17
-~Let's keep moving, yeah? Don't let me catch you moping.~
+~咱们继续走，好吗？别让我看见你发闷。~
 DO ~SetGlobal("WNBhaalChat","GLOBAL",3)~ 
 EXIT
 
 CHAIN WNOPHYJ OphyBhaal.02
-~That's fine, I get it. Let's just focus on the road.~
+~没关系，我懂。咱们专心赶路吧。~
 DO ~SetGlobal("WNBhaalChat","GLOBAL",3)~
 EXIT
 
 CHAIN WNOPHYJ OphyBhaal.16
-~Fine. I was trying to be nice, but can I see that isn't good enough for you. I thought we were friends, <CHARNAME>.~
+~行。我本想对你好点，可我看得出这对你来说不够好。我还以为我们是朋友，<CHARNAME>。~
 DO ~SetGlobal("WNBhaalChat","GLOBAL",3) SetGlobal("WNOPHYFriendshipActive","GLOBAL",3)~ 
 EXIT
 
@@ -1091,13 +1091,13 @@ EXIT
 // Dorn's distrust
 
 I_C_T ~DORNJ~ 87 wn_ophysia_dorn_distrust
-== WNOPHYJ IF ~InParty("WNOPHY") InMyArea("WNOPHY") !StateCheck("WNOPHY",CD_STATE_NOTVALID)~ THEN ~Don't project your own trust issues onto me.~
-== DORNJ ~The bard can't help but let her fanatic ideals bleed through her tales of deceit and fabrication.~
+== WNOPHYJ IF ~InParty("WNOPHY") InMyArea("WNOPHY") !StateCheck("WNOPHY",CD_STATE_NOTVALID)~ THEN ~别把你自己的信任问题投射到我身上。~
+== DORNJ ~这吟游诗人忍不住让她那套狂热信念从她那些欺瞒捏造的故事里渗出来。~
 END
 
 I_C_T ~DORNJ~ 178 wn_ophysia_dorn_distrust_2
-== WNOPHYJ IF ~InParty("WNOPHY") InMyArea("WNOPHY") !StateCheck("WNOPHY",CD_STATE_NOTVALID)~ THEN ~Don't project your own trust issues onto me.~
-== DORNJ ~The bard can't help but let her fanatic ideals bleed through her tales of deceit and fabrication.~
+== WNOPHYJ IF ~InParty("WNOPHY") InMyArea("WNOPHY") !StateCheck("WNOPHY",CD_STATE_NOTVALID)~ THEN ~别把你自己的信任问题投射到我身上。~
+== DORNJ ~这吟游诗人忍不住让她那套狂热信念从她那些欺瞒捏造的故事里渗出来。~
 END
 
 // Telling Dorn that Ophysia has been spreading rumours about him
@@ -1108,8 +1108,8 @@ END
 
 CHAIN
 IF~~THEN WNOPHYJ wn_ophysia_dorn_die
-~<CHARNAME>! What the hells is wrong with you?!~
-== DORNJ ~Die, wench!~ [WNDIEDO]
+~<CHARNAME>！你到底有什么毛病？！~
+== DORNJ ~死吧，婆娘！~ [WNDIEDO]
 DO ~SetGlobal("wn_DORN_ROMANCE_FIGHT","GLOBAL",1)~ 
 EXIT 
 
@@ -1120,7 +1120,7 @@ END
 
 CHAIN
 IF~~THEN WNOPHYJ wn_ophysia_dorn_die_2
-~<CHARNAME>! What the hells is wrong with you?!~
-== DORNJ ~Die, wench!~ [WNDIEDO]
+~<CHARNAME>！你到底有什么毛病？！~
+== DORNJ ~死吧，婆娘！~ [WNDIEDO]
 DO ~SetGlobal("wn_DORN_ROMANCE_FIGHT","GLOBAL",1)~ 
 EXIT 

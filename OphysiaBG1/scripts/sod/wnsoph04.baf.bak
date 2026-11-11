@@ -1,0 +1,30 @@
+// Banter: Ophysia / Baeloth (1)
+IF
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+	!Global("wnOphy_SoD_wnsoph04","MYAREA",-1)
+	Switch("wnOphy_SoD_wnsoph04","MYAREA")
+THEN
+	RESPONSE #0 
+		DisplayStringHead("WNOPHY",~Try me. I'm not afraid to put a blade through you.~)  
+		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",9) 
+		SetGlobal("wnOphy_SoD_wnsoph04","MYAREA",10)
+	RESPONSE #10
+		DisplayStringHead("Baeloth",~Such barbaric bluster from a bard such as yourself is bound to backfire.~)
+		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",8)
+		SetGlobal("wnOphy_SoD_wnsoph04","MYAREA",20)
+	RESPONSE #20
+		DisplayStringHead("WNOPHY",~We all have choices to make in life. You should choose to be less annoying.~)
+		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+		SetGlobal("wnOphy_SoD_BaelothBanter","GLOBAL",3)
+		SetGlobal("wnOphy_SoD_wnsoph04","MYAREA",-1)
+END
+
+/* second script block: deactivate this script by resetting the area script. This script block is needed once at the end of the banter "area" file. */
+IF
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA") //this means "timer IS expired"
+THEN
+	RESPONSE #100
+		SetAreaScript("",GENERAL) //sets area script back (default is "no GENERAL script")
+END

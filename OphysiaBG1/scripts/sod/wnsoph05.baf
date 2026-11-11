@@ -7,15 +7,15 @@ IF
 	Switch("wnOphy_SoD_wnsoph05","MYAREA")
 THEN
 	RESPONSE #0 
-		DisplayStringHead("WNOPHY",~It's a shame we didn't leave you in that cage.~)  
+		DisplayStringHead("WNOPHY",~真可惜我们没把你留在那个笼子里。~)  
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",9) 
 		SetGlobal("wnOphy_SoD_wnsoph05","MYAREA",10)
 	RESPONSE #10
-		DisplayStringHead("Dorn",~It's a shame you yet draw breath. If it weren't for <CHARNAME>, I'd have gutted you long ago.~)
+		DisplayStringHead("Dorn",~真可惜你还在喘气。要不是<CHARNAME>，我早把你开膛了。~)
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",8)
 		SetGlobal("wnOphy_SoD_wnsoph05","MYAREA",20)
 	RESPONSE #20
-		DisplayStringHead("WNOPHY",~How charming. Perhaps you'll get your chance one day, Dorn.~)
+		DisplayStringHead("WNOPHY",~真迷人。也许哪天你会得着机会，多恩。~)
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 		SetGlobal("wnOphy_SoD_DornBanter","GLOBAL",3)
 		SetGlobal("wnOphy_SoD_wnsoph05","MYAREA",-1)

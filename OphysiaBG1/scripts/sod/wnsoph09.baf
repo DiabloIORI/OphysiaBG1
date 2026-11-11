@@ -7,19 +7,19 @@ IF
 	Switch("wnOphy_SoD_wnsoph09","MYAREA")
 THEN
 	RESPONSE #0 
-		DisplayStringHead("WNOPHY",~Khalid, your actions at Bridgefort are worthy of a great ballad.~)  
+		DisplayStringHead("WNOPHY",~卡立德，你在桥堡的作为配得上一首伟大的叙事歌。~)  
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",9) 
 		SetGlobal("wnOphy_SoD_wnsoph09","MYAREA",10)
 	RESPONSE #10
-		DisplayStringHead("Khalid",~W-why thank you Ophysia, but I m-merely did what I had to, as a Harper and a g-good man.~)
+		DisplayStringHead("Khalid",~谢、谢谢你奥菲希娅，可我只是尽了我该尽的，作为一个竖琴手和一个好、好人。~)
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",8)
 		SetGlobal("wnOphy_SoD_wnsoph09","MYAREA",20)
 	RESPONSE #20
-		DisplayStringHead("WNOPHY",~Exactly. I hope you don't mind being the protagonist when I start telling the tale of Bridgefort!~)
+		DisplayStringHead("WNOPHY",~正是。等我开始讲桥堡的故事时，希望你不介意当主角！~)
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 		SetGlobal("wnOphy_SoD_wnsoph09","MYAREA",30)
 	RESPONSE #30
-		DisplayStringHead("Khalid",~I f-feel like that t-title belongs more to <CHARNAME>, but... I would be honored.~)
+		DisplayStringHead("Khalid",~我觉、觉得那个头衔更该归<CHARNAME>，不过……我会深感荣幸。~)
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 		SetGlobal("wnOphy_SoD_KhalidBanter","GLOBAL",3)
 		SetGlobal("wnOphy_SoD_wnsoph09","MYAREA",-1)

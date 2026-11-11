@@ -7,19 +7,19 @@ IF
 	Switch("wnOphy_SoD_wnsoph13","MYAREA")
 THEN
 	RESPONSE #0 
-		DisplayStringHead("WNOPHY",~"I'm glad you changed your mind about coming with us, Rasaad. It wasn't easy for me, either.~)  
+		DisplayStringHead("WNOPHY",~"我很高兴你改变了主意跟我们走，拉萨德。对我也不容易。~)  
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",9) 
 		SetGlobal("wnOphy_SoD_wnsoph13","MYAREA",10)
 	RESPONSE #10
-		DisplayStringHead("Rasaad",~I thank you for your words, Ophysia. Unfortunately, there were many factors that led me to accompanying you.~)
+		DisplayStringHead("Rasaad",~多谢你的话，奥菲希娅。可惜，促使我随你同行的因素很多。~)
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",8)
 		SetGlobal("wnOphy_SoD_wnsoph13","MYAREA",20)
 	RESPONSE #20
-		DisplayStringHead("WNOPHY",~That's a little foreboding. I just wanted you to know that I appreciate having you around.~)
+		DisplayStringHead("WNOPHY",~这话听着有点不祥。我只是想让你知道，我很高兴有你在。~)
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 		SetGlobal("wnOphy_SoD_wnsoph13","MYAREA",30)
 	RESPONSE #30
-		DisplayStringHead("Rasaad",~And I, you, my friend.~)
+		DisplayStringHead("Rasaad",~我也高兴有你，我的朋友。~)
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 		SetGlobal("wnOphy_SoD_RasaadBanter","GLOBAL",3)
 		SetGlobal("wnOphy_SoD_wnsoph13","MYAREA",-1)

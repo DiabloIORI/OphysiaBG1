@@ -7,19 +7,19 @@ IF
 	Switch("wnOphy_SoD_wnsoph16","MYAREA")
 THEN
 	RESPONSE #0 
-		DisplayStringHead("WNOPHY",~Will you please stop making that face at me?~)  
+		DisplayStringHead("WNOPHY",~你能不能别再对我做那个表情？~)  
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",9) 
 		SetGlobal("wnOphy_SoD_wnsoph16","MYAREA",10)
 	RESPONSE #10
-		DisplayStringHead("Voghiln",~I am afraid I cannot. You simply amaze me—an ale-loving skald after mine own heart... and a beautiful woman to boot!~)
+		DisplayStringHead("Voghiln",~恐怕不行。你就是让我惊叹——一个爱麦酒的吟游诗人，正合我心意……而且还是位美貌女子！~)
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",8)
 		SetGlobal("wnOphy_SoD_wnsoph16","MYAREA",20)
 	RESPONSE #20
-		DisplayStringHead("WNOPHY",~I'd be glad to share a drink with you and trade stories if you promise to keep your eyes where they belong.~)
+		DisplayStringHead("WNOPHY",~你要是答应把眼睛放在该放的地方，我倒乐意跟你喝一杯、交换故事。~)
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 		SetGlobal("wnOphy_SoD_wnsoph16","MYAREA",30)
 	RESPONSE #30
-		DisplayStringHead("Voghiln",~I... This will be hard for me. But it is worth it.~)
+		DisplayStringHead("Voghiln",~我……这对我来说会很难。但值得。~)
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 		SetGlobal("wnOphy_SoD_VoghilnBanter","GLOBAL",3)
 		SetGlobal("wnOphy_SoD_wnsoph16","MYAREA",-1)

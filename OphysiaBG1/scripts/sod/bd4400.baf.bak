@@ -1,0 +1,12 @@
+IF
+	GlobalLT("bd_plot","global",505)
+	IfValidForPartyDialog("WNOPHY")  
+	Global("WNOPHY_bd_avernus_bark","bd4400",0) 
+	GlobalGT("WNMadriPlot","Global",0)
+THEN
+	RESPONSE #100  
+		DisplayStringWait("WNOPHY",~Madri's gonna kill me for this.~) 
+	    SetGlobal("WNOPHY_bd_avernus_bark","bd4400",1)  
+		SmallWait(8)
+		Continue()
+END

@@ -7,11 +7,11 @@ IF
 	Switch("wnOphy_SoD_wnsoph15","MYAREA")
 THEN
 	RESPONSE #0 
-		DisplayStringHead("WNOPHY",~"You've got a way of making everything around you a little colder. Must be exhausting.~)  
+		DisplayStringHead("WNOPHY",~"你有种让周围一切都变冷一点的本事。一定很累人。~)  
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",9) 
 		SetGlobal("wnOphy_SoD_wnsoph15","MYAREA",10)
 	RESPONSE #10
-		DisplayStringHead("Viconia",~Not nearly exhausting as the sound of your voice, rivvil.~)
+		DisplayStringHead("Viconia",~远没有你的嗓音累人，人类。~)
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 		SetGlobal("wnOphy_SoD_ViconiaBanter","GLOBAL",3)
 		SetGlobal("wnOphy_SoD_wnsoph15","MYAREA",-1)

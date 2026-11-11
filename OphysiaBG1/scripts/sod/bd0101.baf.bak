@@ -1,0 +1,75 @@
+IF
+    InParty("WNOPHY")
+	Global("WNOPHYMoveCamp","BD0101",0)
+THEN
+  RESPONSE #100
+    SetGlobal("WNOPHYMoveCamp","BD0101",1)
+	Continue()
+END
+
+IF
+  Global("WNOPHYMoveCamp","BD0101",0)
+  !BeenInParty("WNOPHY")
+  !Dead("WNOPHY")
+  !InPartyAllowDead("WNOPHY")
+THEN
+  RESPONSE #100
+    SetGlobal("WNOPHYMoveCamp","BD0101",1)
+    CreateCreature("WNSOPHY",[1029.506],S)
+    ReallyForceSpellDeadRES("BDREJUVE","WNOPHY")
+    ChangeEnemyAlly("WNOPHY",NEUTRAL)
+    ChangeSpecifics("WNOPHY",ALLIES)
+    ActionOverride("WNOPHY",SetGlobal("bd_joined","LOCALS",0))
+    ActionOverride("WNOPHY",SetGlobal("bd_retreat","LOCALS",0))
+    ActionOverride("WNOPHY",SaveObjectLocation("LOCALS","bd_default_loc",Myself))
+    ActionOverride("WNOPHY",ChangeAIScript("WNSOPHY",OVERRIDE))
+	  ActionOverride("WNOPHY",MakeGlobal())
+    Continue()
+END
+
+IF
+  Global("WNOPHYMoveCamp","BD0101",0)
+  BeenInParty("WNOPHY")
+  !Dead("WNOPHY")
+  !InPartyAllowDead("WNOPHY")
+THEN
+  RESPONSE #100
+    SetGlobal("WNOPHYMoveCamp","BD0101",1)
+    MoveGlobal("BD0101","WNOPHY",[1029.506])
+    ActionOverride("WNOPHY",Face(S))
+    ReallyForceSpellDeadRES("BDREJUVE","WNOPHY")
+    ChangeEnemyAlly("WNOPHY",NEUTRAL)
+    ChangeSpecifics("WNOPHY",ALLIES)
+    ActionOverride("WNOPHY",SetGlobal("bd_joined","LOCALS",0))
+    ActionOverride("WNOPHY",SetGlobal("bd_retreat","LOCALS",0))
+    ActionOverride("WNOPHY",SaveObjectLocation("LOCALS","bd_default_loc",Myself))
+    ActionOverride("WNOPHY",ChangeAIScript("WNSOPHY",OVERRIDE))
+    Continue()
+END
+
+// Ophysia comments while waiting
+
+IF
+Global("bd_mdd010z_ot","bd0101",1)
+	!GlobalTimerNotExpired("bd_mdd010z_ot_timer","bd0101")
+	InMyArea("WNOPHY")  
+	!InParty("WNOPHY")  
+THEN
+	RESPONSE #10
+		SetGlobalTimer("bd_mdd010z_ot_timer","bd0101",ONE_ROUND)
+		SetGlobal("bd_mdd010z_ot","bd0101",0)
+		DisplayStringHead("WNOPHY",~You couldn't pay me to stand in that crowd...~)
+		Continue()
+	RESPONSE #10
+		SetGlobalTimer("bd_mdd010z_ot_timer","bd0101",ONE_ROUND)
+		SetGlobal("bd_mdd010z_ot","bd0101",0)
+		DisplayStringHead("WNOPHY",~Buckler... check. Soap... check.~)
+		Continue()
+	RESPONSE #10
+		SetGlobalTimer("bd_mdd010z_ot_timer","bd0101",ONE_ROUND)
+		SetGlobal("bd_mdd010z_ot","bd0101",0)
+		DisplayStringHead("WNOPHY",~It's *so* loud...~)
+		Continue()
+	RESPONSE #160
+		Continue()
+END

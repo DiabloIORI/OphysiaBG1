@@ -8,6 +8,6 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("bd_sdd350b_ot_timer","bd5300",THREE_MINUTES)  
 		SetGlobal("WNOPHY_bd_ot","bd5300",1)  
-		DisplayStringHead("WNOPHY",~Who wants to hear a story?!~)
+		DisplayStringHead("WNOPHY",~谁想听个故事？！~)
 		Continue()
 END

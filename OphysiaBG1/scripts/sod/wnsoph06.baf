@@ -7,11 +7,11 @@ IF
 	Switch("wnOphy_SoD_wnsoph06","MYAREA")
 THEN
 	RESPONSE #0 
-		DisplayStringHead("WNOPHY",~It's vindicating to know that even your fellow Thayans hate you.~)  
+		DisplayStringHead("WNOPHY",~知道你连自己的塞恩同胞都恨你，真是让人痛快。~)  
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",9) 
 		SetGlobal("wnOphy_SoD_wnsoph06","MYAREA",10)
 	RESPONSE #10
-		DisplayStringHead("Edwin",~Not nearly as much as they would hate you, girl.~)
+		DisplayStringHead("Edwin",~他们恨你可远不止这点，丫头。~)
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 		SetGlobal("wnOphy_SoD_EdwinBanter","GLOBAL",3)
 		SetGlobal("wnOphy_SoD_wnsoph06","MYAREA",-1)

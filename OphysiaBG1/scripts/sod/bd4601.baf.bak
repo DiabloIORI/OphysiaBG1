@@ -1,0 +1,12 @@
+IF
+  Global("bd_hellevator_ot_WNOPHY","bd4601",0) // Avernus Elevator
+  InParty("WNOPHY")
+  !GlobalTimerNotExpired("bd_hellevator_timer","bd4601")
+  !ActuallyInCombat()
+THEN
+  RESPONSE #100
+    SetGlobal("bd_hellevator_ot_WNOPHY","bd4601",1)
+    SetGlobalTimer("bd_hellevator_timer","bd4601",ONE_MINUTE)
+    DisplayStringHead("WNOPHY",~Well... This is boring. Boring is better than dead, at least.~)
+	Continue()
+END

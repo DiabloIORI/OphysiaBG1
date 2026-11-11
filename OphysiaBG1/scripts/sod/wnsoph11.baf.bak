@@ -1,0 +1,34 @@
+// Banter: Ophysia / M'Khiin (1)
+IF
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+	!Global("wnOphy_SoD_wnsoph11","MYAREA",-1)
+	Switch("wnOphy_SoD_wnsoph11","MYAREA")
+THEN
+	RESPONSE #0 
+		DisplayStringHead("WNOPHY",~What's the Grubdoubler clan like, M'Khiin?~)  
+		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",9) 
+		SetGlobal("wnOphy_SoD_wnsoph11","MYAREA",10)
+	RESPONSE #10
+		DisplayStringHead("Mkhiin",~Bad.~)
+		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",8)
+		SetGlobal("wnOphy_SoD_wnsoph11","MYAREA",20)
+	RESPONSE #20
+		DisplayStringHead("WNOPHY",~Oh. I'm sorry to hear to hear that. My old home was bad too, so I left and found a better one.~)
+		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+		SetGlobal("wnOphy_SoD_wnsoph11","MYAREA",30)
+	RESPONSE #30
+		DisplayStringHead("Mkhiin",~I haven't found a better one yet. Not holding out hope.~)
+		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+		SetGlobal("wnOphy_SoD_MkhiinBanter","GLOBAL",3)
+		SetGlobal("wnOphy_SoD_wnsoph11","MYAREA",-1)
+END
+
+/* second script block: deactivate this script by resetting the area script. This script block is needed once at the end of the banter "area" file. */
+IF
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA") //this means "timer IS expired"
+THEN
+	RESPONSE #100
+		SetAreaScript("",GENERAL) //sets area script back (default is "no GENERAL script")
+END

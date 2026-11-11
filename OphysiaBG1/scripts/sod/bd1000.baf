@@ -38,6 +38,6 @@ THEN
 	RESPONSE #100
 		SetGlobal("WNOPHY_bd_mdd016b","bd1000",1)
 		SetGlobalTimer("bd_mdd016b_timer","bd1000",ONE_ROUND)
-		DisplayStringHead("WNOPHY",~Well, Caelar seems totally, completely reasonable.~)  
+		DisplayStringHead("WNOPHY",~嗯，凯拉看着完全、彻底通情达理。~)  
 		Continue()
 END

@@ -1,0 +1,26 @@
+// Banter: Ophysia / Edwin (1)
+IF
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+	!Global("wnOphy_SoD_wnsoph06","MYAREA",-1)
+	Switch("wnOphy_SoD_wnsoph06","MYAREA")
+THEN
+	RESPONSE #0 
+		DisplayStringHead("WNOPHY",~It's vindicating to know that even your fellow Thayans hate you.~)  
+		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",9) 
+		SetGlobal("wnOphy_SoD_wnsoph06","MYAREA",10)
+	RESPONSE #10
+		DisplayStringHead("Edwin",~Not nearly as much as they would hate you, girl.~)
+		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+		SetGlobal("wnOphy_SoD_EdwinBanter","GLOBAL",3)
+		SetGlobal("wnOphy_SoD_wnsoph06","MYAREA",-1)
+END
+
+/* second script block: deactivate this script by resetting the area script. This script block is needed once at the end of the banter "area" file. */
+IF
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA") //this means "timer IS expired"
+THEN
+	RESPONSE #100
+		SetAreaScript("",GENERAL) //sets area script back (default is "no GENERAL script")
+END

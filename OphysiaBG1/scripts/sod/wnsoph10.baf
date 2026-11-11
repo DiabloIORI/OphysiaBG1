@@ -7,23 +7,23 @@ IF
 	Switch("wnOphy_SoD_wnsoph10","MYAREA")
 THEN
 	RESPONSE #0 
-		DisplayStringHead("WNOPHY",~Minsc, have you ever trained Boo to do any of the things he does, or does he just... know?~)  
+		DisplayStringHead("WNOPHY",~明斯克，你训练过布布做那些事吗，还是它只是……知道？~)  
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",9) 
 		SetGlobal("wnOphy_SoD_wnsoph10","MYAREA",10)
 	RESPONSE #10
-		DisplayStringHead("Minsc",~Trained? Not at all! All I must do is ask, and Boo will deliver! This is our bond, you see.~)
+		DisplayStringHead("Minsc",~训练？完全没有！我只要开口，布布就会办到！这就是我们的羁绊，你懂吧。~)
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",8)
 		SetGlobal("wnOphy_SoD_wnsoph10","MYAREA",20)
 	RESPONSE #20
-		DisplayStringHead("WNOPHY",~Right. The thing is, I've never seen you cast any spells to—~)
+		DisplayStringHead("WNOPHY",~对。问题是，我从没见过你施什么法来——~)
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 		SetGlobal("wnOphy_SoD_wnsoph10","MYAREA",30)
 	RESPONSE #30
-		DisplayStringHead("Minsc",~Yes, I agree, Boo. She must be feeling unwell.~)
+		DisplayStringHead("Minsc",~对，我同意，布布。她一定是身子不舒服。~)
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 		SetGlobal("wnOphy_SoD_wnsoph10","MYAREA",40)
 	RESPONSE #40
-		DisplayStringHead("WNOPHY",~Of course, I'M the one that's feeling unwell. My apologies, Minsc. Carry on.~)
+		DisplayStringHead("WNOPHY",~当然，不、舒服的是我。我道歉，明斯克。你继续。~)
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 		SetGlobal("wnOphy_SoD_MinscBanter","GLOBAL",3)
 		SetGlobal("wnOphy_SoD_wnsoph10","MYAREA",-1)

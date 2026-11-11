@@ -16,7 +16,7 @@ THEN
 		IncrementGlobal("bd_leaving_ot","global",1)
 		SetGlobal("WNOPHY_SoDleavingcomment","global",1)
 		SetGlobalTimerRandom("bd_leaving_ot_timer","global",TWENTY_MINUTES,THIRTY_MINUTES)
-		DisplayStringHead("WNOPHY",~I can't wait to go home after this. I hope the road to Daggerford isn't too harsh.~)
+		DisplayStringHead("WNOPHY",~这事完了我真等不及回家。希望去达格福德的路别太难过。~)
 END
 
 // Second comment
@@ -38,5 +38,5 @@ THEN
 		IncrementGlobal("bd_leaving2_ot","global",1)
 		SetGlobal("WNOPHY_SoDleavingcomment","global",2)
 		SetGlobalTimerRandom("bd_leaving2_ot_timer","global",EIGHT_MINUTES,THIRTEEN_MINUTES)
-		DisplayStringWait("WNOPHY",~Thus ends our tale, I suppose... for now.~)  
+		DisplayStringWait("WNOPHY",~看来我们的故事就此结束……暂时。~)  
 END

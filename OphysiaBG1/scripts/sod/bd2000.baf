@@ -13,7 +13,7 @@ THEN
 	RESPONSE #100
 		SetGlobal("WNOPHY_betrayal_discussion","GLOBAL",1)
 		SetGlobalTimer("bd_betrayal_discuss_timer","bd2000",ONE_MINUTE) //to space all the other NPC comments
-		DisplayStringHead("WNOPHY",~I'm starting to wonder whether or not you're cut out for leadership, <CHARNAME>.~)
+		DisplayStringHead("WNOPHY",~我开始怀疑你到底适不适合当领袖，<CHARNAME>。~)
 		Continue()
 END
 
@@ -29,6 +29,6 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("bd_mdd410z_ot_timer","bd2000",THREE_MINUTES)  // Boareskyr Bridge & Bridgefort
 		SetGlobal("WNOPHY_bd_ot","bd2000",1)  
-		DisplayStringHead("WNOPHY",~For Daggerford!~)  
+		DisplayStringHead("WNOPHY",~为了达格福德！~)  
 		Continue()
 END

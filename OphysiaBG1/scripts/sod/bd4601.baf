@@ -7,6 +7,6 @@ THEN
   RESPONSE #100
     SetGlobal("bd_hellevator_ot_WNOPHY","bd4601",1)
     SetGlobalTimer("bd_hellevator_timer","bd4601",ONE_MINUTE)
-    DisplayStringHead("WNOPHY",~Well... This is boring. Boring is better than dead, at least.~)
+    DisplayStringHead("WNOPHY",~嗯……这挺无聊。不过无聊总比死了强。~)
 	Continue()
 END

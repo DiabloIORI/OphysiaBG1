@@ -58,17 +58,17 @@ THEN
 	RESPONSE #10
 		SetGlobalTimer("bd_mdd010z_ot_timer","bd0101",ONE_ROUND)
 		SetGlobal("bd_mdd010z_ot","bd0101",0)
-		DisplayStringHead("WNOPHY",~You couldn't pay me to stand in that crowd...~)
+		DisplayStringHead("WNOPHY",~要我站进那堆人里，给钱都不干……~)
 		Continue()
 	RESPONSE #10
 		SetGlobalTimer("bd_mdd010z_ot_timer","bd0101",ONE_ROUND)
 		SetGlobal("bd_mdd010z_ot","bd0101",0)
-		DisplayStringHead("WNOPHY",~Buckler... check. Soap... check.~)
+		DisplayStringHead("WNOPHY",~小圆盾……检查一遍。肥皂……检查一遍。~)
 		Continue()
 	RESPONSE #10
 		SetGlobalTimer("bd_mdd010z_ot_timer","bd0101",ONE_ROUND)
 		SetGlobal("bd_mdd010z_ot","bd0101",0)
-		DisplayStringHead("WNOPHY",~It's *so* loud...~)
+		DisplayStringHead("WNOPHY",~真是*太*吵了……~)
 		Continue()
 	RESPONSE #160
 		Continue()

@@ -7,19 +7,19 @@ IF
 	Switch("wnOphy_SoD_wnsoph14","MYAREA")
 THEN
 	RESPONSE #0 
-		DisplayStringHead("WNOPHY",~"You don't strike me as the sort of person to willingly join this expedition, Safana.~)  
+		DisplayStringHead("WNOPHY",~"你不像那种会自愿加入这支远征队的人，萨法娜。~)  
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",9) 
 		SetGlobal("wnOphy_SoD_wnsoph14","MYAREA",10)
 	RESPONSE #10
-		DisplayStringHead("Safana",~I'm not. But don't assume you know me because of it.~)
+		DisplayStringHead("Safana",~我不是。可别因此就以为你了解我。~)
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",8)
 		SetGlobal("wnOphy_SoD_wnsoph14","MYAREA",20)
 	RESPONSE #20
-		DisplayStringHead("WNOPHY",~I've met a lot of people like you, Safana. None of them turned out to be good for me.~)
+		DisplayStringHead("WNOPHY",~我见过很多像你这样的人，萨法娜。没一个对我有好处。~)
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 		SetGlobal("wnOphy_SoD_wnsoph14","MYAREA",30)
 	RESPONSE #30
-		DisplayStringHead("Safana",~You'll never hear me claim that I'm good for anyone, dear. Now shoo.~)
+		DisplayStringHead("Safana",~我永远不会说我为谁有好处，亲爱的。现在，走开。~)
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 		SetGlobal("wnOphy_SoD_SafanaBanter","GLOBAL",3)
 		SetGlobal("wnOphy_SoD_wnsoph14","MYAREA",-1)

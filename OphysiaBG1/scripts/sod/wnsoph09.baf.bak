@@ -1,0 +1,34 @@
+// Banter: Ophysia / Khalid (1)
+IF
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+	!Global("wnOphy_SoD_wnsoph09","MYAREA",-1)
+	Switch("wnOphy_SoD_wnsoph09","MYAREA")
+THEN
+	RESPONSE #0 
+		DisplayStringHead("WNOPHY",~Khalid, your actions at Bridgefort are worthy of a great ballad.~)  
+		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",9) 
+		SetGlobal("wnOphy_SoD_wnsoph09","MYAREA",10)
+	RESPONSE #10
+		DisplayStringHead("Khalid",~W-why thank you Ophysia, but I m-merely did what I had to, as a Harper and a g-good man.~)
+		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",8)
+		SetGlobal("wnOphy_SoD_wnsoph09","MYAREA",20)
+	RESPONSE #20
+		DisplayStringHead("WNOPHY",~Exactly. I hope you don't mind being the protagonist when I start telling the tale of Bridgefort!~)
+		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+		SetGlobal("wnOphy_SoD_wnsoph09","MYAREA",30)
+	RESPONSE #30
+		DisplayStringHead("Khalid",~I f-feel like that t-title belongs more to <CHARNAME>, but... I would be honored.~)
+		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+		SetGlobal("wnOphy_SoD_KhalidBanter","GLOBAL",3)
+		SetGlobal("wnOphy_SoD_wnsoph09","MYAREA",-1)
+END
+
+/* second script block: deactivate this script by resetting the area script. This script block is needed once at the end of the banter "area" file. */
+IF
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA") //this means "timer IS expired"
+THEN
+	RESPONSE #100
+		SetAreaScript("",GENERAL) //sets area script back (default is "no GENERAL script")
+END

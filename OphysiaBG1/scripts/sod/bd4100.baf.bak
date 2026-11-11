@@ -1,0 +1,29 @@
+// CHARNAME is accused of murder.
+
+IF
+    Global("bd_plot","global",591)
+    !GlobalTimerNotExpired("bd_mdd1352_ot_timer","bd4100")  // Dragonspear Castle Keep, First Floor
+    Global("wn_Ophy_ot","bd4100",0)  // Dragonspear Castle Keep, First Floor
+    ReputationLT(Player1,10)
+    IfValidForPartyDialog("WNOPHY")  // Ophysia
+THEN
+    RESPONSE #100
+        SetGlobal("wn_Ophy_ot","bd4100",1)  // Dragonspear Castle Keep, First Floor
+        SetGlobalTimer("bd_mdd1352_ot_timer","bd4100",2)  // Dragonspear Castle Keep, First Floor
+        DisplayStringHead("WNOPHY",~Wh—what? This can't be right. Someone pinch me.~) 
+		Continue()
+END
+
+IF
+    Global("bd_plot","global",591)
+    !GlobalTimerNotExpired("bd_mdd1352_ot_timer","bd4100")  // Dragonspear Castle Keep, First Floor
+    Global("wn_Ophy_ot","bd4100",0)  // Dragonspear Castle Keep, First Floor
+    !ReputationLT(Player1,10)
+    IfValidForPartyDialog("WNOPHY")  // Ophysia
+THEN
+    RESPONSE #100
+        SetGlobal("wn_Ophy_ot","bd4100",1)  // Dragonspear Castle Keep, First Floor
+        SetGlobalTimer("bd_mdd1352_ot_timer","bd4100",9)  // Dragonspear Castle Keep, First Floor
+        DisplayStringHead("WNOPHY",~Whatever we're looking at here, it has to be a trick. <CHARNAME> wouldn't do this. Skie is our friend!~)   
+		Continue()
+END

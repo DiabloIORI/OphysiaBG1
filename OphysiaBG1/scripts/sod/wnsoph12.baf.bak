@@ -1,0 +1,34 @@
+// Banter: Ophysia / Neera (1)
+IF
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+	!Global("wnOphy_SoD_wnsoph12","MYAREA",-1)
+	Switch("wnOphy_SoD_wnsoph12","MYAREA")
+THEN
+	RESPONSE #0 
+		DisplayStringHead("WNOPHY",~"Well, well, look at you, actually keeping things calm for once. I thought I’d be seeing more fireballs by now.~)  
+		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",9) 
+		SetGlobal("wnOphy_SoD_wnsoph12","MYAREA",10)
+	RESPONSE #10
+		DisplayStringHead("Neera",~Most of the chaos is in my head at the moment, unfortunately.~)
+		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",8)
+		SetGlobal("wnOphy_SoD_wnsoph12","MYAREA",20)
+	RESPONSE #20
+		DisplayStringHead("WNOPHY",~If you need someone to chat to, just come to me.~)
+		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+		SetGlobal("wnOphy_SoD_wnsoph12","MYAREA",30)
+	RESPONSE #30
+		DisplayStringHead("Neera",~I might take you up on that.~)
+		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+		SetGlobal("wnOphy_SoD_NeeraBanter","GLOBAL",3)
+		SetGlobal("wnOphy_SoD_wnsoph12","MYAREA",-1)
+END
+
+/* second script block: deactivate this script by resetting the area script. This script block is needed once at the end of the banter "area" file. */
+IF
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA") //this means "timer IS expired"
+THEN
+	RESPONSE #100
+		SetAreaScript("",GENERAL) //sets area script back (default is "no GENERAL script")
+END

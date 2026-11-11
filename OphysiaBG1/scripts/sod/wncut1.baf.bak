@@ -1,0 +1,20 @@
+IF
+	True()
+THEN
+	RESPONSE #100
+	CutsceneId(Player1)
+	StartCutsceneMode()
+Wait(1)
+DisplayStringHead("WNMADRI",~Hmm... How did it go again?~)
+Wait(1)
+ActionOverride("WNMADRI",SwingOnce())
+CreateVisualEffectObject("SPSTRENH","WNMADRI")
+DestroyItem("wnbuck1") 
+CreateItem("wnbuck2",0,0,0)
+GiveItem("wnbuck2",LastHeardBy())
+Wait(3)
+EndCutSceneMode()
+SetGlobal("WNMadriPlot","Global",2)
+SetGlobal("WNBuckUpDenied","Global",3)
+ActionOverride("WNMADRI",StartDialogueNoSet(Player1))
+END

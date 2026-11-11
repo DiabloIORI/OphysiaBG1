@@ -7,19 +7,19 @@ IF
 	Switch("wnOphy_SoD_wnsoph11","MYAREA")
 THEN
 	RESPONSE #0 
-		DisplayStringHead("WNOPHY",~What's the Grubdoubler clan like, M'Khiin?~)  
+		DisplayStringHead("WNOPHY",~格鲁布道布勒氏族是什么样，姆基恩？~)  
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",9) 
 		SetGlobal("wnOphy_SoD_wnsoph11","MYAREA",10)
 	RESPONSE #10
-		DisplayStringHead("Mkhiin",~Bad.~)
+		DisplayStringHead("Mkhiin",~糟。~)
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",8)
 		SetGlobal("wnOphy_SoD_wnsoph11","MYAREA",20)
 	RESPONSE #20
-		DisplayStringHead("WNOPHY",~Oh. I'm sorry to hear to hear that. My old home was bad too, so I left and found a better one.~)
+		DisplayStringHead("WNOPHY",~哦。听到这个我很遗憾。我老家也很糟，所以我离开了，找到了更好的一个。~)
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 		SetGlobal("wnOphy_SoD_wnsoph11","MYAREA",30)
 	RESPONSE #30
-		DisplayStringHead("Mkhiin",~I haven't found a better one yet. Not holding out hope.~)
+		DisplayStringHead("Mkhiin",~我还没找到更好的。也不抱希望。~)
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 		SetGlobal("wnOphy_SoD_MkhiinBanter","GLOBAL",3)
 		SetGlobal("wnOphy_SoD_wnsoph11","MYAREA",-1)

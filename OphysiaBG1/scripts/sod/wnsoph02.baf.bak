@@ -1,0 +1,35 @@
+// Banter: Ophysia / Corwin (2)
+IF
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA") 
+	!Global("wnOphy_SoD_wnsoph02","MYAREA",-1)
+	Switch("wnOphy_SoD_wnsoph02","MYAREA")
+THEN
+	RESPONSE #0 
+		DisplayStringHead("CORWIN",~There is much good that has been done in the name of the Flaming Fist.~)  
+		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",7)
+		SetGlobal("wnOphy_SoD_wnsoph02","MYAREA",10)
+	RESPONSE #10
+		DisplayStringHead("WNOPHY",~Does that make up for all the unforgiveable things innocent folk have suffered?~)
+		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",9)
+		SetGlobal("wnOphy_SoD_wnsoph02","MYAREA",20)
+	RESPONSE #20
+		DisplayStringHead("CORWIN",~No. I just prefer to focus on the good that I can do, here and now.~)  
+		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",9)
+		SetGlobal("wnOphy_SoD_wnsoph02","MYAREA",30)
+	RESPONSE #30
+		DisplayStringHead("WNOPHY",~Me too, though I don't let someone else tell me the difference between good and bad.~)	
+		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+		SetGlobal("wnOphy_SoD_CorwinBanter","GLOBAL",6)
+		SetGlobal("wnOphy_SoD_wnsoph02","MYAREA",-1)
+END
+
+/* second script block: deactivate this script by resetting the area script. This script block is needed once at the end of the banter "area" file. */
+IF
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA") //this means "timer IS expired"
+THEN
+	RESPONSE #100
+		SetAreaScript("",GENERAL) //sets area script back (default is "no GENERAL script")
+END
+	

@@ -1,0 +1,43 @@
+IF
+    InParty("WNOPHY")
+	Global("WNOPHYMoveCamp","BD1000",0)
+THEN
+  RESPONSE #100
+    SetGlobal("WNOPHYMoveCamp","BD1000",1)
+	Continue()
+END
+
+IF
+  Global("WNOPHYMoveCamp","BD1000",0)
+  !Dead("WNOPHY")
+  !InPartyAllowDead("WNOPHY")
+THEN
+  RESPONSE #100
+    SetGlobal("WNOPHYMoveCamp","BD1000",1)
+    MoveGlobal("BD1000","WNOPHY",[1069.3556])
+    ActionOverride("WNOPHY",Face(NW))
+    ReallyForceSpellDeadRES("BDREJUVE","WNOPHY")
+    ChangeEnemyAlly("WNOPHY",NEUTRAL)
+    ChangeSpecifics("WNOPHY",ALLIES)
+    ActionOverride("WNOPHY",SetGlobal("bd_joined","LOCALS",0))
+    ActionOverride("WNOPHY",SetGlobal("bd_retreat","LOCALS",0))
+    ActionOverride("WNOPHY",SaveObjectLocation("LOCALS","bd_default_loc",Myself))
+    ActionOverride("WNOPHY",ChangeAIScript("WNSOPHY",OVERRIDE))
+    Continue()
+END
+
+// Ophy comments on Caelar
+
+IF
+	Global("bd_plot","global",170) //after talking to Bence, this will be at Global("bd_plot","global",175) 
+	Global("WNOPHY_bd_mdd016b","bd1000",0)
+	!GlobalTimerNotExpired("bd_mdd016b_timer","bd1000") //timer to space the NPC comments
+	IsValidForPartyDialog("WNOPHY")  
+	TriggerOverride("WNOPHY",Detect(Player1))
+THEN
+	RESPONSE #100
+		SetGlobal("WNOPHY_bd_mdd016b","bd1000",1)
+		SetGlobalTimer("bd_mdd016b_timer","bd1000",ONE_ROUND)
+		DisplayStringHead("WNOPHY",~Well, Caelar seems totally, completely reasonable.~)  
+		Continue()
+END

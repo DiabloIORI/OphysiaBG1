@@ -1,0 +1,34 @@
+// Banter: Ophysia / Glint (1)
+IF
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+	!Global("wnOphy_SoD_wnsoph07","MYAREA",-1)
+	Switch("wnOphy_SoD_wnsoph07","MYAREA")
+THEN
+	RESPONSE #0 
+		DisplayStringHead("WNOPHY",~What's it like to have such a big family, Glint?~)  
+		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",9) 
+		SetGlobal("wnOphy_SoD_wnsoph07","MYAREA",10)
+	RESPONSE #10
+		DisplayStringHead("Glint",~Oh, it's great! Well, other than keeping up with all the birthdays, and anniversaries, everyone always needing something—there's never a dull moment. It’s like trying to juggle a hundred things at once, and you're never quite sure what you're gonna drop first.~)
+		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",8)
+		SetGlobal("wnOphy_SoD_wnsoph07","MYAREA",20)
+	RESPONSE #20
+		DisplayStringHead("WNOPHY",~That... doesn't sound that appealing.~)
+		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+		SetGlobal("wnOphy_SoD_wnsoph07","MYAREA",30)
+	RESPONSE #30
+		DisplayStringHead("Glint",~I love them all in different ways. I haven't managed to drop any of them yet. Well, other than my baby cousin—but that doesn't count, because I caught him!~)
+		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+		SetGlobal("wnOphy_SoD_GlintBanter","GLOBAL",3)
+		SetGlobal("wnOphy_SoD_wnsoph07","MYAREA",-1)
+END
+
+/* second script block: deactivate this script by resetting the area script. This script block is needed once at the end of the banter "area" file. */
+IF
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA") //this means "timer IS expired"
+THEN
+	RESPONSE #100
+		SetAreaScript("",GENERAL) //sets area script back (default is "no GENERAL script")
+END

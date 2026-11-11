@@ -7,19 +7,19 @@ IF
 	Switch("wnOphy_SoD_wnsoph03","MYAREA")
 THEN
 	RESPONSE #0 
-		DisplayStringHead("WNOPHY",~Do you think you'll go back to Rasheman soon, Dynaheir?~)  
+		DisplayStringHead("WNOPHY",~你觉得你很快会回拉什曼吗，迪娜希尔？~)  
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",9) 
 		SetGlobal("wnOphy_SoD_wnsoph03","MYAREA",10)
 	RESPONSE #10
-		DisplayStringHead("DYNAHEIR",~I hath considered the venture. Minsc and I have accomplished much in our time here... a return must come one day.~)
+		DisplayStringHead("DYNAHEIR",~我确曾思及此行。明斯克与我在此已成就许多……归去终有一日。~)
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",8)
 		SetGlobal("wnOphy_SoD_wnsoph03","MYAREA",20)
 	RESPONSE #20
-		DisplayStringHead("WNOPHY",~Is that what you want, though?~)
+		DisplayStringHead("WNOPHY",~可那是你想要的吗？~)
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 		SetGlobal("wnOphy_SoD_wnsoph03","MYAREA",30)
 	RESPONSE #30
-		DisplayStringHead("DYNAHEIR",~Perhaps. The choice is not mine alone, but if it were, I would be content to wander for a time longer.~)
+		DisplayStringHead("DYNAHEIR",~也许。这选择不单由我做，可若由我，我倒乐意再游荡一阵。~)
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 		SetGlobal("wnOphy_SoD_DynaBanter","GLOBAL",3)
 		SetGlobal("wnOphy_SoD_wnsoph03","MYAREA",-1)

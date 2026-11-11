@@ -7,19 +7,19 @@ IF
 	Switch("wnOphy_SoD_wnsoph08","MYAREA")
 THEN
 	RESPONSE #0 
-		DisplayStringHead("WNOPHY",~Do you think I'd make a good Harper, Jaheira?~)  
+		DisplayStringHead("WNOPHY",~你觉得我会是个好竖琴手吗，贾希拉？~)  
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",9) 
 		SetGlobal("wnOphy_SoD_wnsoph08","MYAREA",10)
 	RESPONSE #10
-		DisplayStringHead("Jaheira",~You're too brash for your own good. Harpers are sometimes required to act alone, and I doubt you'd last long without my help.~)
+		DisplayStringHead("Jaheira",~你太莽撞，对自己没好处。竖琴手有时得单独行动，我怀疑没有我帮忙你撑不了多久。~)
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",8)
 		SetGlobal("wnOphy_SoD_wnsoph08","MYAREA",20)
 	RESPONSE #20
-		DisplayStringHead("WNOPHY",~That's so sweet. You care about me.~)
+		DisplayStringHead("WNOPHY",~这话真甜。你关心我。~)
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 		SetGlobal("wnOphy_SoD_wnsoph08","MYAREA",30)
 	RESPONSE #30
-		DisplayStringHead("Jaheira",~Do not say that as though I do not—I do.~)
+		DisplayStringHead("Jaheira",~别说得好像我不关心——我关心。~)
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 		SetGlobal("wnOphy_SoD_JaheiraBanter","GLOBAL",3)
 		SetGlobal("wnOphy_SoD_wnsoph08","MYAREA",-1)

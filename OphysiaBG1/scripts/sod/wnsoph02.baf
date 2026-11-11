@@ -7,19 +7,19 @@ IF
 	Switch("wnOphy_SoD_wnsoph02","MYAREA")
 THEN
 	RESPONSE #0 
-		DisplayStringHead("CORWIN",~There is much good that has been done in the name of the Flaming Fist.~)  
+		DisplayStringHead("CORWIN",~以焰拳之名做过很多好事。~)  
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",7)
 		SetGlobal("wnOphy_SoD_wnsoph02","MYAREA",10)
 	RESPONSE #10
-		DisplayStringHead("WNOPHY",~Does that make up for all the unforgiveable things innocent folk have suffered?~)
+		DisplayStringHead("WNOPHY",~那能抵得过无辜百姓遭受的那些不可饶恕的事吗？~)
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",9)
 		SetGlobal("wnOphy_SoD_wnsoph02","MYAREA",20)
 	RESPONSE #20
-		DisplayStringHead("CORWIN",~No. I just prefer to focus on the good that I can do, here and now.~)  
+		DisplayStringHead("CORWIN",~不能。我只是更愿意专注于我此时此地能做的好事。~)  
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",9)
 		SetGlobal("wnOphy_SoD_wnsoph02","MYAREA",30)
 	RESPONSE #30
-		DisplayStringHead("WNOPHY",~Me too, though I don't let someone else tell me the difference between good and bad.~)	
+		DisplayStringHead("WNOPHY",~我也是，不过我不会让别人来替我分辨善恶。~)	
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 		SetGlobal("wnOphy_SoD_CorwinBanter","GLOBAL",6)
 		SetGlobal("wnOphy_SoD_wnsoph02","MYAREA",-1)

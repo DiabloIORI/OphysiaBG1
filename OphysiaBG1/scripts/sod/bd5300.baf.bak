@@ -1,0 +1,13 @@
+IF
+	Global("BD_AREA_HOSTILE","BD5300",1)  // Kanaglym
+	!GlobalTimerNotExpired("bd_sdd350b_ot_timer","bd5300")  
+	Global("WNOPHY_bd_ot","bd5300",0)  
+	IfValidForPartyDialog("WNOPHY")  
+	TriggerOverride("WNOPHY",Range([ENEMY.0.0.0.HOSTILES3],30))
+THEN
+	RESPONSE #100
+		SetGlobalTimer("bd_sdd350b_ot_timer","bd5300",THREE_MINUTES)  
+		SetGlobal("WNOPHY_bd_ot","bd5300",1)  
+		DisplayStringHead("WNOPHY",~Who wants to hear a story?!~)
+		Continue()
+END

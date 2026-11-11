@@ -1,0 +1,34 @@
+// Banter: Ophysia / Jaheira (1)
+IF
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+	!Global("wnOphy_SoD_wnsoph08","MYAREA",-1)
+	Switch("wnOphy_SoD_wnsoph08","MYAREA")
+THEN
+	RESPONSE #0 
+		DisplayStringHead("WNOPHY",~Do you think I'd make a good Harper, Jaheira?~)  
+		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",9) 
+		SetGlobal("wnOphy_SoD_wnsoph08","MYAREA",10)
+	RESPONSE #10
+		DisplayStringHead("Jaheira",~You're too brash for your own good. Harpers are sometimes required to act alone, and I doubt you'd last long without my help.~)
+		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",8)
+		SetGlobal("wnOphy_SoD_wnsoph08","MYAREA",20)
+	RESPONSE #20
+		DisplayStringHead("WNOPHY",~That's so sweet. You care about me.~)
+		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+		SetGlobal("wnOphy_SoD_wnsoph08","MYAREA",30)
+	RESPONSE #30
+		DisplayStringHead("Jaheira",~Do not say that as though I do not—I do.~)
+		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+		SetGlobal("wnOphy_SoD_JaheiraBanter","GLOBAL",3)
+		SetGlobal("wnOphy_SoD_wnsoph08","MYAREA",-1)
+END
+
+/* second script block: deactivate this script by resetting the area script. This script block is needed once at the end of the banter "area" file. */
+IF
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA") //this means "timer IS expired"
+THEN
+	RESPONSE #100
+		SetAreaScript("",GENERAL) //sets area script back (default is "no GENERAL script")
+END

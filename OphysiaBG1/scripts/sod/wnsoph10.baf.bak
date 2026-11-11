@@ -1,0 +1,38 @@
+// Banter: Ophysia / Minsc (1)
+IF
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+	!Global("wnOphy_SoD_wnsoph10","MYAREA",-1)
+	Switch("wnOphy_SoD_wnsoph10","MYAREA")
+THEN
+	RESPONSE #0 
+		DisplayStringHead("WNOPHY",~Minsc, have you ever trained Boo to do any of the things he does, or does he just... know?~)  
+		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",9) 
+		SetGlobal("wnOphy_SoD_wnsoph10","MYAREA",10)
+	RESPONSE #10
+		DisplayStringHead("Minsc",~Trained? Not at all! All I must do is ask, and Boo will deliver! This is our bond, you see.~)
+		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",8)
+		SetGlobal("wnOphy_SoD_wnsoph10","MYAREA",20)
+	RESPONSE #20
+		DisplayStringHead("WNOPHY",~Right. The thing is, I've never seen you cast any spells to—~)
+		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+		SetGlobal("wnOphy_SoD_wnsoph10","MYAREA",30)
+	RESPONSE #30
+		DisplayStringHead("Minsc",~Yes, I agree, Boo. She must be feeling unwell.~)
+		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
+		SetGlobal("wnOphy_SoD_wnsoph10","MYAREA",40)
+	RESPONSE #40
+		DisplayStringHead("WNOPHY",~Of course, I'M the one that's feeling unwell. My apologies, Minsc. Carry on.~)
+		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+		SetGlobal("wnOphy_SoD_MinscBanter","GLOBAL",3)
+		SetGlobal("wnOphy_SoD_wnsoph10","MYAREA",-1)
+END
+
+/* second script block: deactivate this script by resetting the area script. This script block is needed once at the end of the banter "area" file. */
+IF
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA") //this means "timer IS expired"
+THEN
+	RESPONSE #100
+		SetAreaScript("",GENERAL) //sets area script back (default is "no GENERAL script")
+END

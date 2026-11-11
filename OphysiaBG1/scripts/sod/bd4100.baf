@@ -10,7 +10,7 @@ THEN
     RESPONSE #100
         SetGlobal("wn_Ophy_ot","bd4100",1)  // Dragonspear Castle Keep, First Floor
         SetGlobalTimer("bd_mdd1352_ot_timer","bd4100",2)  // Dragonspear Castle Keep, First Floor
-        DisplayStringHead("WNOPHY",~Wh—what? This can't be right. Someone pinch me.~) 
+        DisplayStringHead("WNOPHY",~什——什么？这不可能。谁来掐我一下。~) 
 		Continue()
 END
 
@@ -24,6 +24,6 @@ THEN
     RESPONSE #100
         SetGlobal("wn_Ophy_ot","bd4100",1)  // Dragonspear Castle Keep, First Floor
         SetGlobalTimer("bd_mdd1352_ot_timer","bd4100",9)  // Dragonspear Castle Keep, First Floor
-        DisplayStringHead("WNOPHY",~Whatever we're looking at here, it has to be a trick. <CHARNAME> wouldn't do this. Skie is our friend!~)   
+        DisplayStringHead("WNOPHY",~不管我们在这儿看到的是什么，肯定是个把戏。<CHARNAME>不会这么做。史姬是我们的朋友！~)   
 		Continue()
 END

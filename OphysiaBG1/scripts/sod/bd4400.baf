@@ -5,7 +5,7 @@ IF
 	GlobalGT("WNMadriPlot","Global",0)
 THEN
 	RESPONSE #100  
-		DisplayStringWait("WNOPHY",~Madri's gonna kill me for this.~) 
+		DisplayStringWait("WNOPHY",~玛德莉会为这个宰了我。~) 
 	    SetGlobal("WNOPHY_bd_avernus_bark","bd4400",1)  
 		SmallWait(8)
 		Continue()

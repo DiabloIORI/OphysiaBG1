@@ -1,0 +1,1264 @@
+// Ophysia's main script file
+
+
+// EXPERIENCE
+
+IF
+	Global("BD_JOINXP","LOCALS",1)
+	Global("BD_SAFEHOUSE_DONE","GLOBAL",1)
+	Global("BDSODXP","LOCALS",0)
+	InParty(Myself)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("BDSODXP","LOCALS",1)
+		SetGlobal("BD_JOINXP","LOCALS",0)
+		SetInterrupt(TRUE)
+END
+
+IF
+	Global("BD_JOINXP","LOCALS",0)
+	InParty(Myself)
+	XPGT(Player1,249999)
+	XPLT(Myself,250000)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("BD_JOINXP","LOCALS",1)
+		ChangeStat(Myself,XP,250000,SET)
+		SetInterrupt(TRUE)
+END
+
+IF
+	Global("BD_JOINXP","LOCALS",0)
+	InParty(Myself)
+	XPGT(Player1,199999)
+	XPLT(Myself,200000)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("BD_JOINXP","LOCALS",1)
+		ChangeStat(Myself,XP,200000,SET)
+		SetInterrupt(TRUE)
+END
+
+IF
+	Global("BD_JOINXP","LOCALS",0)
+	InParty(Myself)
+	XPGT(Player1,160999)
+	XPLT(Myself,161000)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("BD_JOINXP","LOCALS",1)
+		ChangeStat(Myself,XP,161000,SET)
+		SetInterrupt(TRUE)
+END
+
+IF
+	Global("BD_JOINXP","LOCALS",0)
+	InParty(Myself)
+	XPGT(Player1,134999)
+	XPLT(Player1,161000)
+	XPLT(Myself,135000)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("BD_JOINXP","LOCALS",1)
+		ChangeStat(Myself,XP,135000,SET)
+		SetInterrupt(TRUE)
+END
+
+IF
+	Global("BD_JOINXP","LOCALS",0)
+	InParty(Myself)
+	XPGT(Player1,109999)
+	XPLT(Player1,135000)
+	XPLT(Myself,110000)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("BD_JOINXP","LOCALS",1)
+		ChangeStat(Myself,XP,110000,SET)
+		SetInterrupt(TRUE)
+END
+
+IF
+	Global("BD_JOINXP","LOCALS",0)
+	InParty(Myself)
+	XPGT(Player1,89999)
+	XPLT(Player1,110000)
+	XPLT(Myself,90000)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("BD_JOINXP","LOCALS",1)
+		ChangeStat(Myself,XP,90000,SET)
+		SetInterrupt(TRUE)
+END
+
+IF
+	Global("BD_JOINXP","LOCALS",0)
+	InParty(Myself)
+	XPLT(Player1,90000)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("BD_JOINXP","LOCALS",1)
+		SetInterrupt(TRUE)
+END
+
+// Give Ophy her SoD bio
+
+IF
+    !AreaCheck("bd0120")  // Tomb Safehouse, First Floor
+    !AreaCheck("bd0130")  // Tomb Safehouse, Second Floor
+    Global("bd_add_new_bio","LOCALS",0)
+THEN
+    RESPONSE #100
+        SetGlobal("bd_add_new_bio","LOCALS",1)
+        SetPlayerSound(Myself,~When asked about her past, OPHYSIA winces before glossing over that she grew up in the slums of Waterdeep before a desire for a new life—and consequences for actions taken in her old one—drove her onto the road, where she eventually found herself in Daggerford, which she has called her home in the years since.
+
+While she only spares a bitter word or two for the City of Splendors, the young bard seems to hum with energy when talking about Daggerford and the people she’s met there, though it is tinted with a degree of frustration, given that the Shining Crusade has prevented her return home.
+
+Much to her own distaste, Ophysia has joined the Flaming Fist expedition and seems motivated to put a stop to crusade by your side.~,EXISTANCE5)
+END
+
+// Ensure Ophysia is A-OK after Korlasz's dungeon
+IF
+	!InParty(Myself)
+	Global("BD_SAFEHOUSE_DONE","GLOBAL",1)
+	Global("BD_POST_SAFEHOUSE_HEAL","LOCALS",0)
+THEN
+	RESPONSE #100
+		SetGlobal("BD_POST_SAFEHOUSE_HEAL","LOCALS",1)
+		ReallyForceSpellDeadRES("BDREJUVE",Myself)  // cures all deseases, dispelles all spell effects and resets HP to 100% 
+		Continue()
+END
+
+
+// Removal of Story Mode on Ophysia if she leaves
+IF
+	!InParty(Myself)
+	CheckSpellState(Myself,STORY_MODE)
+THEN
+	RESPONSE #100
+		ReallyForceSpellDeadRES("OHSMODE3",Myself)  
+		Continue()
+END
+	
+	
+// Ophysia Friendship:
+// 0 = not started
+// 1 = active
+// 2 = active and flirty
+// 3 = failed
+
+// Talk 1 -- Being The Hero
+IF
+    InParty(Myself)
+    !StateCheck(Myself,CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+	CombatCounter(0)
+    !Detect([ENEMY])
+	Global("OphysiaTalksSoD","GLOBAL",0)
+	Global("OphysiaFriendship","GLOBAL",0)
+	GlobalLT("BD_PLOT","GLOBAL",281)
+	OR(5)
+		AreaCheck("BD1000") // Coast Way Crossing
+		AreaCheck("BD7000") // Coast Way Forest
+		AreaCheck("BD7100") // Troll Claw Woods
+		AreaCheck("BD2000") // Boareskyr Bridge
+		AreaCheck("BD7200") // Forest of Wyrms
+THEN
+  RESPONSE #100
+	SetGlobal("OphysiaTalksSoD","GLOBAL",1)
+	RealSetGlobalTimer("OphysiaTalkTimer","GLOBAL",1800)
+END
+
+IF
+    InParty(Myself)
+    !StateCheck(Myself,CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+	CombatCounter(0)
+    !Detect([ENEMY])
+	Global("OphysiaTalksSoD","GLOBAL",1)
+	Global("OphysiaFriendship","GLOBAL",0)
+	RealGlobalTimerExpired("OphysiaTalkTimer","GLOBAL")
+	GlobalLT("BD_PLOT","GLOBAL",281)
+	OR(5)
+		AreaCheck("BD1000") // Coast Way Crossing
+		AreaCheck("BD7000") // Coast Way Forest
+		AreaCheck("BD7100") // Troll Claw Woods
+		AreaCheck("BD2000") // Boareskyr Bridge
+		AreaCheck("BD7200") // Forest of Wyrms
+THEN
+  RESPONSE #100
+	SetGlobal("OphysiaTalksSoD","GLOBAL",2)
+	StartDialogueNoSet(Player1)
+END
+	
+// Talk 2 -- Daggerford and Waterdeep
+IF
+    InParty(Myself)
+    !StateCheck(Myself,CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+	CombatCounter(0)
+    !Detect([ENEMY])
+	Global("OphysiaTalksSoD","GLOBAL",3)
+	Global("OphysiaFriendship","GLOBAL",1)
+	GlobalLT("BD_PLOT","GLOBAL",281)
+	OR(3)
+		AreaCheck("BD7100") // Troll Claw Woods
+		AreaCheck("BD2000") // Boareskyr Bridge
+		AreaCheck("BD7200") // Forest of Wyrms
+THEN
+  RESPONSE #100
+	SetGlobal("OphysiaTalksSoD","GLOBAL",4)
+	RealSetGlobalTimer("OphysiaTalkTimer","GLOBAL",1800)
+END
+
+IF
+    InParty(Myself)
+    !StateCheck(Myself,CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+	CombatCounter(0)
+    !Detect([ENEMY])
+	Global("OphysiaTalksSoD","GLOBAL",4)
+	Global("OphysiaFriendship","GLOBAL",1)
+	RealGlobalTimerExpired("OphysiaTalkTimer","GLOBAL")
+	GlobalLT("BD_PLOT","GLOBAL",281)
+	OR(3)
+		AreaCheck("BD7100") // Troll Claw Woods
+		AreaCheck("BD2000") // Boareskyr Bridge
+		AreaCheck("BD7200") // Forest of Wyrms
+THEN
+  RESPONSE #100
+	SetGlobal("OphysiaTalksSoD","GLOBAL",5)
+	StartDialogueNoSet(Player1)
+END	
+	
+// Talk 3 -- Post Boareskyr Bridge Scene
+
+IF
+    InParty(Myself)
+    !StateCheck(Myself,CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+	CombatCounter(0)
+    !Detect([ENEMY])
+	Global("OphysiaTalksSoD","GLOBAL",6)
+	Global("OphysiaFriendship","GLOBAL",1)
+	Global("BD_PLOT","GLOBAL",295)
+	AreaCheck("BD2000") // Boareskyr Bridge
+THEN
+  RESPONSE #100
+	SetGlobal("OphysiaTalksSoD","GLOBAL",7)
+	RealSetGlobalTimer("OphysiaTalkTimer","GLOBAL",7)
+END
+
+IF
+    InParty(Myself)
+    !StateCheck(Myself,CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+	CombatCounter(0)
+    !Detect([ENEMY])
+	Global("OphysiaTalksSoD","GLOBAL",7)
+	Global("OphysiaFriendship","GLOBAL",1)
+	RealGlobalTimerExpired("OphysiaTalkTimer","GLOBAL")
+	Global("BD_PLOT","GLOBAL",295)
+	AreaCheck("BD2000") // Boareskyr Bridge
+THEN
+  RESPONSE #100
+	SetGlobal("OphysiaTalksSoD","GLOBAL",8)
+	StartDialogueNoSet(Player1)
+END	
+	
+// Talk 4 -- Moonlit Evening
+
+IF
+    InParty(Myself)
+    !StateCheck(Myself,CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+	CombatCounter(0)
+    !Detect([ENEMY])
+	Global("OphysiaTalksSoD","GLOBAL",9)
+	Global("OphysiaFriendship","GLOBAL",1)
+THEN
+  RESPONSE #100
+	SetGlobal("OphysiaTalksSoD","GLOBAL",10)
+	RealSetGlobalTimer("OphysiaTalkTimer","GLOBAL",3600)
+END
+
+IF
+    InParty(Myself)
+    !StateCheck(Myself,CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+	CombatCounter(0)
+    !Detect([ENEMY])
+	Global("OphysiaTalksSoD","GLOBAL",10)
+	Global("OphysiaFriendship","GLOBAL",1)
+	RealGlobalTimerExpired("OphysiaTalkTimer","GLOBAL")
+	AreaType(OUTDOOR)
+	TimeOfDay(NIGHT)
+THEN
+  RESPONSE #100
+	SetGlobal("OphysiaTalksSoD","GLOBAL",11)
+	StartDialogueNoSet(Player1)
+END	
+	
+// Talk 5 -- Alcohol
+
+IF
+    InParty(Myself)
+    !StateCheck(Myself,CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+	CombatCounter(0)
+    !Detect([ENEMY])
+	Global("OphysiaTalksSoD","GLOBAL",12)
+	Global("OphysiaFriendship","GLOBAL",2)
+THEN
+  RESPONSE #100
+	SetGlobal("OphysiaTalksSoD","GLOBAL",13)
+	RealSetGlobalTimer("OphysiaTalkTimer","GLOBAL",1800)
+END
+
+IF
+    InParty(Myself)
+    !StateCheck(Myself,CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+	CombatCounter(0)
+    !Detect([ENEMY])
+	Global("OphysiaTalksSoD","GLOBAL",13)
+	Global("OphysiaFriendship","GLOBAL",2)
+	RealGlobalTimerExpired("OphysiaTalkTimer","GLOBAL")
+THEN
+  RESPONSE #100
+	SetGlobal("OphysiaTalksSoD","GLOBAL",14)
+	StartDialogueNoSet(Player1)
+END		
+	
+// Talk 6 -- Avernus Portal
+
+IF
+    InParty(Myself)
+    !StateCheck(Myself,CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+	CombatCounter(0)
+    !Detect([ENEMY])
+	Global("OphysiaTalksSoD","GLOBAL",15)
+	Global("OphysiaFriendship","GLOBAL",2)
+	Global("BD_PLOT","GLOBAL",495)
+THEN
+  RESPONSE #100
+	SetGlobal("OphysiaTalksSoD","GLOBAL",16)
+	RealSetGlobalTimer("OphysiaTalkTimer","GLOBAL",ONE_ROUND)
+END
+
+IF
+    InParty(Myself)
+    !StateCheck(Myself,CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+	CombatCounter(0)
+    !Detect([ENEMY])
+	Global("OphysiaTalksSoD","GLOBAL",16)
+	Global("OphysiaFriendship","GLOBAL",2)
+	RealGlobalTimerExpired("OphysiaTalkTimer","GLOBAL")
+	Global("BD_PLOT","GLOBAL",495)
+THEN
+  RESPONSE #100
+	SetGlobal("OphysiaTalksSoD","GLOBAL",17)
+	StartDialogueNoSet(Player1)
+END		
+	
+// Talk 6 -- Return from Avernus
+
+IF
+    InParty(Myself)
+    !StateCheck(Myself,CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+	CombatCounter(0)
+    !Detect([ENEMY])
+	Global("OphysiaTalksSoD","GLOBAL",18)
+	Global("OphysiaFriendship","GLOBAL",2)
+	Global("BD_PLOT","GLOBAL",590)
+THEN
+  RESPONSE #100
+	SetGlobal("OphysiaTalksSoD","GLOBAL",19)
+	RealSetGlobalTimer("OphysiaTalkTimer","GLOBAL",2)
+END
+
+IF
+    InParty(Myself)
+    !StateCheck(Myself,CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+	CombatCounter(0)
+    !Detect([ENEMY])
+	Global("OphysiaTalksSoD","GLOBAL",19)
+	Global("OphysiaFriendship","GLOBAL",2)
+	RealGlobalTimerExpired("OphysiaTalkTimer","GLOBAL")
+	Global("BD_PLOT","GLOBAL",495)
+THEN
+  RESPONSE #100
+	SetGlobal("OphysiaTalksSoD","GLOBAL",20)
+	StartDialogueNoSet(Player1)
+END	
+
+// Ophy comments on the Coast Way bridge explosion
+IF
+	GlobalTimerNotExpired("bd_caelar_timer","bd1000")
+	AreaCheck("bd1000")
+	IsValidForPartyDialog(Myself)
+	Detect(Player1)	
+	Global("WNOPHY_SoDbridge","bd1000",0)
+THEN
+	RESPONSE #100
+		SetGlobal("WNOPHY_SoDbridge","bd1000",1)
+		DisplayStringHead(Myself,~This *really* wasn't how I wanted my day to go. Hyah!~)
+END
+
+  
+// Ophy breaks romance if the player kills the crusaders with the spike trap -- taken from jastey's tutorial (thanks!)
+
+// Ophy doesn't see/wasn't there
+IF
+	!InParty(Myself)
+	OR(2)
+		!AreaCheck("bd7230")
+		!Range("Lever",30)
+	Global("WNOPHY_UsedSpikes","GLOBAL",1) //this variable is set by patching bdlever2.BCS via tp2
+	CombatCounter(0)
+THEN
+	RESPONSE #100
+		SetGlobal("WNOPHY_UsedSpikes","GLOBAL",3)
+END
+
+// If Ophy is there, she's sad
+
+IF
+	InParty(Myself)
+	IsValidForPartyDialog(Myself)
+	See(Player1)
+	AreaCheck("bd7230")
+	Global("WNOPHY_UsedSpikes","GLOBAL",1) //this variable is set by patching bdlever2.BCS via tp2
+	CombatCounter(0)
+THEN
+	RESPONSE #100
+		SetGlobal("WNOPHY_UsedSpikes","GLOBAL",2)
+		DisplayStringHead(Myself,~Gods... I don't even want to think about what you just did.~)
+		SetGlobal("WNOphysiaRomanceActive","Global",3)
+END
+
+// Banters
+
+// Corwin
+
+// Step 1: Detect the companion and activate the timer
+IF
+	InParty(Myself)
+	InParty("CORWIN")
+	OR(2)
+		Global("wnOphy_SoD_CorwinBanter","GLOBAL",0)
+		Global("wnOphy_SoD_CorwinBanter","GLOBAL",3)
+THEN
+	RESPONSE #100
+		SetGlobalTimerRandom("wnOphy_SoD_CorwinBanterTimer","LOCALS",ONE_DAY,FOURTEEN_DAYS)
+		IncrementGlobal("wnOphy_SoD_CorwinBanter","GLOBAL",1)
+END
+
+// Step 2: Ensure banter doesn't trigger if companion leaves the party
+IF
+	OR(2)
+		!InParty(Myself)
+		!InParty("CORWIN")  
+	OR(2)
+		Global("wnOphy_SoD_CorwinBanter","GLOBAL",1) //intermediate value for first banter
+		Global("wnOphy_SoD_CorwinBanter","GLOBAL",4) //intermediate value for 2nd banter
+THEN
+	RESPONSE #100
+		IncrementGlobal("wnOphy_SoD_CorwinBanter","GLOBAL",-1) //decreases value to "Corwin not detected"
+END
+
+// Step 3: The timer runs out and the variable is incremented
+IF
+		GlobalTimerExpired("wnOphy_SoD_CorwinBanterTimer","LOCALS")
+		!GlobalTimerNotExpired("BD_NPC_BANTER","GLOBAL")
+	GlobalTimerNotExpired("BD_AREA_BANTER_DELAY","MYAREA")
+	OR(2)
+		Global("wnOphy_SoD_CorwinBanter","GLOBAL",1) //intermediate value for first banter
+		Global("wnOphy_SoD_CorwinBanter","GLOBAL",4) //intermediate value for 2nd banter
+	IsValidForPartyDialog(Myself)
+	IsValidForPartyDialog("CORWIN")
+	!PartyRested()
+	!ActuallyInCombat()
+THEN
+	RESPONSE #100
+		BanterBlockTime(450)
+		SetGlobalTimer("BD_NPC_BANTER","GLOBAL",FOUR_HOURS)
+		IncrementGlobal("wnOphy_SoD_CorwinBanter","GLOBAL",1) //increment banter variable to activate 4th banter block
+END
+
+// Step 4: The first banter is initiated by setting the area script to the custom script containing our banters [ONLY STARTED BY OPHYSIA]
+IF
+	Global("wnOphy_SoD_CorwinBanter","GLOBAL",2) //trigger value for first banter - will be closed in 1st banter
+	IsValidForPartyDialog(Myself)
+	IsValidForPartyDialog("CORWIN")  
+	See("CORWIN")
+THEN
+	RESPONSE #100
+		SetAreaScript("wnsoph01",GENERAL) //this is the banter "area" script containing the Biff-Corwin banter.
+END
+
+// Dynaheir
+
+IF
+	InParty(Myself)
+	InParty("DYNAHEIR")
+	OR(2)
+		Global("wnOphy_SoD_DynaBanter","GLOBAL",0)
+		Global("wnOphy_SoD_DynaBanter","GLOBAL",3)
+THEN
+	RESPONSE #100
+		SetGlobalTimerRandom("wnOphy_SoD_DynaBanterTimer","LOCALS",ONE_DAY,FOURTEEN_DAYS)
+		IncrementGlobal("wnOphy_SoD_DynaBanter","GLOBAL",1)
+END
+
+IF
+	OR(2)
+		!InParty(Myself)
+		!InParty("DYNAHEIR")  
+	OR(2)
+		Global("wnOphy_SoD_DynaBanter","GLOBAL",1)
+		Global("wnOphy_SoD_DynaBanter","GLOBAL",4)
+THEN
+	RESPONSE #100
+		IncrementGlobal("wnOphy_SoD_DynaBanter","GLOBAL",-1)
+END
+
+IF
+		GlobalTimerExpired("wnOphy_SoD_DynaBanterTimer","LOCALS")
+		!GlobalTimerNotExpired("BD_NPC_BANTER","GLOBAL")
+	GlobalTimerNotExpired("BD_AREA_BANTER_DELAY","MYAREA")
+	OR(2)
+		Global("wnOphy_SoD_DynaBanter","GLOBAL",1) 
+		Global("wnOphy_SoD_DynaBanter","GLOBAL",4) 
+	IsValidForPartyDialog(Myself)
+	IsValidForPartyDialog("DYNAHEIR")
+	!PartyRested()
+	!ActuallyInCombat()
+THEN
+	RESPONSE #100
+		BanterBlockTime(450)
+		SetGlobalTimer("BD_NPC_BANTER","GLOBAL",FOUR_HOURS)
+		IncrementGlobal("wnOphy_SoD_DynaBanter","GLOBAL",1)
+END
+
+IF
+	Global("wnOphy_SoD_DynaBanter","GLOBAL",2)
+	IsValidForPartyDialog(Myself)
+	IsValidForPartyDialog("DYNAHEIR")  
+	See("DYNAHEIR")
+THEN
+	RESPONSE #100
+		SetAreaScript("wnsoph03",GENERAL)
+END
+
+// Baeloth
+IF
+	InParty(Myself)
+	InParty("BAELOTH")
+	OR(2)
+		Global("wnOphy_SoD_BAELOTHBanter","GLOBAL",0)
+		Global("wnOphy_SoD_BAELOTHBanter","GLOBAL",3)
+THEN
+	RESPONSE #100
+		SetGlobalTimerRandom("wnOphy_SoD_BAELOTHBanterTimer","LOCALS",ONE_DAY,FOURTEEN_DAYS)
+		IncrementGlobal("wnOphy_SoD_BAELOTHBanter","GLOBAL",1)
+END
+
+IF
+	OR(2)
+		!InParty(Myself)
+		!InParty("BAELOTH")  
+	OR(2)
+		Global("wnOphy_SoD_BAELOTHBanter","GLOBAL",1)
+		Global("wnOphy_SoD_BAELOTHBanter","GLOBAL",4)
+THEN
+	RESPONSE #100
+		IncrementGlobal("wnOphy_SoD_BAELOTHBanter","GLOBAL",-1)
+END
+
+IF
+		GlobalTimerExpired("wnOphy_SoD_BAELOTHBanterTimer","LOCALS")
+		!GlobalTimerNotExpired("BD_NPC_BANTER","GLOBAL")
+	GlobalTimerNotExpired("BD_AREA_BANTER_DELAY","MYAREA")
+	OR(2)
+		Global("wnOphy_SoD_BAELOTHBanter","GLOBAL",1)
+		Global("wnOphy_SoD_BAELOTHBanter","GLOBAL",4)
+	IsValidForPartyDialog(Myself)
+	IsValidForPartyDialog("BAELOTH")
+	!PartyRested()
+	!ActuallyInCombat()
+THEN
+	RESPONSE #100
+		BanterBlockTime(450)
+		SetGlobalTimer("BD_NPC_BANTER","GLOBAL",FOUR_HOURS)
+		IncrementGlobal("wnOphy_SoD_BAELOTHBanter","GLOBAL",1)
+END
+
+IF
+	Global("wnOphy_SoD_BAELOTHBanter","GLOBAL",2)
+	IsValidForPartyDialog(Myself)
+	IsValidForPartyDialog("BAELOTH")  
+	See("BAELOTH")
+THEN
+	RESPONSE #100
+		SetAreaScript("wnsoph04",GENERAL)
+END
+
+// Dorn
+
+IF
+	InParty(Myself)
+	InParty("DORN")
+	OR(2)
+		Global("wnOphy_SoD_DORNBanter","GLOBAL",0)
+		Global("wnOphy_SoD_DORNBanter","GLOBAL",3)
+THEN
+	RESPONSE #100
+		SetGlobalTimerRandom("wnOphy_SoD_DORNBanterTimer","LOCALS",ONE_DAY,FOURTEEN_DAYS)
+		IncrementGlobal("wnOphy_SoD_DORNBanter","GLOBAL",1)
+END
+
+IF
+	OR(2)
+		!InParty(Myself)
+		!InParty("DORN")  
+	OR(2)
+		Global("wnOphy_SoD_DORNBanter","GLOBAL",1)
+		Global("wnOphy_SoD_DORNBanter","GLOBAL",4)
+THEN
+	RESPONSE #100
+		IncrementGlobal("wnOphy_SoD_DORNBanter","GLOBAL",-1)
+END
+
+IF
+		GlobalTimerExpired("wnOphy_SoD_DORNBanterTimer","LOCALS")
+		!GlobalTimerNotExpired("BD_NPC_BANTER","GLOBAL")
+	GlobalTimerNotExpired("BD_AREA_BANTER_DELAY","MYAREA")
+	OR(2)
+		Global("wnOphy_SoD_DORNBanter","GLOBAL",1)
+		Global("wnOphy_SoD_DORNBanter","GLOBAL",4)
+	IsValidForPartyDialog(Myself)
+	IsValidForPartyDialog("DORN")
+	!PartyRested()
+	!ActuallyInCombat()
+THEN
+	RESPONSE #100
+		BanterBlockTime(450)
+		SetGlobalTimer("BD_NPC_BANTER","GLOBAL",FOUR_HOURS)
+		IncrementGlobal("wnOphy_SoD_DORNBanter","GLOBAL",1)
+END
+
+IF
+	Global("wnOphy_SoD_DORNBanter","GLOBAL",2)
+	IsValidForPartyDialog(Myself)
+	IsValidForPartyDialog("DORN")  
+	See("DORN")
+THEN
+	RESPONSE #100
+		SetAreaScript("wnsoph05",GENERAL)
+END
+
+// Edwin
+
+IF
+	InParty(Myself)
+	InParty("EDWIN")
+	OR(2)
+		Global("wnOphy_SoD_EDWINBanter","GLOBAL",0)
+		Global("wnOphy_SoD_EDWINBanter","GLOBAL",3)
+THEN
+	RESPONSE #100
+		SetGlobalTimerRandom("wnOphy_SoD_EDWINBanterTimer","LOCALS",ONE_DAY,FOURTEEN_DAYS)
+		IncrementGlobal("wnOphy_SoD_EDWINBanter","GLOBAL",1)
+END
+
+IF
+	OR(2)
+		!InParty(Myself)
+		!InParty("EDWIN")  
+	OR(2)
+		Global("wnOphy_SoD_EDWINBanter","GLOBAL",1)
+		Global("wnOphy_SoD_EDWINBanter","GLOBAL",4)
+THEN
+	RESPONSE #100
+		IncrementGlobal("wnOphy_SoD_EDWINBanter","GLOBAL",-1)
+END
+
+IF
+		GlobalTimerExpired("wnOphy_SoD_EDWINBanterTimer","LOCALS")
+		!GlobalTimerNotExpired("BD_NPC_BANTER","GLOBAL")
+	GlobalTimerNotExpired("BD_AREA_BANTER_DELAY","MYAREA")
+	OR(2)
+		Global("wnOphy_SoD_EDWINBanter","GLOBAL",1)
+		Global("wnOphy_SoD_EDWINBanter","GLOBAL",4)
+	IsValidForPartyDialog(Myself)
+	IsValidForPartyDialog("EDWIN")
+	!PartyRested()
+	!ActuallyInCombat()
+THEN
+	RESPONSE #100
+		BanterBlockTime(450)
+		SetGlobalTimer("BD_NPC_BANTER","GLOBAL",FOUR_HOURS)
+		IncrementGlobal("wnOphy_SoD_EDWINBanter","GLOBAL",1)
+END
+
+IF
+	Global("wnOphy_SoD_EDWINBanter","GLOBAL",2)
+	IsValidForPartyDialog(Myself)
+	IsValidForPartyDialog("EDWIN")  
+	See("EDWIN")
+THEN
+	RESPONSE #100
+		SetAreaScript("wnsoph06",GENERAL)
+END
+
+// Glint
+
+IF
+	InParty(Myself)
+	InParty("GLINT")
+	OR(2)
+		Global("wnOphy_SoD_GLINTBanter","GLOBAL",0)
+		Global("wnOphy_SoD_GLINTBanter","GLOBAL",3)
+THEN
+	RESPONSE #100
+		SetGlobalTimerRandom("wnOphy_SoD_GLINTBanterTimer","LOCALS",ONE_DAY,FOURTEEN_DAYS)
+		IncrementGlobal("wnOphy_SoD_GLINTBanter","GLOBAL",1)
+END
+
+IF
+	OR(2)
+		!InParty(Myself)
+		!InParty("GLINT")  
+	OR(2)
+		Global("wnOphy_SoD_GLINTBanter","GLOBAL",1)
+		Global("wnOphy_SoD_GLINTBanter","GLOBAL",4)
+THEN
+	RESPONSE #100
+		IncrementGlobal("wnOphy_SoD_GLINTBanter","GLOBAL",-1)
+END
+
+IF
+		GlobalTimerExpired("wnOphy_SoD_GLINTBanterTimer","LOCALS")
+		!GlobalTimerNotExpired("BD_NPC_BANTER","GLOBAL")
+	GlobalTimerNotExpired("BD_AREA_BANTER_DELAY","MYAREA")
+	OR(2)
+		Global("wnOphy_SoD_GLINTBanter","GLOBAL",1)
+		Global("wnOphy_SoD_GLINTBanter","GLOBAL",4)
+	IsValidForPartyDialog(Myself)
+	IsValidForPartyDialog("GLINT")
+	!PartyRested()
+	!ActuallyInCombat()
+THEN
+	RESPONSE #100
+		BanterBlockTime(450)
+		SetGlobalTimer("BD_NPC_BANTER","GLOBAL",FOUR_HOURS)
+		IncrementGlobal("wnOphy_SoD_GLINTBanter","GLOBAL",1)
+END
+
+IF
+	Global("wnOphy_SoD_GLINTBanter","GLOBAL",2)
+	IsValidForPartyDialog(Myself)
+	IsValidForPartyDialog("GLINT")  
+	See("GLINT")
+THEN
+	RESPONSE #100
+		SetAreaScript("wnsoph07",GENERAL)
+END
+
+// Jaheira
+
+IF
+	InParty(Myself)
+	InParty("JAHEIRA")
+	OR(2)
+		Global("wnOphy_SoD_JAHEIRABanter","GLOBAL",0)
+		Global("wnOphy_SoD_JAHEIRABanter","GLOBAL",3)
+THEN
+	RESPONSE #100
+		SetGlobalTimerRandom("wnOphy_SoD_JAHEIRABanterTimer","LOCALS",ONE_DAY,FOURTEEN_DAYS)
+		IncrementGlobal("wnOphy_SoD_JAHEIRABanter","GLOBAL",1)
+END
+
+IF
+	OR(2)
+		!InParty(Myself)
+		!InParty("JAHEIRA")  
+	OR(2)
+		Global("wnOphy_SoD_JAHEIRABanter","GLOBAL",1)
+		Global("wnOphy_SoD_JAHEIRABanter","GLOBAL",4)
+THEN
+	RESPONSE #100
+		IncrementGlobal("wnOphy_SoD_JAHEIRABanter","GLOBAL",-1)
+END
+
+IF
+		GlobalTimerExpired("wnOphy_SoD_JAHEIRABanterTimer","LOCALS")
+		!GlobalTimerNotExpired("BD_NPC_BANTER","GLOBAL")
+	GlobalTimerNotExpired("BD_AREA_BANTER_DELAY","MYAREA")
+	OR(2)
+		Global("wnOphy_SoD_JAHEIRABanter","GLOBAL",1)
+		Global("wnOphy_SoD_JAHEIRABanter","GLOBAL",4)
+	IsValidForPartyDialog(Myself)
+	IsValidForPartyDialog("JAHEIRA")
+	!PartyRested()
+	!ActuallyInCombat()
+THEN
+	RESPONSE #100
+		BanterBlockTime(450)
+		SetGlobalTimer("BD_NPC_BANTER","GLOBAL",FOUR_HOURS)
+		IncrementGlobal("wnOphy_SoD_JAHEIRABanter","GLOBAL",1)
+END
+
+IF
+	Global("wnOphy_SoD_JAHEIRABanter","GLOBAL",2)
+	IsValidForPartyDialog(Myself)
+	IsValidForPartyDialog("JAHEIRA")  
+	See("JAHEIRA")
+THEN
+	RESPONSE #100
+		SetAreaScript("wnsoph08",GENERAL)
+END
+
+// Khalid
+
+IF
+	InParty(Myself)
+	InParty("KHALID")
+	OR(2)
+		Global("wnOphy_SoD_KHALIDBanter","GLOBAL",0)
+		Global("wnOphy_SoD_KHALIDBanter","GLOBAL",3)
+THEN
+	RESPONSE #100
+		SetGlobalTimerRandom("wnOphy_SoD_KHALIDBanterTimer","LOCALS",ONE_DAY,FOURTEEN_DAYS)
+		IncrementGlobal("wnOphy_SoD_KHALIDBanter","GLOBAL",1)
+END
+
+IF
+	OR(2)
+		!InParty(Myself)
+		!InParty("KHALID")  
+	OR(2)
+		Global("wnOphy_SoD_KHALIDBanter","GLOBAL",1)
+		Global("wnOphy_SoD_KHALIDBanter","GLOBAL",4)
+THEN
+	RESPONSE #100
+		IncrementGlobal("wnOphy_SoD_KHALIDBanter","GLOBAL",-1)
+END
+
+IF
+		GlobalTimerExpired("wnOphy_SoD_KHALIDBanterTimer","LOCALS")
+		!GlobalTimerNotExpired("BD_NPC_BANTER","GLOBAL")
+	GlobalTimerNotExpired("BD_AREA_BANTER_DELAY","MYAREA")
+	OR(2)
+		Global("wnOphy_SoD_KHALIDBanter","GLOBAL",1)
+		Global("wnOphy_SoD_KHALIDBanter","GLOBAL",4)
+	IsValidForPartyDialog(Myself)
+	IsValidForPartyDialog("KHALID")
+	!PartyRested()
+	!ActuallyInCombat()
+THEN
+	RESPONSE #100
+		BanterBlockTime(450)
+		SetGlobalTimer("BD_NPC_BANTER","GLOBAL",FOUR_HOURS)
+		IncrementGlobal("wnOphy_SoD_KHALIDBanter","GLOBAL",1)
+END
+
+IF
+	Global("wnOphy_SoD_KHALIDBanter","GLOBAL",2)
+	IsValidForPartyDialog(Myself)
+	IsValidForPartyDialog("KHALID")  
+	See("KHALID")
+THEN
+	RESPONSE #100
+		SetAreaScript("wnsoph09",GENERAL)
+END
+
+// Minsc
+
+IF
+	InParty(Myself)
+	InParty("MINSC")
+	OR(2)
+		Global("wnOphy_SoD_MINSCBanter","GLOBAL",0)
+		Global("wnOphy_SoD_MINSCBanter","GLOBAL",3)
+THEN
+	RESPONSE #100
+		SetGlobalTimerRandom("wnOphy_SoD_MINSCBanterTimer","LOCALS",ONE_DAY,FOURTEEN_DAYS)
+		IncrementGlobal("wnOphy_SoD_MINSCBanter","GLOBAL",1)
+END
+
+IF
+	OR(2)
+		!InParty(Myself)
+		!InParty("MINSC")  
+	OR(2)
+		Global("wnOphy_SoD_MINSCBanter","GLOBAL",1)
+		Global("wnOphy_SoD_MINSCBanter","GLOBAL",4)
+THEN
+	RESPONSE #100
+		IncrementGlobal("wnOphy_SoD_MINSCBanter","GLOBAL",-1)
+END
+
+IF
+		GlobalTimerExpired("wnOphy_SoD_MINSCBanterTimer","LOCALS")
+		!GlobalTimerNotExpired("BD_NPC_BANTER","GLOBAL")
+	GlobalTimerNotExpired("BD_AREA_BANTER_DELAY","MYAREA")
+	OR(2)
+		Global("wnOphy_SoD_MINSCBanter","GLOBAL",1)
+		Global("wnOphy_SoD_MINSCBanter","GLOBAL",4)
+	IsValidForPartyDialog(Myself)
+	IsValidForPartyDialog("MINSC")
+	!PartyRested()
+	!ActuallyInCombat()
+THEN
+	RESPONSE #100
+		BanterBlockTime(450)
+		SetGlobalTimer("BD_NPC_BANTER","GLOBAL",FOUR_HOURS)
+		IncrementGlobal("wnOphy_SoD_MINSCBanter","GLOBAL",1)
+END
+
+IF
+	Global("wnOphy_SoD_MINSCBanter","GLOBAL",2)
+	IsValidForPartyDialog(Myself)
+	IsValidForPartyDialog("MINSC")  
+	See("MINSC")
+THEN
+	RESPONSE #100
+		SetAreaScript("wnsoph10",GENERAL)
+END
+
+// M'Khiin
+
+IF
+	InParty(Myself)
+	InParty("MKHIIN")
+	OR(2)
+		Global("wnOphy_SoD_MKHIINBanter","GLOBAL",0)
+		Global("wnOphy_SoD_MKHIINBanter","GLOBAL",3)
+THEN
+	RESPONSE #100
+		SetGlobalTimerRandom("wnOphy_SoD_MKHIINBanterTimer","LOCALS",ONE_DAY,FOURTEEN_DAYS)
+		IncrementGlobal("wnOphy_SoD_MKHIINBanter","GLOBAL",1)
+END
+
+IF
+	OR(2)
+		!InParty(Myself)
+		!InParty("MKHIIN")  
+	OR(2)
+		Global("wnOphy_SoD_MKHIINBanter","GLOBAL",1)
+		Global("wnOphy_SoD_MKHIINBanter","GLOBAL",4)
+THEN
+	RESPONSE #100
+		IncrementGlobal("wnOphy_SoD_MKHIINBanter","GLOBAL",-1)
+END
+
+IF
+		GlobalTimerExpired("wnOphy_SoD_MKHIINBanterTimer","LOCALS")
+		!GlobalTimerNotExpired("BD_NPC_BANTER","GLOBAL")
+	GlobalTimerNotExpired("BD_AREA_BANTER_DELAY","MYAREA")
+	OR(2)
+		Global("wnOphy_SoD_MKHIINBanter","GLOBAL",1)
+		Global("wnOphy_SoD_MKHIINBanter","GLOBAL",4)
+	IsValidForPartyDialog(Myself)
+	IsValidForPartyDialog("MKHIIN")
+	!PartyRested()
+	!ActuallyInCombat()
+THEN
+	RESPONSE #100
+		BanterBlockTime(450)
+		SetGlobalTimer("BD_NPC_BANTER","GLOBAL",FOUR_HOURS)
+		IncrementGlobal("wnOphy_SoD_MKHIINBanter","GLOBAL",1)
+END
+
+IF
+	Global("wnOphy_SoD_MKHIINBanter","GLOBAL",2)
+	IsValidForPartyDialog(Myself)
+	IsValidForPartyDialog("MKHIIN")  
+	See("MKHIIN")
+THEN
+	RESPONSE #100
+		SetAreaScript("wnsoph11",GENERAL)
+END
+
+// Neera
+
+IF
+	InParty(Myself)
+	InParty("NEERA")
+	OR(2)
+		Global("wnOphy_SoD_NEERABanter","GLOBAL",0)
+		Global("wnOphy_SoD_NEERABanter","GLOBAL",3)
+THEN
+	RESPONSE #100
+		SetGlobalTimerRandom("wnOphy_SoD_NEERABanterTimer","LOCALS",ONE_DAY,FOURTEEN_DAYS)
+		IncrementGlobal("wnOphy_SoD_NEERABanter","GLOBAL",1)
+END
+
+IF
+	OR(2)
+		!InParty(Myself)
+		!InParty("NEERA")  
+	OR(2)
+		Global("wnOphy_SoD_NEERABanter","GLOBAL",1)
+		Global("wnOphy_SoD_NEERABanter","GLOBAL",4)
+THEN
+	RESPONSE #100
+		IncrementGlobal("wnOphy_SoD_NEERABanter","GLOBAL",-1)
+END
+
+IF
+		GlobalTimerExpired("wnOphy_SoD_NEERABanterTimer","LOCALS")
+		!GlobalTimerNotExpired("BD_NPC_BANTER","GLOBAL")
+	GlobalTimerNotExpired("BD_AREA_BANTER_DELAY","MYAREA")
+	OR(2)
+		Global("wnOphy_SoD_NEERABanter","GLOBAL",1)
+		Global("wnOphy_SoD_NEERABanter","GLOBAL",4)
+	IsValidForPartyDialog(Myself)
+	IsValidForPartyDialog("NEERA")
+	!PartyRested()
+	!ActuallyInCombat()
+THEN
+	RESPONSE #100
+		BanterBlockTime(450)
+		SetGlobalTimer("BD_NPC_BANTER","GLOBAL",FOUR_HOURS)
+		IncrementGlobal("wnOphy_SoD_NEERABanter","GLOBAL",1)
+END
+
+IF
+	Global("wnOphy_SoD_NEERABanter","GLOBAL",2)
+	IsValidForPartyDialog(Myself)
+	IsValidForPartyDialog("NEERA")  
+	See("NEERA")
+THEN
+	RESPONSE #100
+		SetAreaScript("wnsoph12",GENERAL)
+END
+
+// Rasaad
+
+IF
+	InParty(Myself)
+	InParty("RASAAD")
+	OR(2)
+		Global("wnOphy_SoD_RASAADBanter","GLOBAL",0)
+		Global("wnOphy_SoD_RASAADBanter","GLOBAL",3)
+THEN
+	RESPONSE #100
+		SetGlobalTimerRandom("wnOphy_SoD_RASAADBanterTimer","LOCALS",ONE_DAY,FOURTEEN_DAYS)
+		IncrementGlobal("wnOphy_SoD_RASAADBanter","GLOBAL",1)
+END
+
+IF
+	OR(2)
+		!InParty(Myself)
+		!InParty("RASAAD")  
+	OR(2)
+		Global("wnOphy_SoD_RASAADBanter","GLOBAL",1)
+		Global("wnOphy_SoD_RASAADBanter","GLOBAL",4)
+THEN
+	RESPONSE #100
+		IncrementGlobal("wnOphy_SoD_RASAADBanter","GLOBAL",-1)
+END
+
+IF
+		GlobalTimerExpired("wnOphy_SoD_RASAADBanterTimer","LOCALS")
+		!GlobalTimerNotExpired("BD_NPC_BANTER","GLOBAL")
+	GlobalTimerNotExpired("BD_AREA_BANTER_DELAY","MYAREA")
+	OR(2)
+		Global("wnOphy_SoD_RASAADBanter","GLOBAL",1)
+		Global("wnOphy_SoD_RASAADBanter","GLOBAL",4)
+	IsValidForPartyDialog(Myself)
+	IsValidForPartyDialog("RASAAD")
+	!PartyRested()
+	!ActuallyInCombat()
+THEN
+	RESPONSE #100
+		BanterBlockTime(450)
+		SetGlobalTimer("BD_NPC_BANTER","GLOBAL",FOUR_HOURS)
+		IncrementGlobal("wnOphy_SoD_RASAADBanter","GLOBAL",1)
+END
+
+IF
+	Global("wnOphy_SoD_RASAADBanter","GLOBAL",2)
+	IsValidForPartyDialog(Myself)
+	IsValidForPartyDialog("RASAAD")  
+	See("RASAAD")
+THEN
+	RESPONSE #100
+		SetAreaScript("wnsoph13",GENERAL)
+END
+
+// Safana
+
+IF
+	InParty(Myself)
+	InParty("SAFANA")
+	OR(2)
+		Global("wnOphy_SoD_SAFANABanter","GLOBAL",0)
+		Global("wnOphy_SoD_SAFANABanter","GLOBAL",3)
+THEN
+	RESPONSE #100
+		SetGlobalTimerRandom("wnOphy_SoD_SAFANABanterTimer","LOCALS",ONE_DAY,FOURTEEN_DAYS)
+		IncrementGlobal("wnOphy_SoD_SAFANABanter","GLOBAL",1)
+END
+
+IF
+	OR(2)
+		!InParty(Myself)
+		!InParty("SAFANA")  
+	OR(2)
+		Global("wnOphy_SoD_SAFANABanter","GLOBAL",1)
+		Global("wnOphy_SoD_SAFANABanter","GLOBAL",4)
+THEN
+	RESPONSE #100
+		IncrementGlobal("wnOphy_SoD_SAFANABanter","GLOBAL",-1)
+END
+
+IF
+		GlobalTimerExpired("wnOphy_SoD_SAFANABanterTimer","LOCALS")
+		!GlobalTimerNotExpired("BD_NPC_BANTER","GLOBAL")
+	GlobalTimerNotExpired("BD_AREA_BANTER_DELAY","MYAREA")
+	OR(2)
+		Global("wnOphy_SoD_SAFANABanter","GLOBAL",1)
+		Global("wnOphy_SoD_SAFANABanter","GLOBAL",4)
+	IsValidForPartyDialog(Myself)
+	IsValidForPartyDialog("SAFANA")
+	!PartyRested()
+	!ActuallyInCombat()
+THEN
+	RESPONSE #100
+		BanterBlockTime(450)
+		SetGlobalTimer("BD_NPC_BANTER","GLOBAL",FOUR_HOURS)
+		IncrementGlobal("wnOphy_SoD_SAFANABanter","GLOBAL",1)
+END
+
+IF
+	Global("wnOphy_SoD_SAFANABanter","GLOBAL",2)
+	IsValidForPartyDialog(Myself)
+	IsValidForPartyDialog("SAFANA")  
+	See("SAFANA")
+THEN
+	RESPONSE #100
+		SetAreaScript("wnsoph14",GENERAL)
+END
+
+// Viconia
+
+IF
+	InParty(Myself)
+	InParty("VICONIA")
+	OR(2)
+		Global("wnOphy_SoD_VICONIABanter","GLOBAL",0)
+		Global("wnOphy_SoD_VICONIABanter","GLOBAL",3)
+THEN
+	RESPONSE #100
+		SetGlobalTimerRandom("wnOphy_SoD_VICONIABanterTimer","LOCALS",ONE_DAY,FOURTEEN_DAYS)
+		IncrementGlobal("wnOphy_SoD_VICONIABanter","GLOBAL",1)
+END
+
+IF
+	OR(2)
+		!InParty(Myself)
+		!InParty("VICONIA")  
+	OR(2)
+		Global("wnOphy_SoD_VICONIABanter","GLOBAL",1)
+		Global("wnOphy_SoD_VICONIABanter","GLOBAL",4)
+THEN
+	RESPONSE #100
+		IncrementGlobal("wnOphy_SoD_VICONIABanter","GLOBAL",-1)
+END
+
+IF
+		GlobalTimerExpired("wnOphy_SoD_VICONIABanterTimer","LOCALS")
+		!GlobalTimerNotExpired("BD_NPC_BANTER","GLOBAL")
+	GlobalTimerNotExpired("BD_AREA_BANTER_DELAY","MYAREA")
+	OR(2)
+		Global("wnOphy_SoD_VICONIABanter","GLOBAL",1)
+		Global("wnOphy_SoD_VICONIABanter","GLOBAL",4)
+	IsValidForPartyDialog(Myself)
+	IsValidForPartyDialog("VICONIA")
+	!PartyRested()
+	!ActuallyInCombat()
+THEN
+	RESPONSE #100
+		BanterBlockTime(450)
+		SetGlobalTimer("BD_NPC_BANTER","GLOBAL",FOUR_HOURS)
+		IncrementGlobal("wnOphy_SoD_VICONIABanter","GLOBAL",1)
+END
+
+IF
+	Global("wnOphy_SoD_VICONIABanter","GLOBAL",2)
+	IsValidForPartyDialog(Myself)
+	IsValidForPartyDialog("VICONIA")  
+	See("VICONIA")
+THEN
+	RESPONSE #100
+		SetAreaScript("wnsoph15",GENERAL)
+END
+
+// Voghiln
+
+IF
+	InParty(Myself)
+	InParty("VOGHILN")
+	OR(2)
+		Global("wnOphy_SoD_VOGHILNBanter","GLOBAL",0)
+		Global("wnOphy_SoD_VOGHILNBanter","GLOBAL",3)
+THEN
+	RESPONSE #100
+		SetGlobalTimerRandom("wnOphy_SoD_VOGHILNBanterTimer","LOCALS",ONE_DAY,FOURTEEN_DAYS)
+		IncrementGlobal("wnOphy_SoD_VOGHILNBanter","GLOBAL",1)
+END
+
+IF
+	OR(2)
+		!InParty(Myself)
+		!InParty("VOGHILN")  
+	OR(2)
+		Global("wnOphy_SoD_VOGHILNBanter","GLOBAL",1)
+		Global("wnOphy_SoD_VOGHILNBanter","GLOBAL",4)
+THEN
+	RESPONSE #100
+		IncrementGlobal("wnOphy_SoD_VOGHILNBanter","GLOBAL",-1)
+END
+
+IF
+		GlobalTimerExpired("wnOphy_SoD_VOGHILNBanterTimer","LOCALS")
+		!GlobalTimerNotExpired("BD_NPC_BANTER","GLOBAL")
+	GlobalTimerNotExpired("BD_AREA_BANTER_DELAY","MYAREA")
+	OR(2)
+		Global("wnOphy_SoD_VOGHILNBanter","GLOBAL",1)
+		Global("wnOphy_SoD_VOGHILNBanter","GLOBAL",4)
+	IsValidForPartyDialog(Myself)
+	IsValidForPartyDialog("VOGHILN")
+	!PartyRested()
+	!ActuallyInCombat()
+THEN
+	RESPONSE #100
+		BanterBlockTime(450)
+		SetGlobalTimer("BD_NPC_BANTER","GLOBAL",FOUR_HOURS)
+		IncrementGlobal("wnOphy_SoD_VOGHILNBanter","GLOBAL",1)
+END
+
+IF
+	Global("wnOphy_SoD_VOGHILNBanter","GLOBAL",2)
+	IsValidForPartyDialog(Myself)
+	IsValidForPartyDialog("VOGHILN")  
+	See("VOGHILN")
+THEN
+	RESPONSE #100
+		SetAreaScript("wnsoph16",GENERAL)
+END

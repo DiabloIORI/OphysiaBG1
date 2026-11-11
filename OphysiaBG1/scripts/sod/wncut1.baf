@@ -5,7 +5,7 @@ THEN
 	CutsceneId(Player1)
 	StartCutsceneMode()
 Wait(1)
-DisplayStringHead("WNMADRI",~Hmm... How did it go again?~)
+DisplayStringHead("WNMADRI",~嗯……刚才是怎么说的来着？~)
 Wait(1)
 ActionOverride("WNMADRI",SwingOnce())
 CreateVisualEffectObject("SPSTRENH","WNMADRI")

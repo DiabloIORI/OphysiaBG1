@@ -7,19 +7,19 @@ IF
 	Switch("wnOphy_SoD_wnsoph12","MYAREA")
 THEN
 	RESPONSE #0 
-		DisplayStringHead("WNOPHY",~"Well, well, look at you, actually keeping things calm for once. I thought I’d be seeing more fireballs by now.~)  
+		DisplayStringHead("WNOPHY",~"好啦好啦，看看你，居然难得让事情平静了一回。我还以为这会儿该见着更多火球了。~)  
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",9) 
 		SetGlobal("wnOphy_SoD_wnsoph12","MYAREA",10)
 	RESPONSE #10
-		DisplayStringHead("Neera",~Most of the chaos is in my head at the moment, unfortunately.~)
+		DisplayStringHead("Neera",~可惜这会儿大部分混乱都在我脑子里。~)
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",8)
 		SetGlobal("wnOphy_SoD_wnsoph12","MYAREA",20)
 	RESPONSE #20
-		DisplayStringHead("WNOPHY",~If you need someone to chat to, just come to me.~)
+		DisplayStringHead("WNOPHY",~你要是需要人聊聊，就来找我。~)
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 		SetGlobal("wnOphy_SoD_wnsoph12","MYAREA",30)
 	RESPONSE #30
-		DisplayStringHead("Neera",~I might take you up on that.~)
+		DisplayStringHead("Neera",~我也许会接受。~)
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 		SetGlobal("wnOphy_SoD_NeeraBanter","GLOBAL",3)
 		SetGlobal("wnOphy_SoD_wnsoph12","MYAREA",-1)

@@ -7,19 +7,19 @@ IF
 	Switch("wnOphy_SoD_wnsoph01","MYAREA")
 THEN
 	RESPONSE #0 
-		DisplayStringHead("WNOPHY",~How long have you been with the Flaming Fist, captain?~)  
+		DisplayStringHead("WNOPHY",~队长，你在焰拳待多久了？~)  
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",9) 
 		SetGlobal("wnOphy_SoD_wnsoph01","MYAREA",10)
 	RESPONSE #10
-		DisplayStringHead("CORWIN",~A long time. Though captain for less.~)
+		DisplayStringHead("CORWIN",~很久了。不过当队长的时间短些。~)
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",8)
 		SetGlobal("wnOphy_SoD_wnsoph01","MYAREA",20)
 	RESPONSE #20
-		DisplayStringHead("WNOPHY",~I saw how the Fist were treating refugees in the city. I couldn't be as proud as you are to be a part of that.~)
+		DisplayStringHead("WNOPHY",~我看到焰拳在城里是怎么对待难民的。我没法像你那样为参与其中而自豪。~)
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 		SetGlobal("wnOphy_SoD_wnsoph01","MYAREA",30)
 	RESPONSE #30
-		DisplayStringHead("corwin",~I get the feeling this isn't going to be a productive conversation.~)
+		DisplayStringHead("corwin",~我感觉这场谈话不会有什么成果。~)
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 		SetGlobal("wnOphy_SoD_CorwinBanter","GLOBAL",3)
 		SetGlobal("wnOphy_SoD_wnsoph01","MYAREA",-1)

@@ -7,19 +7,19 @@ IF
 	Switch("wnOphy_SoD_wnsoph07","MYAREA")
 THEN
 	RESPONSE #0 
-		DisplayStringHead("WNOPHY",~What's it like to have such a big family, Glint?~)  
+		DisplayStringHead("WNOPHY",~有这么大一家子是什么感觉，格林特？~)  
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",9) 
 		SetGlobal("wnOphy_SoD_wnsoph07","MYAREA",10)
 	RESPONSE #10
-		DisplayStringHead("Glint",~Oh, it's great! Well, other than keeping up with all the birthdays, and anniversaries, everyone always needing something—there's never a dull moment. It’s like trying to juggle a hundred things at once, and you're never quite sure what you're gonna drop first.~)
+		DisplayStringHead("Glint",~哦，太棒了！嗯，除了要记住所有生日和纪念日、人人都总有需要——从来没个消停的时候。就像同时抛接一百样东西，你永远不确定会先掉哪个。~)
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",8)
 		SetGlobal("wnOphy_SoD_wnsoph07","MYAREA",20)
 	RESPONSE #20
-		DisplayStringHead("WNOPHY",~That... doesn't sound that appealing.~)
+		DisplayStringHead("WNOPHY",~那……听着没那么诱人。~)
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 		SetGlobal("wnOphy_SoD_wnsoph07","MYAREA",30)
 	RESPONSE #30
-		DisplayStringHead("Glint",~I love them all in different ways. I haven't managed to drop any of them yet. Well, other than my baby cousin—but that doesn't count, because I caught him!~)
+		DisplayStringHead("Glint",~我以不同的方式爱他们所有人。我至今还没弄掉过任何一个。嗯，除了我的小堂弟——可那不算，因为我接住了！~)
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 		SetGlobal("wnOphy_SoD_GlintBanter","GLOBAL",3)
 		SetGlobal("wnOphy_SoD_wnsoph07","MYAREA",-1)

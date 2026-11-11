@@ -117,11 +117,11 @@ IF
 THEN
     RESPONSE #100
         SetGlobal("bd_add_new_bio","LOCALS",1)
-        SetPlayerSound(Myself,~When asked about her past, OPHYSIA winces before glossing over that she grew up in the slums of Waterdeep before a desire for a new life—and consequences for actions taken in her old one—drove her onto the road, where she eventually found herself in Daggerford, which she has called her home in the years since.
+        SetPlayerSound(Myself,~问起她的过去时，奥菲希娅会先缩一下，然后含糊带过：她在深水城的贫民区长大，后来对新生活的渴望——加上旧日所作所为的后果——把她逼上了路，最终流落到达格福德，此后多年她都以那里为家。
 
-While she only spares a bitter word or two for the City of Splendors, the young bard seems to hum with energy when talking about Daggerford and the people she’s met there, though it is tinted with a degree of frustration, given that the Shining Crusade has prevented her return home.
+她对光辉之城只肯丢下一两句苦涩的话，可谈起达格福德和她在那里遇到的人时，这位年轻吟游诗人似乎满身是劲，只是其中掺着几分懊恼，因为光耀十字军让她回不了家。
 
-Much to her own distaste, Ophysia has joined the Flaming Fist expedition and seems motivated to put a stop to crusade by your side.~,EXISTANCE5)
+尽管她自己并不乐意，奥菲希娅还是加入了焰拳远征队，似乎有心与你并肩制止十字军。~,EXISTANCE5)
 END
 
 // Ensure Ophysia is A-OK after Korlasz's dungeon
@@ -413,7 +413,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobal("WNOPHY_SoDbridge","bd1000",1)
-		DisplayStringHead(Myself,~This *really* wasn't how I wanted my day to go. Hyah!~)
+		DisplayStringHead(Myself,~这*真*不是我想要的一天。驾！~)
 END
 
   
@@ -444,7 +444,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobal("WNOPHY_UsedSpikes","GLOBAL",2)
-		DisplayStringHead(Myself,~Gods... I don't even want to think about what you just did.~)
+		DisplayStringHead(Myself,~天哪……我连想都不愿想你刚才干了什么。~)
 		SetGlobal("WNOphysiaRomanceActive","Global",3)
 END
 

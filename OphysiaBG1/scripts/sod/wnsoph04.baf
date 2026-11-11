@@ -7,15 +7,15 @@ IF
 	Switch("wnOphy_SoD_wnsoph04","MYAREA")
 THEN
 	RESPONSE #0 
-		DisplayStringHead("WNOPHY",~Try me. I'm not afraid to put a blade through you.~)  
+		DisplayStringHead("WNOPHY",~试试看。我不怕把刀捅进你。~)  
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",9) 
 		SetGlobal("wnOphy_SoD_wnsoph04","MYAREA",10)
 	RESPONSE #10
-		DisplayStringHead("Baeloth",~Such barbaric bluster from a bard such as yourself is bound to backfire.~)
+		DisplayStringHead("Baeloth",~你这样的吟游诗人放这种野蛮狠话，必定反噬。~)
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",8)
 		SetGlobal("wnOphy_SoD_wnsoph04","MYAREA",20)
 	RESPONSE #20
-		DisplayStringHead("WNOPHY",~We all have choices to make in life. You should choose to be less annoying.~)
+		DisplayStringHead("WNOPHY",~人这辈子都得做选择。你该选择别那么烦人。~)
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 		SetGlobal("wnOphy_SoD_BaelothBanter","GLOBAL",3)
 		SetGlobal("wnOphy_SoD_wnsoph04","MYAREA",-1)

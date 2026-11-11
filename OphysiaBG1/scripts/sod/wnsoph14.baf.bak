@@ -1,0 +1,34 @@
+// Banter: Ophysia / Safana (1)
+IF
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+	!Global("wnOphy_SoD_wnsoph14","MYAREA",-1)
+	Switch("wnOphy_SoD_wnsoph14","MYAREA")
+THEN
+	RESPONSE #0 
+		DisplayStringHead("WNOPHY",~"You don't strike me as the sort of person to willingly join this expedition, Safana.~)  
+		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",9) 
+		SetGlobal("wnOphy_SoD_wnsoph14","MYAREA",10)
+	RESPONSE #10
+		DisplayStringHead("Safana",~I'm not. But don't assume you know me because of it.~)
+		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",8)
+		SetGlobal("wnOphy_SoD_wnsoph14","MYAREA",20)
+	RESPONSE #20
+		DisplayStringHead("WNOPHY",~I've met a lot of people like you, Safana. None of them turned out to be good for me.~)
+		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+		SetGlobal("wnOphy_SoD_wnsoph14","MYAREA",30)
+	RESPONSE #30
+		DisplayStringHead("Safana",~You'll never hear me claim that I'm good for anyone, dear. Now shoo.~)
+		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+		SetGlobal("wnOphy_SoD_SafanaBanter","GLOBAL",3)
+		SetGlobal("wnOphy_SoD_wnsoph14","MYAREA",-1)
+END
+
+/* second script block: deactivate this script by resetting the area script. This script block is needed once at the end of the banter "area" file. */
+IF
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA") //this means "timer IS expired"
+THEN
+	RESPONSE #100
+		SetAreaScript("",GENERAL) //sets area script back (default is "no GENERAL script")
+END

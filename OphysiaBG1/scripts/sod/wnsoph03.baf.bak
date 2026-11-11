@@ -1,0 +1,34 @@
+// Banter: Ophysia / Dynaheir (1)
+IF
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+	!Global("wnOphy_SoD_wnsoph03","MYAREA",-1)
+	Switch("wnOphy_SoD_wnsoph03","MYAREA")
+THEN
+	RESPONSE #0 
+		DisplayStringHead("WNOPHY",~Do you think you'll go back to Rasheman soon, Dynaheir?~)  
+		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",9) 
+		SetGlobal("wnOphy_SoD_wnsoph03","MYAREA",10)
+	RESPONSE #10
+		DisplayStringHead("DYNAHEIR",~I hath considered the venture. Minsc and I have accomplished much in our time here... a return must come one day.~)
+		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",8)
+		SetGlobal("wnOphy_SoD_wnsoph03","MYAREA",20)
+	RESPONSE #20
+		DisplayStringHead("WNOPHY",~Is that what you want, though?~)
+		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+		SetGlobal("wnOphy_SoD_wnsoph03","MYAREA",30)
+	RESPONSE #30
+		DisplayStringHead("DYNAHEIR",~Perhaps. The choice is not mine alone, but if it were, I would be content to wander for a time longer.~)
+		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+		SetGlobal("wnOphy_SoD_DynaBanter","GLOBAL",3)
+		SetGlobal("wnOphy_SoD_wnsoph03","MYAREA",-1)
+END
+
+/* second script block: deactivate this script by resetting the area script. This script block is needed once at the end of the banter "area" file. */
+IF
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA") //this means "timer IS expired"
+THEN
+	RESPONSE #100
+		SetAreaScript("",GENERAL) //sets area script back (default is "no GENERAL script")
+END
