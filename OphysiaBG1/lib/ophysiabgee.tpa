@@ -11,55 +11,55 @@ COMPILE ~OphysiaBG1/dialogue/wnophyb.d~
 COMPILE ~OphysiaBG1/dialogue/wnophyj.d~
 
 COPY ~OphysiaBG1/creatures/wnophy.cre~ ~override/wnophy.cre~
-  SAY NAME1 ~Ophysia~
-  SAY NAME2 ~Ophysia~
+  SAY NAME1 ~奥菲希娅~
+  SAY NAME2 ~奥菲希娅~
   WRITE_ASCII 0x248 ~WNOPHY~ #8  //override script
   WRITE_ASCII 0x280 ~WNOPHY~ #32  //DV
   WRITE_ASCII 0x2cc ~WNOPHY~ #8   //pre-joining dialogue file
   WRITE_ASCII 0X34 ~OphysL~ #8   //small portrait
   WRITE_ASCII 0x3c ~OphysL~ #8   //medium portrait
-  SAY BIO ~When asked about her past, OPHYSIA regales you with colorful stories of her exploits north of Baldur's Gate, from battles against impossible odds to daring escapes—all of which she assures you are completely true. From what you can gather, she originally hails from Waterdeep, the City of Splendors, but becomes uncharacteristically quiet when prompted on it, preferring to direct the conversation towards her current home of Daggerford.
+  SAY BIO ~问起她的过去时，奥菲希娅会给你讲一串她在博德之门以北的英勇事迹——从对抗绝无胜算的恶战到惊险脱身——并保证全都千真万确。从你能拼凑出的信息看，她原本来自深水城，也就是光辉之城；可一旦有人追问，她就会反常地沉默下来，宁可把话题引向她现在的家达格福德。
 
-When profits from spinning tales wears thin, Ophysia takes to the road to find new ones—preferring to do so in the company of traveling merchants who will pay for her sword arm, if not her company.
+靠编故事赚的钱越来越不够用时，奥菲希娅就上路去找新的故事——她更喜欢跟旅行商人搭伴，那些人至少肯为她的剑付钱，指望她作伴则未必。
 
-Apparently mercenary work has been sparse for those not interested in banditry, so Ophysia has ventured south to take matters into her own hands and put an end to the issues that plague the Sword Coast. She appears to be a strong-willed young woman, if a bit overconfident.~
-  SAY MORALE ~I think it's time for a tactical retreat. ~ [wnoph01]
-  SAY HAPPY ~This could make for a great story!~ [wnoph02]
-  SAY UNHAPPY_ANNOYED ~I guess I don't have to write about EVERYTHING we do.~ [wnoph03]
-  SAY UNHAPPY_SERIOUS ~Shouldn't we be... helping people?~ [wnoph04]
-  SAY UNHAPPY_BREAKING_POINT ~I've had enough. I'm leaving.~ [wnoph05]
-  SAY LEADER ~Oh, alright! As leader, I order you to walk ahead of me.~ [wnoph06]
-  SAY TIRED ~I'm tired. Who wants to tell stories around a fire?~ [wnoph07]
-  SAY BORED ~And thus our tale ended... as we dropped dead from boredom.~ [wnoph08]
-  SAY BATTLE_CRY1 ~For Daggerford!~ [wnoph10]
-  SAY BATTLE_CRY2 ~Into the fray!~ [wnoph11]
-  SAY BATTLE_CRY3 ~You will fall!~ [wnoph12]
+看来如今不肯去当强盗的人已经很难接到佣兵的活儿，于是奥菲希娅南下，打算亲自动手，把困扰剑湾的麻烦一并了结。她看起来是个意志坚定的年轻女子，只是略显自信过头。~
+  SAY MORALE ~我想是时候战术撤退了。 ~ [wnoph01]
+  SAY HAPPY ~这可是一篇好故事的素材！~ [wnoph02]
+  SAY UNHAPPY_ANNOYED ~看来我们干的每件事都*不必*都写下来。~ [wnoph03]
+  SAY UNHAPPY_SERIOUS ~我们不是应该……帮帮别人吗？~ [wnoph04]
+  SAY UNHAPPY_BREAKING_POINT ~我受够了。我要走了。~ [wnoph05]
+  SAY LEADER ~哦，好吧！作为队长，我命令你走在我前面。~ [wnoph06]
+  SAY TIRED ~我累了。谁想在篝火边讲故事？~ [wnoph07]
+  SAY BORED ~我们的故事就这样结束了……我们无聊死了。~ [wnoph08]
+  SAY BATTLE_CRY1 ~为了达格福德！~ [wnoph10]
+  SAY BATTLE_CRY2 ~杀进去！~ [wnoph11]
+  SAY BATTLE_CRY3 ~你必将倒下！~ [wnoph12]
   SAY BATTLE_CRY3 ~~
   SAY DAMAGE ~~ [wnoph13]
-  SAY DYING ~Ooh... s-sorry.~ [wnoph14]
-  SAY HURT ~If I don't get healing soon, I'm going to run away.~ [wnoph15]
-  SAY AREA_FOREST ~Peaceful out here.~ [wnoph16]
-  SAY AREA_CITY ~Too many people here.~ [wnoph17]
-  SAY AREA_DUNGEON ~I think I just saw a rat! C'mere, rat!~ [wnoph18]
+  SAY DYING ~哦……抱、抱歉。~ [wnoph14]
+  SAY HURT ~再不给我治伤，我可要跑了。~ [wnoph15]
+  SAY AREA_FOREST ~这外面真宁静。~ [wnoph16]
+  SAY AREA_CITY ~这儿人太多了。~ [wnoph17]
+  SAY AREA_DUNGEON ~我好像刚看见一只老鼠！过来，老鼠！~ [wnoph18]
   SAY AREA_DAY ~~
-  SAY AREA_NIGHT ~Good light for an ambush.~ [wnoph19]
-  SAY SELECT_COMMON1 ~Do you need something?~ [wnoph20]
-  SAY SELECT_COMMON2 ~Give it to me.~ [wnoph21]
-  SAY SELECT_COMMON3 ~Hey!~ [wnoph22]
-  SAY SELECT_ACTION1 ~If no one else will do it.~ [wnoph23]
-  SAY SELECT_ACTION2 ~Since you asked nicely.~ [wnoph24]
-  SAY SELECT_ACTION3 ~Nothing would make me happier.~ [wnoph25]
-  SAY SELECT_ACTION4 ~I wonder what's going on back home.~ [wnoph26]
-  SAY SELECT_ACTION5 ~Are you... okay?~  [wnoph27]
-  SAY SELECT_ACTION6 ~Stop!~  [wnoph28]
-  SAY CRITICAL_HIT ~Hah!~ [wnoph29]
-  SAY CRITICAL_MISS ~Damn!~ [wnoph30]
-  SAY TARGET_IMMUNE ~Nope, that's not working.~ [wnoph31]
-  SAY INVENTORY_FULL ~Do you want to pick that up? I dropped it.~ [wnoph32]
-  SAY SPELL_DISRUPTED ~My spell!~ [wnoph33]
-  SAY SET_A_TRAP ~Trap's set, and they're none the wiser.~ [wnoph34]
-  SAY HIDDEN_IN_SHADOWS ~Being quiet!~ [wnoph35]
-  SAY PICKED_POCKET ~I'll take that!~ [wnoph36]
+  SAY AREA_NIGHT ~这光线正适合埋伏。~ [wnoph19]
+  SAY SELECT_COMMON1 ~你需要什么吗？~ [wnoph20]
+  SAY SELECT_COMMON2 ~给我吧。~ [wnoph21]
+  SAY SELECT_COMMON3 ~嘿！~ [wnoph22]
+  SAY SELECT_ACTION1 ~要是没别人干，那就我干。~ [wnoph23]
+  SAY SELECT_ACTION2 ~既然你好好求我了。~ [wnoph24]
+  SAY SELECT_ACTION3 ~没有比这更让我高兴的了。~ [wnoph25]
+  SAY SELECT_ACTION4 ~不知道家里那边怎么样了。~ [wnoph26]
+  SAY SELECT_ACTION5 ~你……没事吧？~  [wnoph27]
+  SAY SELECT_ACTION6 ~停下！~  [wnoph28]
+  SAY CRITICAL_HIT ~哈！~ [wnoph29]
+  SAY CRITICAL_MISS ~该死！~ [wnoph30]
+  SAY TARGET_IMMUNE ~不行，这没用。~ [wnoph31]
+  SAY INVENTORY_FULL ~你要捡起来吗？我把它掉了。~ [wnoph32]
+  SAY SPELL_DISRUPTED ~我的法术！~ [wnoph33]
+  SAY SET_A_TRAP ~陷阱设好了，他们一点都不知道。~ [wnoph34]
+  SAY HIDDEN_IN_SHADOWS ~保持安静！~ [wnoph35]
+  SAY PICKED_POCKET ~这个我收下了！~ [wnoph36]
 APPEND ~pdialog.2da~ ~wnophy wnophyp wnophyj wnophyd~
   UNLESS ~wnophy~
 APPEND ~interdia.2da~ ~wnophy wnophyb~
@@ -86,21 +86,21 @@ END
 
 // ITEMS
 COPY ~OphysiaBG1/items/wnbuck1.itm~ ~override~
-  SAY NAME1 ~Buckler~
-  SAY NAME2 ~Ophysia’s Buckler~
-  SAY DESC ~This finely crafted buckler was gifted to Ophysia after rescuing a merchant caravan beset by hobgoblins north of Waterdeep. It serves as a reminder of the good she’s done in the world, and she keeps it close at all times. Ophysia skillfully incorporates the buckler into her fighting style, seemingly finding great joy in delivering it directly into people’s faces.
+  SAY NAME1 ~小圆盾~
+  SAY NAME2 ~奥菲希娅的小圆盾~
+  SAY DESC ~这只小圆盾做工精良，是奥菲希娅在深水城以北救下一支遭犬魔袭击的商队后获赠的礼物。它提醒着她在世上做过的善事，她一直随身带着。奥菲希娅把小圆盾巧妙地融进自己的战法，似乎尤其乐于直接把它拍在人脸上。
 
-STATISTICS:
+属性：
 
-Equipped abilities:
-– Armor Class +1
-– 1 extra attack per round
-– No protection against missile and piercing attacks
+装备能力：
+– 护甲等级 +1
+– 每轮多出一次攻击
+– 对穿刺与飞射攻击无防护
 
-Requires:
-4 Strength
+需求：
+力量 4
 
-Weight: 2~
+重量：2~
 LPF ALTER_EFFECT INT_VAR match_opcode = 319 special = RESOLVE_STR_REF("Ophysia") END
 
 

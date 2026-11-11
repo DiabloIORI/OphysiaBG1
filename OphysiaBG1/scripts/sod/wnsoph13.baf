@@ -7,7 +7,7 @@ IF
 	Switch("wnOphy_SoD_wnsoph13","MYAREA")
 THEN
 	RESPONSE #0 
-		DisplayStringHead("WNOPHY",~"我很高兴你改变了主意跟我们走，拉萨德。对我也不容易。~)  
+		DisplayStringHead("WNOPHY",~我很高兴你改变了主意跟我们走，拉萨德。对我也不容易。~)  
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",9) 
 		SetGlobal("wnOphy_SoD_wnsoph13","MYAREA",10)
 	RESPONSE #10

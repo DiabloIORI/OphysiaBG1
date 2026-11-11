@@ -1,0 +1,106 @@
+// OphysiaBGEE.tpa
+// BGEE Content Installation
+
+COPY ~OphysiaBG1/portraits~ ~override~
+COPY ~OphysiaBG1/audio~ ~override~
+COPY ~OphysiaBG1/bams~ ~override~
+
+COMPILE ~OphysiaBG1/dialogue/wnophy.d~
+COMPILE ~OphysiaBG1/dialogue/wnophyp.d~
+COMPILE ~OphysiaBG1/dialogue/wnophyb.d~
+COMPILE ~OphysiaBG1/dialogue/wnophyj.d~
+
+COPY ~OphysiaBG1/creatures/wnophy.cre~ ~override/wnophy.cre~
+  SAY NAME1 ~Ophysia~
+  SAY NAME2 ~Ophysia~
+  WRITE_ASCII 0x248 ~WNOPHY~ #8  //override script
+  WRITE_ASCII 0x280 ~WNOPHY~ #32  //DV
+  WRITE_ASCII 0x2cc ~WNOPHY~ #8   //pre-joining dialogue file
+  WRITE_ASCII 0X34 ~OphysL~ #8   //small portrait
+  WRITE_ASCII 0x3c ~OphysL~ #8   //medium portrait
+  SAY BIO ~When asked about her past, OPHYSIA regales you with colorful stories of her exploits north of Baldur's Gate, from battles against impossible odds to daring escapes—all of which she assures you are completely true. From what you can gather, she originally hails from Waterdeep, the City of Splendors, but becomes uncharacteristically quiet when prompted on it, preferring to direct the conversation towards her current home of Daggerford.
+
+When profits from spinning tales wears thin, Ophysia takes to the road to find new ones—preferring to do so in the company of traveling merchants who will pay for her sword arm, if not her company.
+
+Apparently mercenary work has been sparse for those not interested in banditry, so Ophysia has ventured south to take matters into her own hands and put an end to the issues that plague the Sword Coast. She appears to be a strong-willed young woman, if a bit overconfident.~
+  SAY MORALE ~I think it's time for a tactical retreat. ~ [wnoph01]
+  SAY HAPPY ~This could make for a great story!~ [wnoph02]
+  SAY UNHAPPY_ANNOYED ~I guess I don't have to write about EVERYTHING we do.~ [wnoph03]
+  SAY UNHAPPY_SERIOUS ~Shouldn't we be... helping people?~ [wnoph04]
+  SAY UNHAPPY_BREAKING_POINT ~I've had enough. I'm leaving.~ [wnoph05]
+  SAY LEADER ~Oh, alright! As leader, I order you to walk ahead of me.~ [wnoph06]
+  SAY TIRED ~I'm tired. Who wants to tell stories around a fire?~ [wnoph07]
+  SAY BORED ~And thus our tale ended... as we dropped dead from boredom.~ [wnoph08]
+  SAY BATTLE_CRY1 ~For Daggerford!~ [wnoph10]
+  SAY BATTLE_CRY2 ~Into the fray!~ [wnoph11]
+  SAY BATTLE_CRY3 ~You will fall!~ [wnoph12]
+  SAY BATTLE_CRY3 ~~
+  SAY DAMAGE ~~ [wnoph13]
+  SAY DYING ~Ooh... s-sorry.~ [wnoph14]
+  SAY HURT ~If I don't get healing soon, I'm going to run away.~ [wnoph15]
+  SAY AREA_FOREST ~Peaceful out here.~ [wnoph16]
+  SAY AREA_CITY ~Too many people here.~ [wnoph17]
+  SAY AREA_DUNGEON ~I think I just saw a rat! C'mere, rat!~ [wnoph18]
+  SAY AREA_DAY ~~
+  SAY AREA_NIGHT ~Good light for an ambush.~ [wnoph19]
+  SAY SELECT_COMMON1 ~Do you need something?~ [wnoph20]
+  SAY SELECT_COMMON2 ~Give it to me.~ [wnoph21]
+  SAY SELECT_COMMON3 ~Hey!~ [wnoph22]
+  SAY SELECT_ACTION1 ~If no one else will do it.~ [wnoph23]
+  SAY SELECT_ACTION2 ~Since you asked nicely.~ [wnoph24]
+  SAY SELECT_ACTION3 ~Nothing would make me happier.~ [wnoph25]
+  SAY SELECT_ACTION4 ~I wonder what's going on back home.~ [wnoph26]
+  SAY SELECT_ACTION5 ~Are you... okay?~  [wnoph27]
+  SAY SELECT_ACTION6 ~Stop!~  [wnoph28]
+  SAY CRITICAL_HIT ~Hah!~ [wnoph29]
+  SAY CRITICAL_MISS ~Damn!~ [wnoph30]
+  SAY TARGET_IMMUNE ~Nope, that's not working.~ [wnoph31]
+  SAY INVENTORY_FULL ~Do you want to pick that up? I dropped it.~ [wnoph32]
+  SAY SPELL_DISRUPTED ~My spell!~ [wnoph33]
+  SAY SET_A_TRAP ~Trap's set, and they're none the wiser.~ [wnoph34]
+  SAY HIDDEN_IN_SHADOWS ~Being quiet!~ [wnoph35]
+  SAY PICKED_POCKET ~I'll take that!~ [wnoph36]
+APPEND ~pdialog.2da~ ~wnophy wnophyp wnophyj wnophyd~
+  UNLESS ~wnophy~
+APPEND ~interdia.2da~ ~wnophy wnophyb~
+  UNLESS ~wnophy~
+
+// Adds CD_STATE_NOTVALID state
+APPEND ~STATE.IDS~ ~0x80101FEF CD_STATE_NOTVALID~
+  UNLESS ~CD_STATE_NOTVALID~
+
+// Compile scripts
+//COMPILE ~OphysiaBG1/scripts/wnophy.baf~
+EXTEND_BOTTOM ~dorn.bcs~ ~OphysiaBG1/scripts/dorn.baf~
+
+// Extend area scripts
+ACTION_IF GAME_IS ~bgee~ BEGIN
+  EXTEND_BOTTOM ~AR4809.bcs~ ~OphysiaBG1/scripts/AR4809.baf~
+  COPY ~OphysiaBG1/scripts/wnophy_bg1.baf~ ~override/wnophy.bcs~
+    COMPILE_BAF_TO_BCS
+END ELSE ACTION_IF GAME_IS ~eet~ BEGIN
+  EXTEND_BOTTOM ~BG4809.bcs~ ~OphysiaBG1/scripts/BG4809.baf~
+  COPY ~OphysiaBG1/scripts/wnophy_eet.baf~ ~override/wnophy.bcs~
+    COMPILE_BAF_TO_BCS
+END
+
+// ITEMS
+COPY ~OphysiaBG1/items/wnbuck1.itm~ ~override~
+  SAY NAME1 ~Buckler~
+  SAY NAME2 ~Ophysia’s Buckler~
+  SAY DESC ~This finely crafted buckler was gifted to Ophysia after rescuing a merchant caravan beset by hobgoblins north of Waterdeep. It serves as a reminder of the good she’s done in the world, and she keeps it close at all times. Ophysia skillfully incorporates the buckler into her fighting style, seemingly finding great joy in delivering it directly into people’s faces.
+
+STATISTICS:
+
+Equipped abilities:
+– Armor Class +1
+– 1 extra attack per round
+– No protection against missile and piercing attacks
+
+Requires:
+4 Strength
+
+Weight: 2~
+LPF ALTER_EFFECT INT_VAR match_opcode = 319 special = RESOLVE_STR_REF("Ophysia") END
+
+

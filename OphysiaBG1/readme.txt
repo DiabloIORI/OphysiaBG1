@@ -1,108 +1,107 @@
+﻿***********************************
+*** Ophysia（奥菲希娅）BG:EE + SoD 队友 NPC ***
 ***********************************
-*** Ophysia NPC for BG:EE + SoD ***
-***********************************
 
-Author: Llewren
-Version: 1.0
-Platform: BG:EE
+作者：Llewren
+版本：1.0
+平台：BG:EE
 
 ------------------
--- Introduction --
+-- 简介 --
 ------------------
 
-This mod adds a new companion to the game — Ophysia, a chaotic good half-elven Skald from Daggerford. She can be found in the Belching Dragon Tavern in Nashkel, sharing stories and drinks with the patrons. In Siege of Dragonspear, she can be found immediately in the city of Baldur's Gate.
+本模组为游戏加入一位新队友——奥菲希娅，一位来自达格福德的混乱善良半精灵战歌诗人（Skald）。她在那西凯的"喷火巨龙"酒馆里，与酒客们讲着故事、喝着酒。在《龙矛堡围攻》（Siege of Dragonspear）中，她一开始就能在博德之门城里找到。
 
-Ophysia has time-based and scenery-based talks, banters, optional interjections, and a light romance path for female PCs in Siege of Dragonspear.
+奥菲希娅拥有按时间触发、按场景触发的对话，队友间的闲聊（banter），可选的插入对话，以及在《龙矛堡围攻》中为女性主角准备的一条轻量恋爱线。
 
 ------------------
--- Installation --
+-- 安装 --
 ------------------
 
-Ensure that your game is updated to the latest version and unpack the archive into the main Baldur's Gate: Enhanced Edition folder, then run setup-OphysiaBG1 and follow the installation instructions. Starting a new game is recommended. If you are playing using Steam or GOG and have Siege of Dragonspear installed, make sure you download DLC Merger (by Argent77) or modmerge (by Scott Brooks) before downloading any other mods.
+请确认游戏已更新到最新版本，把压缩包解压到《博德之门：增强版》的主目录，然后运行 setup-OphysiaBG1 并按提示安装。建议开新档。如果你通过 Steam 或 GOG 游玩，并且安装了《龙矛堡围攻》，请务必先安装 DLC Merger（作者 Argent77）或 modmerge（作者 Scott Brooks），再安装其他模组。
 
 ---------
--- FAQ --
+-- 常见问题 --
 ---------
 
-Q: Why are the interjections optional?
-A: With no interjections, Ophysia more closely resembles companions from the unmodded game. With them, she will have more content and react to events as they happen — though not to an egregious extent.
+问：为什么插入对话是可选的？
+答：不装插入对话时，奥菲希娅更接近原版游戏里的队友。装了之后她会有更多内容，会随事件发生而作出反应——但不会多到过分的程度。
 
-Q: Do I need Siege of Dragonspear to play this?
-A: No! While Siege of Dragonspear is quite important to Ophysia's character, she is still a feature-complete companion without it.
+问：玩这个模组需要《龙矛堡围攻》吗？
+答：不需要！虽然《龙矛堡围攻》对奥菲希娅这个角色很重要，但没有它她依旧是一个内容完整的队友。
 
-Q: Is the mod EET compatible?
-A: I've given no special care to ensure EET compatibility, but I likely will do in the future.
+问：这个模组支持 EET 吗？
+答：我并没有专门为 EET 兼容性做处理，但将来大概会做。
 
-Q: Does Ophysia have player-initiated dialogue?
-A: No.
+问：奥菲希娅有玩家主动发起的对话吗？
+答：没有。
 
-Q: Does Ophysia have any conflicts?
-A: Ophysia and Eldoth will eventually come to (verbal) blows and you will be forced to choose between one of them unless Skie is present or the PC has 16+ Charisma.
+问：奥菲希娅和其他内容有冲突吗？
+答：奥菲希娅和埃尔多斯最终会闹到（口头）动手，而且除非史姬在场、或主角的魅力达到 16 以上，否则你将不得不在两人中选一个。
 
-Q: Is Ophysia's portrait is AI-generated?
-A: Yes. While I generally frown upon the usage of AI-generated content, this mod is a non-profit product, and commissioning art is not within my budget at this time. When it is, expect to see more portraits for Ophysia.
+问：奥菲希娅的头像是 AI 生成的吗？
+答：是的。虽然我一般不太赞成使用 AI 生成的内容，但本模组是非营利作品，目前请人绘制立绘超出我的预算。等预算允许了，应该会为奥菲希娅增加更多头像。
 
-Q: Where do I contact you about bugs or typos?
-A: Find the thread for Ophysia on the Beamdog Forums and leave a comment or contact me directly at https://smolderingmodsbar.com/
+问：发现 bug 或错别字该到哪里联系你？
+答：在 Beamdog 论坛上找到奥菲希娅的主题帖留言，或者直接通过 https://smolderingmodsbar.com/ 联系我。
 
 -------------
--- Credits --
+-- 鸣谢 --
 -------------
 
-Mod Author: Llewren
-General help: Lava Del'Vortel, morpheus562, RoyalProtector, Jastey, Zenblack, Dark0Dave, CamDawg
-Soundset: Canis Major
-Portrait: Midjourney, with edits by Llewren
+模组作者：Llewren
+综合协助：Lava Del'Vortel、morpheus562、RoyalProtector、Jastey、Zenblack、Dark0Dave、CamDawg
+语音集：Canis Major
+头像：Midjourney，由 Llewren 修改
 
-Special thanks to all the readers of the Smoldering Mods Bar, your kind words of encouragement helped spur on the development of this mod; and to Lava Del'Vortel, because this mod likely would not exist without your benevolence and patience.
+特别感谢 Smoldering Mods Bar 的所有读者，你们的鼓励推动了本模组的开发；也感谢 Lava Del'Vortel，没有你的善意与耐心，本模组大概不会存在。
 
-This project is based on material developed by BioWare and Beamdog from Baldur's Gate: Enhanced Edition and Baldur's Gate: Siege of Dragonspear.
+本项目基于 BioWare 与 Beamdog 开发的《博德之门：增强版》及《博德之门：龙矛堡围攻》素材。
 
-All original content contained in this mod is © Llewren. Please do not redistribute and/or host this mod without explicit permission from the author.
+本模组内所有原创内容版权归 © Llewren 所有。未经作者明确许可，请勿转载或另行托管本模组。
 
 ---------------------
--- Version history --
+-- 版本历史 --
 ---------------------
 
-October 2025 — v1.4
-- Fixed issue with SoD scripts that may cause problems
-- Fix by CamDawg to stop random voicelines playing when Ophysia is waiting in camp
-- Minor grammar fixes in SoD
-- 13 new banters (Branwen, Coran, Dorn, Jaheira, Safana, Shar-Teel)
-- Banter edits (Ajantis, Branwen, Jaheira, Safana, Shar-Teel)
+2025 年 10 月 — v1.4
+- 修复 SoD 脚本中可能导致问题的地方
+- CamDawg 修复了奥菲希娅在营地等待时会随机播放语音的问题
+- 修正 SoD 中若干语法问题
+- 新增 13 段闲聊（布朗温、科兰、多恩、贾希拉、萨法娜、莎尔-提尔）
+- 调整若干闲聊（阿詹提斯、布朗温、贾希拉、萨法娜、莎尔-提尔）
 
-September 2025 — v1.3.1
-- Fixed multiple typos in Ophysia's banters
-- 2 new banters (Ajantis)
-- Adjusted Ajantis banter tone to align with his characterisation in the BG:EE NPC Revamp.
+2025 年 9 月 — v1.3.1
+- 修正奥菲希娅闲聊中的多处错别字
+- 新增 2 段闲聊（阿詹提斯）
+- 调整阿詹提斯闲聊的语气，使其与他在这套 BG:EE NPC 修订版中的设定一致
 
-July 2025 — v1.3
-- Fixed several scenery talks not triggering properly
-- 4 new banters in BG1 (Dorn, Eldoth, Neera)
-- Added conflict between Eldoth and Ophysia
+2025 年 7 月 — v1.3
+- 修复若干无法正常触发的场景对话
+- BG1 新增 4 段闲聊（多恩、埃尔多斯、妮拉）
+- 加入埃尔多斯与奥菲希娅之间的冲突
 
-May 2025 — v1.2.2
-- Tweaked internal banter formatting
-- Adjusted tone for BG:EE banters (Alora, Faldorn, Neera, Imoen, Rasaad, Safana)
-- 2 new banters in BG1 (Eldoth, Safana)
-- Buckler fixes by RoyalProtector
-- Main component is now required for interjections to be installed
+2025 年 5 月 — v1.2.2
+- 调整闲聊的内部格式
+- 调整 BG:EE 闲聊的语气（阿洛拉、法尔多恩、妮拉、伊莫恩、拉萨德、萨法娜）
+- BG1 新增 2 段闲聊（埃尔多斯、萨法娜）
+- RoyalProtector 修复小圆盾相关问题
+- 现在安装插入对话必须先装主组件
 
-April 2025 — v1.2.1
-- Fixed an issue in which Ophysia will attempt to initiate nonexistent dialogue.
+2025 年 4 月 — v1.2.1
+- 修复奥菲希娅会尝试发起不存在对话的问题
 
-January 2025 — v1.2
-- EET compatibility by morpheus562
-- 4 new banters in BG1 (Ajantis, Kagain, Dorn, Xan)
+2025 年 1 月 — v1.2
+- morpheus562 提供 EET 兼容
+- BG1 新增 4 段闲聊（阿詹提斯、卡盖恩、多恩、克桑）
 
-January 2025 — v1.1
-- 13 new interjections in BG1
-- Tweaks to Ophysia's biography in BG1 and in SoD
-- Tweaks to Ophysia's joining sequence dialogue in BG1
-- Moved Ophysia's interjections during Dorn's BG1 player-talks to the core files of the mod
-- Fixed Ophysia's behaviour during Dorn's 'romance fight' in BG1
-- Fixed Ophysia's Buckler having no icon without Siege of Dragonspear installed — it now has a unique BAM and a new colour scheme to match it.
+2025 年 1 月 — v1.1
+- BG1 新增 13 条插入对话
+- 调整奥菲希娅在 BG1 与 SoD 中的传记
+- 调整奥菲希娅在 BG1 中的入队对话
+- 把奥菲希娅在多恩 BG1 玩家对话中的插入对话移入模组核心文件
+- 修复奥菲希娅在多恩 BG1"恋爱争执"中的表现
+- 修复未安装《龙矛堡围攻》时奥菲希娅的小圆盾没有图标的问题——现在它有独立的 BAM 与配套的新配色
 
-January 2025 — v1.0
-- Initial release
-
+2025 年 1 月 — v1.0
+- 首次发布

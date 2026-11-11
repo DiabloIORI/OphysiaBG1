@@ -19,15 +19,20 @@
 | `dialogue/sod/wnsophyj.d` | menhir 唱歌整段、龙矛堡行军、波尔斯基尔桥、达格福德民兵、玛德莉身世 | 254 | `.bak` |
 | `dialogue/sod/wnsophyp.d` | SoD 玩家发话选项 | 26 | `.bak` |
 | `scripts/sod/*.baf`（28 个） | `DisplayStringHead` 战场/场景喊话 | 80 | `.bak` |
+| `lib/ophysiabgee.tpa` | NAME1/NAME2、BIO、34 条语音喊话（`SAY MORALE`…`SAY PICKED_POCKET`）、小圆盾 wnbuck1 的名称与描述 | 41 | `.bak` |
+| `lib/ophysiasod.tpa` | 同上（SoD 版 wnsophy.cre + wnbuck2 + 玛德莉 NAME）、BIO 与描述为 SoD 专属文本 | 45 | `.bak` |
 | `translations/english/journalentries.tra` | 日志条目 @0 / @1 / @09 / @10 | 4 | 无（非代码） |
 | `OphysiaBG1.tp2` | 组件名、需求提示、依赖提示 | 4 | `.bak` |
+| `readme.txt` | 安装说明、FAQ、鸣谢、版本历史（WeiDU 安装界面会显示） | 全文 | 无（文档，非代码） |
 
-合计约 **1470 条**中文串。所有文件均为 UTF-8 无 BOM，`~` 全部成对，原换行结构（含 `\n\n` 分段）原样保留，`<CHARNAME>` 等 `<PRO_*>` 变量未动。
+合计约 **1550 条**中文串。所有文件均为 UTF-8 无 BOM（readme.txt 例外，带 BOM 便于记事本直接打开），`~` 全部成对，原换行结构（含 `\n\n` 分段）原样保留，`<CHARNAME>` 等 `<PRO_*>` 变量未动。
 
 ## 三、两处需要说明的技术处理
 
 1. **tp2 的 `setup.tra` 缺文件**：`LANGUAGE` 块原本列了 `setup.tra`，但仓库里没有这个文件，WeiDU 选语言时会直接出错。已将该行注释掉，只保留 `JournalEntries.tra`（`ADD_JOURNAL` 本身是 `USING` 显式指定文件，不受影响）。**这是唯一一处动到代码的地方**，原行以 `//` 形式留在文件里可随时恢复。
 2. **修正了 3 处翻译错位**：抽取脚本的"全局引号序号"曾在 `+ ~条件~ + ~台词~` 这类结构上偏一位，导致 `wnmadri.d` 一句漏译且下两句各错一位（`SetGlobal("WNMadriPlot","Global",5)` 一度被中文覆盖）。已从 `.bak` 还原该文件后按正确序号重建，并补上 `wnsophyj.d` 的 12 条 menhir 选项台词与 `wnophin.d` 的 1 条。复核脚本确认：**没有任何代码串被中文污染**。
+3. **顺手修掉作者 4 处笔误**：`wnsoph12/13/14/15.baf` 里 `DisplayStringHead("WNOPHY",~"……~` 多了一个半角引号，进游戏会在字幕开头显示一个多余的 `"`。已删掉该引号，其余字符未动。
+4. **`lib` 里的两个 `.tpa` 是第一轮漏掉的**：它们是队友的 `NAME1/NAME2`、`BIO`、全部语音喊话（`SAY MORALE` 到 `SAY PICKED_POCKET`）以及两把小圆盾的 `SAY NAME/DESC`。这些文字不是在 `.d` 里，而是在安装脚本中用 `SAY` 写入 `.cre`/`.itm`，所以必须改 `.tpa` 才能进游戏。
 
 ## 四、译名表（后续若续译请沿用）
 

@@ -7,7 +7,7 @@ IF
 	Switch("wnOphy_SoD_wnsoph14","MYAREA")
 THEN
 	RESPONSE #0 
-		DisplayStringHead("WNOPHY",~"你不像那种会自愿加入这支远征队的人，萨法娜。~)  
+		DisplayStringHead("WNOPHY",~你不像那种会自愿加入这支远征队的人，萨法娜。~)  
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",9) 
 		SetGlobal("wnOphy_SoD_wnsoph14","MYAREA",10)
 	RESPONSE #10

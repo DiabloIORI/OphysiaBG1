@@ -7,7 +7,7 @@ IF
 	Switch("wnOphy_SoD_wnsoph15","MYAREA")
 THEN
 	RESPONSE #0 
-		DisplayStringHead("WNOPHY",~"你有种让周围一切都变冷一点的本事。一定很累人。~)  
+		DisplayStringHead("WNOPHY",~你有种让周围一切都变冷一点的本事。一定很累人。~)  
 		SetGlobalTimer("BD_BANTER_DELAY","MYAREA",9) 
 		SetGlobal("wnOphy_SoD_wnsoph15","MYAREA",10)
 	RESPONSE #10
